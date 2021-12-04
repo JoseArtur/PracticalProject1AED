@@ -1,8 +1,28 @@
 //
-// Created by josea on 04/12/2021.
+// Created by jccmg on 04/12/2021.
 //
 
-#ifndef PROJECT1_PLANE_H
-#define PROJECT1_PLANE_H
+#ifndef PROJETO_PLANE_H
+#define PROJETO_PLANE_H
+#include <iostream>
+#include <string>
+#include <vector>
+#include "../flight.h"
 
-#endif //PROJECT1_PLANE_H
+using namespace std;
+
+
+class plane {
+    string mat;
+    string type;
+    int cap;
+    vector<flight> flights;
+public:
+    plane(string mat, string type, int cap);
+    string getmat();
+    string gettype();
+    int getcap();
+    void addflight(flight &flight);
+    void removeflight(flight &flight);
+};
+#endif //PROJETO_PLANE_H

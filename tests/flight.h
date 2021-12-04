@@ -1,8 +1,36 @@
 //
-// Created by josea on 04/12/2021.
+// Created by jccmg on 04/12/2021.
 //
 
-#ifndef PROJECT1_FLIGHT_H
-#define PROJECT1_FLIGHT_H
+#ifndef PROJETO_FLIGHT_H
+#define PROJETO_FLIGHT_H
+#include <iostream>
+#include <string>
+#include <vector>
+#include "passenger.h"
+using namespace std;
 
-#endif //PROJECT1_FLIGHT_H
+class flight {
+    int num;
+    int day;
+    int month;
+    int year;
+    int dur;
+    string origin;
+    string destiny;
+    vector<passenger> passengers;
+public:
+    flight(int num, int day, int month, int year, int dur, string origin, string destiny);
+    int getnum();
+    int getday();
+    int getmonth();
+    int getyear();
+    string getdate();
+    int getdur();
+    string getorigin();
+    string getdestiny();
+    void addpassenger(passenger &pass);
+    void removepassenger(passenger &pass);
+
+};
+#endif //PROJETO_FLIGHT_H
