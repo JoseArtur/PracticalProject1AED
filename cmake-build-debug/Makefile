@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\josea\Feup\AED\Project1
+CMAKE_SOURCE_DIR = C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\josea\Feup\AED\Project1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\josea\Feup\AED\Project1\cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -77,7 +77,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -86,9 +86,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles C:\Users\josea\Feup\AED\Project1\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\CMakeFiles C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tests/departure.obj: tests/departure.cpp.obj
+.PHONY : tests/departure.obj
+
+# target to build an object file
+tests/departure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/departure.cpp.obj
+.PHONY : tests/departure.cpp.obj
+
+tests/departure.i: tests/departure.cpp.i
+.PHONY : tests/departure.i
+
+# target to preprocess a source file
+tests/departure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/departure.cpp.i
+.PHONY : tests/departure.cpp.i
+
+tests/departure.s: tests/departure.cpp.s
+.PHONY : tests/departure.s
+
+# target to generate assembly for a file
+tests/departure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/departure.cpp.s
+.PHONY : tests/departure.cpp.s
+
+tests/planeService.obj: tests/planeService.cpp.obj
+.PHONY : tests/planeService.obj
+
+# target to build an object file
+tests/planeService.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.obj
+.PHONY : tests/planeService.cpp.obj
+
+tests/planeService.i: tests/planeService.cpp.i
+.PHONY : tests/planeService.i
+
+# target to preprocess a source file
+tests/planeService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.i
+.PHONY : tests/planeService.cpp.i
+
+tests/planeService.s: tests/planeService.cpp.s
+.PHONY : tests/planeService.s
+
+# target to generate assembly for a file
+tests/planeService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.s
+.PHONY : tests/planeService.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +212,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/departure.obj
+	@echo ... tests/departure.i
+	@echo ... tests/departure.s
+	@echo ... tests/planeService.obj
+	@echo ... tests/planeService.i
+	@echo ... tests/planeService.s
 .PHONY : help
 
 
