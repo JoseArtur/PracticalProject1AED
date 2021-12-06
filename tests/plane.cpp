@@ -8,20 +8,20 @@
 #include <vector>
 using namespace std;
 
-plane::plane(string mat, string type, int cap) {
+Plane::Plane(string mat, string type, int cap) {
     this->mat = mat;
     this->type = type;
     this->cap = cap;
 }
 
-string plane::getmat(){
+string Plane::getmat(){
     return mat;
 }
 
-string plane::gettype(){
+string Plane::gettype(){
     return type;
 }
 
-int plane::getcap(){
+int Plane::getcap(){
     return cap;
 }

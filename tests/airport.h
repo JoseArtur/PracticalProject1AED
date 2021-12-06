@@ -7,32 +7,16 @@
 
 #include <iostream>
 #include <stdlib.h>
-using namespace std;
+#include "Flight.h"
+#include "plane.h"
+#include "bst.h"
+#include "carriage.h"
 
-class Airport{
-    string id;
-    vector<Flight *> flights;
-    vector<Plane *> planes;
-    vector<Airline *> airlines;
-    BST<Carriage > carriages = BST<Carriage>(Carriage);
-public:
-    Airport();
-    Airport(id);
-    string getId() const;
-    string setId(string id) ;
-    BST<Carriage> getCarriages() const;
-    void addCarriage(Carriage carriage);
-    void removeCarriage(Carriage carriage);
-    Flight*  searchFlight(Flight* flight);
-    Airline*  searchAirline(Airline* airline);
-    void addAirline(Airline* airline);
-    void removeAirline(Airline* airline);
-}
+using namespace std;
 class Airline {
     string name, id;
     vector<Flight *> flights;
     vector<Plane *> planes;
-    BST<Carriage > carriages = BST<Carriage>(Carriage); //para manter
 public:
     void addFlight(Flight* flight);
     void addPlane(Plane* plane);
@@ -41,4 +25,24 @@ public:
     Flight*  searchFlight(Flight* flight);
 
 };
+class Airport{
+    string id;
+    vector<Flight *> flights;
+    vector<Plane *> planes;
+    vector<Airline *> airlines;
+    BST<Carriage > carriages;
+public:
+    Airport(): carriages(Carriage("",0,0)) {};
+    Airport(string id);
+    string getId() const;
+    void setId(string id) ;
+    BST<Carriage> getCarriages() const;
+    bool addCarriage(  Carriage carriage );
+    void removeCarriage(Carriage carriage);
+    Flight*  searchFlight(Flight* flight);
+    Airline*  searchAirline(Airline* airline);
+    void addAirline(Airline* airline);
+    void removeAirline(Airline* airline);
+};
+
 #endif //PROJECT1_AIRPORT_H

@@ -7,22 +7,22 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../flight.h"
+#include "/Flight.h"
 
 using namespace std;
 
 
-class plane {
+class Plane {
     string mat;
     string type;
     int cap;
-    vector<flight> flights;
+    vector<Flight> flights;
 public:
-    plane(string mat, string type, int cap);
+    Plane(string mat, string type, int cap);
     string getmat();
     string gettype();
     int getcap();
-    void addflight(flight &flight);
-    void removeflight(flight &flight);
+    void addflight(Flight &flight);
+    void removeflight(Flight &flight);
 };
 #endif //PROJETO_PLANE_H

@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-flight::flight(int num, int day, int month, int year, int dur, string origin, string destiny) {
+Flight::Flight(int num, int day, int month, int year, int dur, string origin, string destiny) {
     this-> num = num;
     this-> day = day;
     this-> month = month;
@@ -17,17 +17,17 @@ flight::flight(int num, int day, int month, int year, int dur, string origin, st
     this-> destiny = destiny;
 }
 
-int flight::getnum() {
+int Flight::getnum() {
     return num;
 }
 
-int flight::getday() {
+int Flight::getday() {
     return day;
 }
-int flight::getmonth() {
+int Flight::getmonth() {
     return month;
 }
 
-int flight::getyear() {
+int Flight::getyear() {
 
 }

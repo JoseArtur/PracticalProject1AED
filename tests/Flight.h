@@ -10,7 +10,7 @@
 #include "passenger.h"
 using namespace std;
 
-class flight {
+class Flight {
     int num;
     int day;
     int month;
@@ -20,7 +20,7 @@ class flight {
     string destiny;
     vector<passenger> passengers;
 public:
-    flight(int num, int day, int month, int year, int dur, string origin, string destiny);
+    Flight(int num, int day, int month, int year, int dur, string origin, string destiny);
     int getnum();
     int getday();
     int getmonth();

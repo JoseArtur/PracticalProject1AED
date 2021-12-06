@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\jccmg\OneDrive\Ambiente de Trabalho\AED\PracticalProject1AED"
+CMAKE_SOURCE_DIR = C:\Users\josea\Feup\AED\Project1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\jccmg\OneDrive\Ambiente de Trabalho\AED\PracticalProject1AED\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\josea\Feup\AED\Project1\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\jccmg\OneDrive\Ambiente de Trabalho\AED\PracticalProject1AED\cmake-build-debug\CMakeFiles" "C:\Users\jccmg\OneDrive\Ambiente de Trabalho\AED\PracticalProject1AED\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles C:\Users\josea\Feup\AED\Project1\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\jccmg\OneDrive\Ambiente de Trabalho\AED\PracticalProject1AED\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tests/airport.obj: tests/airport.cpp.obj
+.PHONY : tests/airport.obj
+
+# target to build an object file
+tests/airport.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/airport.cpp.obj
+.PHONY : tests/airport.cpp.obj
+
+tests/airport.i: tests/airport.cpp.i
+.PHONY : tests/airport.i
+
+# target to preprocess a source file
+tests/airport.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/airport.cpp.i
+.PHONY : tests/airport.cpp.i
+
+tests/airport.s: tests/airport.cpp.s
+.PHONY : tests/airport.s
+
+# target to generate assembly for a file
+tests/airport.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/airport.cpp.s
+.PHONY : tests/airport.cpp.s
+
+tests/carriage.obj: tests/carriage.cpp.obj
+.PHONY : tests/carriage.obj
+
+# target to build an object file
+tests/carriage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/carriage.cpp.obj
+.PHONY : tests/carriage.cpp.obj
+
+tests/carriage.i: tests/carriage.cpp.i
+.PHONY : tests/carriage.i
+
+# target to preprocess a source file
+tests/carriage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/carriage.cpp.i
+.PHONY : tests/carriage.cpp.i
+
+tests/carriage.s: tests/carriage.cpp.s
+.PHONY : tests/carriage.s
+
+# target to generate assembly for a file
+tests/carriage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/carriage.cpp.s
+.PHONY : tests/carriage.cpp.s
+
+tests/planeService.obj: tests/planeService.cpp.obj
+.PHONY : tests/planeService.obj
+
+# target to build an object file
+tests/planeService.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.obj
+.PHONY : tests/planeService.cpp.obj
+
+tests/planeService.i: tests/planeService.cpp.i
+.PHONY : tests/planeService.i
+
+# target to preprocess a source file
+tests/planeService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.i
+.PHONY : tests/planeService.cpp.i
+
+tests/planeService.s: tests/planeService.cpp.s
+.PHONY : tests/planeService.s
+
+# target to generate assembly for a file
+tests/planeService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.s
+.PHONY : tests/planeService.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +236,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/airport.obj
+	@echo ... tests/airport.i
+	@echo ... tests/airport.s
+	@echo ... tests/carriage.obj
+	@echo ... tests/carriage.i
+	@echo ... tests/carriage.s
+	@echo ... tests/planeService.obj
+	@echo ... tests/planeService.i
+	@echo ... tests/planeService.s
 .PHONY : help
 
 
