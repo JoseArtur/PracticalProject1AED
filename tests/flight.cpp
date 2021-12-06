@@ -7,27 +7,47 @@
 #include <string>
 #include <vector>
 
-flight::flight(int num, int day, int month, int year, int dur, string origin, string destiny) {
+Flight::Flight(int num, int day, int dur, string origin, string destiny) {
     this-> num = num;
-    this-> day = day;
-    this-> month = month;
-    this-> year = year;
     this-> dur = dur;
     this-> origin = origin;
     this-> destiny = destiny;
 }
 
-int flight::getnum() {
+int Flight::getnum() {
     return num;
 }
 
-int flight::getday() {
-    return day;
-}
-int flight::getmonth() {
-    return month;
+int Flight::getdur() {
+    return dur;
 }
 
-int flight::getyear() {
+string Flight::getorigin() {
+    return origin;
+}
 
+string Flight::getdestiny() {
+    return destiny;
+}
+
+void Flight::setdur(int &dur) {
+    this->dur = dur;
+}
+
+vector<passenger> Flight::getpassangers() {
+    return passengers;
+}
+int Flight::getpassindex(Passenger &pass) {} {
+    for(int i = 0; i < passengers.size();i++){
+        if(pass.getname() = passengers[i].getname()) return i;
+    }
+    return -1;
+}
+
+void Flight::addpassenger(Passenger &pass) {
+    passengers.pushback(pass);
+}
+
+void Flight::removepassenger(Passenger &pass) {
+    passengers.erase(passengers.begin()+getpassindex(pass));
 }

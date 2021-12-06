@@ -16,12 +16,14 @@ class plane {
     string mat;
     string type;
     int cap;
+    queue<planeService> service;
     vector<flight> flights;
 public:
     plane(string mat, string type, int cap);
     string getmat();
     string gettype();
     int getcap();
+    int getindex(flight &flight);
     void addflight(flight &flight);
     void removeflight(flight &flight);
 };

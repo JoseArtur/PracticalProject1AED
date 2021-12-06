@@ -25,3 +25,27 @@ string plane::gettype(){
 int plane::getcap(){
     return cap;
 }
+
+int plane::getindex(flight &flight) {
+    for(int i = 0; i < flights.size();i++){
+        if(flight.num()==flights[i].num()) return i
+    }
+    return -1;
+}
+
+bool plane::addflight(flight &flight) {
+    if(getindex(flight)==-1){
+        flights.pushback(flight);
+        return true;
+    }
+    return false;
+}
+
+void plane::removeflight(flight &flight) {
+    if(getindex(flight) >=0){
+            clientes.erase(clientes.begin()+ getindex(flight));
+            return true;
+        }
+    }
+    return false;
+}

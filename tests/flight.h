@@ -10,27 +10,22 @@
 #include "passenger.h"
 using namespace std;
 
-class flight {
+class Flight {
     int num;
-    int day;
-    int month;
-    int year;
     int dur;
     string origin;
     string destiny;
     vector<passenger> passengers;
 public:
-    flight(int num, int day, int month, int year, int dur, string origin, string destiny);
+    Flight(int num, int dur, string origin, string destiny);
     int getnum();
-    int getday();
-    int getmonth();
-    int getyear();
-    string getdate();
     int getdur();
+    int setdur(int &dur);
     string getorigin();
     string getdestiny();
+    vector<passenger> getpassangers();
+    int getpassindex(passenger &pass);
     void addpassenger(passenger &pass);
     void removepassenger(passenger &pass);
-
 };
 #endif //PROJETO_FLIGHT_H
