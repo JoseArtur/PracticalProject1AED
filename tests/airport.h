@@ -32,6 +32,7 @@ class Airline {
     string name, id;
     vector<Flight *> flights;
     vector<Plane *> planes;
+    BST<Carriage > carriages = BST<Carriage>(Carriage); //para manter
 public:
     void addFlight(Flight* flight);
     void addPlane(Plane* plane);
