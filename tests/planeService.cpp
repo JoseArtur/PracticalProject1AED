@@ -4,14 +4,10 @@
 
 #include "planeService.h"
 
-planeService::planeService() {
-    this->employee.clear();
-    this->type.clear();
-}
-
-planeService::planeService(string t, string e) {
+planeService::planeService(string t, string e, Date d) {
     this->type = t;
     this->employee = e;
+    this->date = d;
 }
 
 string planeService::getType() const {
@@ -28,4 +24,8 @@ void planeService::setType(string t) {
 
 void planeService::setEmployee(string e) {
     this->employee = e;
+}
+
+Date planeService::getDate() const {
+    return this->date;
 }
