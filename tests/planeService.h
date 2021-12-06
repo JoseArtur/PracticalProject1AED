@@ -5,6 +5,7 @@
 #ifndef PROJECT1_PLANESERVICE_H
 #define PROJECT1_PLANESERVICE_H
 
+#include "date.h"
 #include <queue>
 #include <string>
 
@@ -13,14 +14,14 @@ using namespace std;
 class planeService {
     string type;
     string employee;
+    Date date;
 public:
-    planeService();
-    planeService(string t, string e);
+    planeService(string t, string e, Date d);
     string getType() const;
     string getEmployee() const;
+    Date getDate() const;
     void setType(string t);
     void setEmployee(string e);
 };
-
 
 #endif //PROJECT1_PLANESERVICE_H
