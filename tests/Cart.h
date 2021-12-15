@@ -20,7 +20,7 @@ public:
     unsigned int getC() const;
     unsigned int getN() const;
     unsigned int getM() const;
-    unsigned int getCart() const;
+    vector<vector<stack<Luggage>>> getCart() const;
     void setC(const unsigned int c);
     void setN(const unsigned int n);
     void setM(const unsigned int m);

@@ -1,6 +1,7 @@
 #include <iostream>
+#include "tests/Menu.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    Menu menu;
+    menu.DisplayMenu();
 }

@@ -23,7 +23,7 @@ unsigned int Cart::getM() const {
     return this->m;
 }
 
-unsigned int Cart::getCart() const {
+vector<vector<stack<Luggage>>> Cart::getCart() const {
     return this->cart;
 }
 
