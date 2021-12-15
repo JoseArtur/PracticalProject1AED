@@ -8,43 +8,80 @@
 #include <vector>
 using namespace std;
 
-plane::plane(string mat, string type, int cap) {
+Plane::Plane(string mat, string type, int cap) {
     this->mat = mat;
     this->type = type;
     this->cap = cap;
 }
 
-string plane::getmat(){
+string Plane::getmat(){
     return mat;
 }
 
-string plane::gettype(){
+void Plane::setmat(string & mat){
+    this->mat = mat;
+}
+
+string Plane::gettype(){
     return type;
 }
 
-int plane::getcap(){
+void Plane::settype(string & type){
+    this->type = type;
+}
+
+int Plane::getcap(){
     return cap;
 }
 
-int plane::getindex(flight &flight) {
+void Plane::setcap(int & cap){
+    this->cap=cap;
+}
+
+void Plane::addflight(Flight &flight) {
+    int count = -1;
+    for(int i = 0; i < flights.size();i++) {
+        if(flights[i].getnum()== flight.getnum()){
+            count ++;
+        }
+    }
+    if (count == -1) flights.push_back(flight);
+}
+
+void Plane::removeflight(Flight &flight) {
     for(int i = 0; i < flights.size();i++){
-        if(flight.num()==flights[i].num()) return i
+        if(flights[i].getnum() == flight.getnum()){
+            flights.erase(flights.begin()+i);
+        }
     }
-    return -1;
 }
 
-bool plane::addflight(flight &flight) {
-    if(getindex(flight)==-1){
-        flights.pushback(flight);
-        return true;
-    }
-    return false;
+void Plane::addservice(planeService &service){
+    not_done.push(service);
 }
 
-void plane::removeflight(flight &flight) {
-    if(getindex(flight) >=0){
-            clientes.erase(clientes.begin()+ getindex(flight));
-            return true;
+void finishservice(int &service){
+    while(service > 0){
+        done.push_back(not_done.front());
+        not_done.pop;
+        service --;
+    }
+}
+
+bool Flight::addpassenger(Flight &flight, passenger &pass) {
+    int count = -1;
+    for(int i = 0; i < passengers.size();i++) {
+        if(flights[i].getnum() == flight.getnum()){
+            for(int j = 0; j < flights[i].getpassangers().size();j++){
+                if(flights[i].getpassanger()[j].getid() == pass.getid()){
+                    count++;
+                }
+            }
+            if ( this->cap - flights[i].getpassengers().size() > 0 && count == -1) {
+                pass.setticket(true);
+                flight[i].getpassengers().addpassenger(pass);
+                return true;
+            }
         }
     }
     return false;

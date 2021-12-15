@@ -7,24 +7,33 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../flight.h"
+#include "Flight.h"
+#include "planeService.h"
+#include <list>
+#include "passenger.h"
 
 using namespace std;
 
 
-class plane {
+class Plane {
     string mat;
     string type;
     int cap;
-    queue<planeService> service;
-    vector<flight> flights;
+    vector<Flight> flights;
+    queue<planeService> not_done;
+    queue<planeService> done;
 public:
-    plane(string mat, string type, int cap);
+    Plane(string mat, string type, int cap);
     string getmat();
+    void setmat(string & mat);
     string gettype();
+    void settype(string & type);
     int getcap();
-    int getindex(flight &flight);
-    void addflight(flight &flight);
-    void removeflight(flight &flight);
+    void setcap(int & cap);
+    void addflight(Flight &flight);
+    void removeflight(Flight &flight);
+    void addservice(planeService & service);
+    void finishservice(int & service);
+    bool addpassenger(Flight &flight, passenger &pass);
 };
 #endif //PROJETO_PLANE_H

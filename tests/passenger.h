@@ -9,21 +9,12 @@
 #include <vector>
 using namespace std;
 
-class Passenger {
-    string name;
-    bool ticket;
+class passenger {
     bool bagage;
     bool group;
 public:
-    Passenger(string name;bool bagage, bool group,bool ticket);
-    string getname();
-    void setname();
+    passenger(bool bagage, bool group);
     bool getbagage();
-    void setbagage(bool &bagage);
     bool getgroup();
-    void setgroup(bool &group);
-    bool getticket();
-    void setticket(bool ticket);
-
 };
 #endif //PROJETO_PASSENGER_H

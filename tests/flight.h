@@ -7,7 +7,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "passenger.h"
+#include "date.h"
+#include "passanger.h"
+
 using namespace std;
 
 class Flight {
@@ -15,17 +17,23 @@ class Flight {
     int dur;
     string origin;
     string destiny;
-    vector<passenger> passengers;
+    vector<Passenger> passengers;
+    Date date;
 public:
-    Flight(int num, int dur, string origin, string destiny);
+    Flight(int cap, int num, int day, int month, int year, int dur, string origin, string destiny);
     int getnum();
+    void setnum(int & num);
     int getdur();
-    int setdur(int &dur);
+    void setdur(int & dur);
     string getorigin();
+    void setorigin(string & origin);
     string getdestiny();
-    vector<passenger> getpassangers();
-    int getpassindex(passenger &pass);
-    void addpassenger(passenger &pass);
-    void removepassenger(passenger &pass);
+    void setdestiny(string & destiny);
+    vector<Passenger> getpassangers();
+    void setpassangers(vector<Passenger> passengers);
+    void addpassenger(Passenger &pass);
+    bool removepassenger(Passenger &pass);
+    Date getdate();
+    void setdate( Date & date);
 };
 #endif //PROJETO_FLIGHT_H
