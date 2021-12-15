@@ -18,14 +18,14 @@ string planeService::getEmployee() const {
     return this->employee;
 }
 
+Date planeService::getDate() const {
+    return this->date;
+}
+
 void planeService::setType(string t) {
     this->type = t;
 }
 
 void planeService::setEmployee(string e) {
     this->employee = e;
-}
-
-Date planeService::getDate() const {
-    return this->date;
 }

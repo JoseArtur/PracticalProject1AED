@@ -275,7 +275,7 @@ template <class Comparable>
 void BSTItrPost<Comparable>::advance () {
     itrStack.pop();
     visitStack.pop();
-    if ((!itrStack.empty()) && (visitStack.top() == false)) {
+    if (!itrStack.empty() && !visitStack.top()) {
         visitStack.pop();
         visitStack.push(true);
         slideDown(itrStack.top()->right);
@@ -457,6 +457,5 @@ template <class Comparable>
 bool iteratorBST<Comparable>::operator!= (const iteratorBST<Comparable>& it2) const {
     return itrStack != it2.itrStack;
 }
-
 
 #endif

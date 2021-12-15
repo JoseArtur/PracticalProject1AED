@@ -3,7 +3,7 @@ project(Project1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Project1 tests/airport.h tests/plane.h tests/luggage.h tests/Flight.h tests/carriage.h tests/bst.h tests/passanger.h tests/planeService.h tests/departure.h tests/planeService.cpp tests/airport.cpp tests/carriage.cpp tests/main.cpp)
+add_executable(Project1  tests/airport.h tests/plane.h tests/luggage.h tests/Flight.h tests/carriage.h tests/bst.h tests/passanger.h tests/planeService.h tests/departure.h tests/planeService.cpp tests/airport.cpp tests/carriage.cpp tests/Cart.h tests/Cart.cpp)
 # Doxygen Build
 find_package(Doxygen)
 if(DOXYGEN_FOUND)
@@ -23,4 +23,5 @@ if(DOXYGEN_FOUND)
 else(DOXYGEN_FOUND)
     message("Doxygen needs to be installed to generate the documentation.")
 endif(DOXYGEN_FOUND)
+
 

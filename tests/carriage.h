@@ -8,7 +8,6 @@
 #include <iostream>
 using namespace std;
 class Carriage{
-
     string carriageType;
     float distance;
     time_t hour;

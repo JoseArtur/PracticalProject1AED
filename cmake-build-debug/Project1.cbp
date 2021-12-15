@@ -90,6 +90,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Cart.cpp">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Cart.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Flight.h">
 			<Option target="Project1"/>
 		</Unit>
@@ -112,9 +118,6 @@
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/luggage.h">
-			<Option target="Project1"/>
-		</Unit>
-		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/main.cpp">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/passanger.h">

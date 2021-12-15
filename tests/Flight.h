@@ -8,18 +8,18 @@
 #include <string>
 #include <vector>
 #include "passenger.h"
+#include "date.h"
 using namespace std;
 
 class Flight {
     int num;
-    int day;
-    int month;
-    int year;
+    Date date;
     int dur;
     string origin;
     string destiny;
     vector<passenger> passengers;
 public:
+<<<<<<< HEAD
     Flight(int num, int day, int month, int year, int dur, string origin, string destiny);
     int getNum();
     int getday();
@@ -29,6 +29,14 @@ public:
     int getdur();
     string getorigin();
     string getdestiny();
+=======
+    Flight(int num, Date date, int dur, string origin, string destiny);
+    int getNum();
+    Date getDate();
+    int getDur();
+    string getOrigin();
+    string getDestiny();
+>>>>>>> origin/b3
     void addpassenger(passenger &pass);
     void removepassenger(passenger &pass);
 

@@ -5,11 +5,11 @@
 #include "date.h"
 
 Date::Date(unsigned int day, unsigned int month, unsigned int year, unsigned int hour, unsigned int minute) {
-    this->day = day;
-    this->month = month;
+    if (day >= 1 && day <= 31) this->day = day;
+    if (month >= 1 && month <= 12)this->month = month;
     this->year = year;
-    this->hour = hour;
-    this->minute = minute;
+    if (hour >= 0 && hour <= 23)this->hour = hour;
+    if (minute >= 0 && minute <= 59)this->minute = minute;
 }
 
 unsigned Date::getHour() const {

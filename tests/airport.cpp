@@ -7,11 +7,15 @@
 #include <vector>
 using namespace std;
 
+<<<<<<< HEAD
 
 
 /// this is a description.
 /// this is a breve description.
 Airport::Airport(int id, BST<Carriage> carriages): carriages(carriages) {
+=======
+Airport::Airport(string id){
+>>>>>>> origin/b3
     this->id = id;
 }
 string Airport::getId() const {
@@ -26,9 +30,14 @@ BST<Carriage> Airport::getCarriages() const {
     return carriages;
 } //TO DO
 
+<<<<<<< HEAD
 bool Airport::addCarriage(  const Carriage& carriage ) {
      carriages.insert(carriage);
      return true;
+=======
+bool Airport::addCarriage(Carriage carriage ) {
+    return carriages.insert(carriage);
+>>>>>>> origin/b3
 }
 
 void Airport::removeCarriage(Carriage carriage) {

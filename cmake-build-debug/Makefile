@@ -141,6 +141,30 @@ Doxygen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
 .PHONY : Doxygen/fast
 
+tests/Cart.obj: tests/Cart.cpp.obj
+.PHONY : tests/Cart.obj
+
+# target to build an object file
+tests/Cart.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.obj
+.PHONY : tests/Cart.cpp.obj
+
+tests/Cart.i: tests/Cart.cpp.i
+.PHONY : tests/Cart.i
+
+# target to preprocess a source file
+tests/Cart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.i
+.PHONY : tests/Cart.cpp.i
+
+tests/Cart.s: tests/Cart.cpp.s
+.PHONY : tests/Cart.s
+
+# target to generate assembly for a file
+tests/Cart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.s
+.PHONY : tests/Cart.cpp.s
+
 tests/airport.obj: tests/airport.cpp.obj
 .PHONY : tests/airport.obj
 
@@ -189,30 +213,6 @@ tests/carriage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/carriage.cpp.s
 .PHONY : tests/carriage.cpp.s
 
-tests/main.obj: tests/main.cpp.obj
-.PHONY : tests/main.obj
-
-# target to build an object file
-tests/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.obj
-.PHONY : tests/main.cpp.obj
-
-tests/main.i: tests/main.cpp.i
-.PHONY : tests/main.i
-
-# target to preprocess a source file
-tests/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.i
-.PHONY : tests/main.cpp.i
-
-tests/main.s: tests/main.cpp.s
-.PHONY : tests/main.s
-
-# target to generate assembly for a file
-tests/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.s
-.PHONY : tests/main.cpp.s
-
 tests/planeService.obj: tests/planeService.cpp.obj
 .PHONY : tests/planeService.obj
 
@@ -247,15 +247,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Doxygen
 	@echo ... Project1
+	@echo ... tests/Cart.obj
+	@echo ... tests/Cart.i
+	@echo ... tests/Cart.s
 	@echo ... tests/airport.obj
 	@echo ... tests/airport.i
 	@echo ... tests/airport.s
 	@echo ... tests/carriage.obj
 	@echo ... tests/carriage.i
 	@echo ... tests/carriage.s
-	@echo ... tests/main.obj
-	@echo ... tests/main.i
-	@echo ... tests/main.s
 	@echo ... tests/planeService.obj
 	@echo ... tests/planeService.i
 	@echo ... tests/planeService.s
