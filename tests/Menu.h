@@ -11,6 +11,7 @@
 using namespace std;
 
 class Menu {
+public:
     void DisplayMenu();
     void SearchFlight();
     void SearchFlightNumber();
