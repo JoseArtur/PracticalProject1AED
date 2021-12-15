@@ -14,14 +14,23 @@ Plane::Plane(string mat, string type, int cap) {
     this->cap = cap;
 }
 
-string Plane::getmat(){
+string Plane::getMat(){
     return mat;
 }
 
-string Plane::gettype(){
+string Plane::getType(){
     return type;
 }
 
-int Plane::getcap(){
+int Plane::getCap(){
     return cap;
+}
+
+void Plane::scheduleService(planeService service) {
+    this->scheduled.push(service);
+}
+
+void Plane::completeService() {
+    this->completed.push(scheduled.front());
+    this->scheduled.pop();
 }

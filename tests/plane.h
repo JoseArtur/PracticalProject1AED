@@ -4,25 +4,32 @@
 
 #ifndef PROJETO_PLANE_H
 #define PROJETO_PLANE_H
+
 #include <iostream>
 #include <string>
 #include <vector>
+#include <queue>
 #include "Flight.h"
+#include "planeService.h"
 
 using namespace std;
-
 
 class Plane {
     string mat;
     string type;
     int cap;
     vector<Flight> flights;
+    queue<planeService> scheduled;
+    queue<planeService> completed;
 public:
     Plane(string mat, string type, int cap);
-    string getmat();
-    string gettype();
-    int getcap();
+    string getMat();
+    string getType();
+    int getCap();
     void addflight(Flight &flight);
     void removeflight(Flight &flight);
+    void scheduleService(planeService service);
+    void completeService();
 };
+
 #endif //PROJETO_PLANE_H

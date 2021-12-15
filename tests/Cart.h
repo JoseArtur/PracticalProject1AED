@@ -24,7 +24,6 @@ public:
     void setC(const unsigned int c);
     void setN(const unsigned int n);
     void setM(const unsigned int m);
-    void setCart(vector<vector<stack<Luggage>>> cart);
     void addLuggage(Luggage l);
 };
 
