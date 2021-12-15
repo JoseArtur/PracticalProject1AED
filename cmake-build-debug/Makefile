@@ -128,29 +128,18 @@ Project1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/build
 .PHONY : Project1/fast
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+#=============================================================================
+# Target rules for targets named Doxygen
 
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+# Build rule for target.
+Doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Doxygen
+.PHONY : Doxygen
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+Doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
+.PHONY : Doxygen/fast
 
 tests/airport.obj: tests/airport.cpp.obj
 .PHONY : tests/airport.obj
@@ -200,6 +189,30 @@ tests/carriage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/carriage.cpp.s
 .PHONY : tests/carriage.cpp.s
 
+tests/main.obj: tests/main.cpp.obj
+.PHONY : tests/main.obj
+
+# target to build an object file
+tests/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.obj
+.PHONY : tests/main.cpp.obj
+
+tests/main.i: tests/main.cpp.i
+.PHONY : tests/main.i
+
+# target to preprocess a source file
+tests/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.i
+.PHONY : tests/main.cpp.i
+
+tests/main.s: tests/main.cpp.s
+.PHONY : tests/main.s
+
+# target to generate assembly for a file
+tests/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.s
+.PHONY : tests/main.cpp.s
+
 tests/planeService.obj: tests/planeService.cpp.obj
 .PHONY : tests/planeService.obj
 
@@ -232,16 +245,17 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Doxygen
 	@echo ... Project1
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 	@echo ... tests/airport.obj
 	@echo ... tests/airport.i
 	@echo ... tests/airport.s
 	@echo ... tests/carriage.obj
 	@echo ... tests/carriage.i
 	@echo ... tests/carriage.s
+	@echo ... tests/main.obj
+	@echo ... tests/main.i
+	@echo ... tests/main.s
 	@echo ... tests/planeService.obj
 	@echo ... tests/planeService.i
 	@echo ... tests/planeService.s
