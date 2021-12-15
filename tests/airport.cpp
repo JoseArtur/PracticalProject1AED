@@ -7,9 +7,6 @@
 #include <vector>
 using namespace std;
 
-
-
-
 Airport::Airport(string id){
     this->id = id;
 
@@ -32,8 +29,7 @@ BST<Carriage> Airport::getCarriages() const {
     return carriages;
 } //TO DO
 
-bool Airport::addCarriage(  Carriage carriage ) {
-
+bool Airport::addCarriage(Carriage carriage ) {
     return carriages.insert(carriage);
 }
 

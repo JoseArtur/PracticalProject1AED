@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\josea\Feup\AED\Project1
+CMAKE_SOURCE_DIR = C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\josea\Feup\AED\Project1\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\josea\Feup\AED\Project1\cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -77,7 +77,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -86,9 +86,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles C:\Users\josea\Feup\AED\Project1\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\CMakeFiles C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -151,6 +151,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+tests/Cart.obj: tests/Cart.cpp.obj
+.PHONY : tests/Cart.obj
+
+# target to build an object file
+tests/Cart.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.obj
+.PHONY : tests/Cart.cpp.obj
+
+tests/Cart.i: tests/Cart.cpp.i
+.PHONY : tests/Cart.i
+
+# target to preprocess a source file
+tests/Cart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.i
+.PHONY : tests/Cart.cpp.i
+
+tests/Cart.s: tests/Cart.cpp.s
+.PHONY : tests/Cart.s
+
+# target to generate assembly for a file
+tests/Cart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.s
+.PHONY : tests/Cart.cpp.s
 
 tests/airport.obj: tests/airport.cpp.obj
 .PHONY : tests/airport.obj
@@ -236,6 +260,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/Cart.obj
+	@echo ... tests/Cart.i
+	@echo ... tests/Cart.s
 	@echo ... tests/airport.obj
 	@echo ... tests/airport.i
 	@echo ... tests/airport.s
