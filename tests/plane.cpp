@@ -56,18 +56,6 @@ void Plane::removeflight(Flight &flight) {
     }
 }
 
-void Plane::addservice(planeService &service){
-    not_done.push(service);
-}
-
-void finishservice(int &service){
-    while(service > 0){
-        done.push_back(not_done.front());
-        not_done.pop;
-        service --;
-    }
-}
-
 bool Flight::addpassenger(Flight &flight, passenger &pass) {
     int count = -1;
     for(int i = 0; i < passengers.size();i++) {
@@ -85,4 +73,21 @@ bool Flight::addpassenger(Flight &flight, passenger &pass) {
         }
     }
     return false;
+}
+
+void Plane::scheduleService(planeService service) {
+    this->scheduled.push(service);
+}
+
+void Plane::completeService() {
+    this->completed.push(scheduled.front());
+    this->scheduled.pop();
+}
+
+vector<Flight> Plane::getflights(){
+    return flights;
+}
+
+void Plane::setflights(vector<Flight> &flights) {
+    this->flights = flights;
 }

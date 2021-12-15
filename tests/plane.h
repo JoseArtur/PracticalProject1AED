@@ -20,8 +20,8 @@ class Plane {
     string type;
     int cap;
     vector<Flight> flights;
-    queue<planeService> not_done;
-    queue<planeService> done;
+    queue<planeService> scheduled;
+    queue<planeService> completed;
 public:
     Plane(string mat, string type, int cap);
     string getmat();
@@ -32,8 +32,10 @@ public:
     void setcap(int & cap);
     void addflight(Flight &flight);
     void removeflight(Flight &flight);
-    void addservice(planeService & service);
-    void finishservice(int & service);
     bool addpassenger(Flight &flight, passenger &pass);
+    void scheduleService(planeService service);
+    void completeService();
+    vector<Flight> getflights();
+    void setflights(vector<Flight> &flights);
 };
 #endif //PROJETO_PLANE_H
