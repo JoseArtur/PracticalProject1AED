@@ -21,7 +21,7 @@ class Flight {
     vector<passenger> passengers;
 public:
     Flight(int num, int day, int month, int year, int dur, string origin, string destiny);
-    int getnum();
+    int getNum();
     int getday();
     int getmonth();
     int getyear();

@@ -25,3 +25,4 @@ string Plane::gettype(){
 int Plane::getcap(){
     return cap;
 }
+

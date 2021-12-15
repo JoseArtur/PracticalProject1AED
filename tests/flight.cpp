@@ -17,7 +17,7 @@ Flight::Flight(int num, int day, int month, int year, int dur, string origin, st
     this-> destiny = destiny;
 }
 
-int Flight::getnum() {
+int Flight::getNum() {
     return num;
 }
 
