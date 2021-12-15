@@ -34,7 +34,7 @@ class Airport{
     vector<Airline *> airlines;
     BST<Carriage > carriages;
 public:
-    Airport(): carriages(Carriage("",0,0)) {};
+    Airport(): carriages(Carriage("o",0,0)) {};
     Airport(int id, BST<Carriage> carriages);
     void setId(int id) ;
     string getId() const;

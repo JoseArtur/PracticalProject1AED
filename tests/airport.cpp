@@ -25,11 +25,11 @@ void Airport::setId(int id) {
 BST<Carriage> Airport::getCarriages() const {
     return carriages;
 } //TO DO
-/*
+
 bool Airport::addCarriage(  const Carriage& carriage ) {
      carriages.insert(carriage);
      return true;
-}*/
+}
 
 void Airport::removeCarriage(Carriage carriage) {
 carriages.remove(carriage);
