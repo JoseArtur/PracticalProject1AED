@@ -5,6 +5,7 @@
 #ifndef HEAD_CART_H
 #define HEAD_CART_H
 
+#include "luggage.h"
 #include <stack>
 #include <vector>
 
@@ -21,9 +22,9 @@ public:
     unsigned int getN() const;
     unsigned int getM() const;
     vector<vector<stack<Luggage>>> getCart() const;
-    void setC(const unsigned int c);
-    void setN(const unsigned int n);
-    void setM(const unsigned int m);
+    void setC(unsigned int c);
+    void setN(unsigned int n);
+    void setM(unsigned int m);
     void addLuggage(Luggage l);
 };
 

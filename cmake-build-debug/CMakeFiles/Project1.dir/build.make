@@ -130,18 +130,18 @@ CMakeFiles/Project1.dir/tests/Cart.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/Cart.cpp.s"
 	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Cart.cpp -o CMakeFiles\Project1.dir\tests\Cart.cpp.s
 
-CMakeFiles/Project1.dir/tests/Menu.cpp.obj: CMakeFiles/Project1.dir/flags.make
-CMakeFiles/Project1.dir/tests/Menu.cpp.obj: ../tests/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/tests/Menu.cpp.obj"
-	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\Menu.cpp.obj -c C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Menu.cpp
+CMakeFiles/Project1.dir/tests/Luggage.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/Luggage.cpp.obj: ../tests/Luggage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/tests/Luggage.cpp.obj"
+	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\Luggage.cpp.obj -c C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Luggage.cpp
 
-CMakeFiles/Project1.dir/tests/Menu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/Menu.cpp.i"
-	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Menu.cpp > CMakeFiles\Project1.dir\tests\Menu.cpp.i
+CMakeFiles/Project1.dir/tests/Luggage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/Luggage.cpp.i"
+	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Luggage.cpp > CMakeFiles\Project1.dir\tests\Luggage.cpp.i
 
-CMakeFiles/Project1.dir/tests/Menu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/Menu.cpp.s"
-	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Menu.cpp -o CMakeFiles\Project1.dir\tests\Menu.cpp.s
+CMakeFiles/Project1.dir/tests/Luggage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/Luggage.cpp.s"
+	C:\PROGRA~3\MICROS~1\Windows\STARTM~1\Programs\JETBRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gdrp7\Documents\JetBrains\CLionProjects\PracticalProject1AED\tests\Luggage.cpp -o CMakeFiles\Project1.dir\tests\Luggage.cpp.s
 
 # Object files for target Project1
 Project1_OBJECTS = \
@@ -150,7 +150,7 @@ Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/tests/airport.cpp.obj" \
 "CMakeFiles/Project1.dir/tests/carriage.cpp.obj" \
 "CMakeFiles/Project1.dir/tests/Cart.cpp.obj" \
-"CMakeFiles/Project1.dir/tests/Menu.cpp.obj"
+"CMakeFiles/Project1.dir/tests/Luggage.cpp.obj"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
@@ -160,7 +160,7 @@ Project1.exe: CMakeFiles/Project1.dir/tests/planeService.cpp.obj
 Project1.exe: CMakeFiles/Project1.dir/tests/airport.cpp.obj
 Project1.exe: CMakeFiles/Project1.dir/tests/carriage.cpp.obj
 Project1.exe: CMakeFiles/Project1.dir/tests/Cart.cpp.obj
-Project1.exe: CMakeFiles/Project1.dir/tests/Menu.cpp.obj
+Project1.exe: CMakeFiles/Project1.dir/tests/Luggage.cpp.obj
 Project1.exe: CMakeFiles/Project1.dir/build.make
 Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
 Project1.exe: CMakeFiles/Project1.dir/objects1.rsp

@@ -27,15 +27,15 @@ vector<vector<stack<Luggage>>> Cart::getCart() const {
     return this->cart;
 }
 
-void Cart::setC(const unsigned int c) {
+void Cart::setC(unsigned int c) {
     this->c = c;
 }
 
-void Cart::setN(const unsigned int n) {
+void Cart::setN(unsigned int n) {
     this->n = n;
 }
 
-void Cart::setM(const unsigned int m) {
+void Cart::setM(unsigned int m) {
     this->m = m;
 }
 
@@ -43,7 +43,7 @@ bool Cart::addLuggage(Luggage l) {
     for (auto c : cart)
         for (auto n : c)
             if (n.size() < m) {
-                n.insert(l);
+                n.push(l);
                 return true;
             }
     return false;

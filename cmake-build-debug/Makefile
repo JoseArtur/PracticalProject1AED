@@ -176,29 +176,29 @@ tests/Cart.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.s
 .PHONY : tests/Cart.cpp.s
 
-tests/Menu.obj: tests/Menu.cpp.obj
-.PHONY : tests/Menu.obj
+tests/Luggage.obj: tests/Luggage.cpp.obj
+.PHONY : tests/Luggage.obj
 
 # target to build an object file
-tests/Menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Menu.cpp.obj
-.PHONY : tests/Menu.cpp.obj
+tests/Luggage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Luggage.cpp.obj
+.PHONY : tests/Luggage.cpp.obj
 
-tests/Menu.i: tests/Menu.cpp.i
-.PHONY : tests/Menu.i
+tests/Luggage.i: tests/Luggage.cpp.i
+.PHONY : tests/Luggage.i
 
 # target to preprocess a source file
-tests/Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Menu.cpp.i
-.PHONY : tests/Menu.cpp.i
+tests/Luggage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Luggage.cpp.i
+.PHONY : tests/Luggage.cpp.i
 
-tests/Menu.s: tests/Menu.cpp.s
-.PHONY : tests/Menu.s
+tests/Luggage.s: tests/Luggage.cpp.s
+.PHONY : tests/Luggage.s
 
 # target to generate assembly for a file
-tests/Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Menu.cpp.s
-.PHONY : tests/Menu.cpp.s
+tests/Luggage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Luggage.cpp.s
+.PHONY : tests/Luggage.cpp.s
 
 tests/airport.obj: tests/airport.cpp.obj
 .PHONY : tests/airport.obj
@@ -287,9 +287,9 @@ help:
 	@echo ... tests/Cart.obj
 	@echo ... tests/Cart.i
 	@echo ... tests/Cart.s
-	@echo ... tests/Menu.obj
-	@echo ... tests/Menu.i
-	@echo ... tests/Menu.s
+	@echo ... tests/Luggage.obj
+	@echo ... tests/Luggage.i
+	@echo ... tests/Luggage.s
 	@echo ... tests/airport.obj
 	@echo ... tests/airport.i
 	@echo ... tests/airport.s

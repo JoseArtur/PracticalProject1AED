@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Project1.dir/main.cpp.obj"
   "CMakeFiles/Project1.dir/tests/Cart.cpp.obj"
-  "CMakeFiles/Project1.dir/tests/Menu.cpp.obj"
+  "CMakeFiles/Project1.dir/tests/Luggage.cpp.obj"
   "CMakeFiles/Project1.dir/tests/airport.cpp.obj"
   "CMakeFiles/Project1.dir/tests/carriage.cpp.obj"
   "CMakeFiles/Project1.dir/tests/planeService.cpp.obj"
