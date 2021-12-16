@@ -1,5 +1,5 @@
-#ifndef _BST_H_
-#define _BST_H_
+#ifndef PROJECT1_BST_H
+#define PROJECT1_BST_H
 
 #include <iostream>
 #include <stack>

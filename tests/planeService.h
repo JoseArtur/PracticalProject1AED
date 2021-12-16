@@ -2,10 +2,11 @@
 // Created by josea on 04/12/2021.
 //
 
+
 #ifndef PROJECT1_PLANESERVICE_H
 #define PROJECT1_PLANESERVICE_H
 
-#include "date.h"
+#include "Date.h"
 #include <queue>
 #include <string>
 
@@ -16,7 +17,7 @@ class planeService {
     string employee;
     Date date;
 public:
-    planeService(string t, string e, Date d);
+    planeService(string t, string e, Date date);
     string getType() const;
     string getEmployee() const;
     Date getDate() const;

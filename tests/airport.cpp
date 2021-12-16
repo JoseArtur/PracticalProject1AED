@@ -11,7 +11,7 @@ using namespace std;
 
 /// this is a description.
 /// this is a breve description.
-Airport::Airport(int id, BST<Carriage> carriages): carriages(carriages) {
+Airport::Airport(int id) {
     this->id = id;
 }
 string Airport::getId() const {
@@ -26,37 +26,31 @@ BST<Carriage> Airport::getCarriages() const {
     return carriages;
 } //TO DO
 /*
-bool Airport::addCarriage(  const Carriage& carriage ) {
-     carriages.insert(carriage);
-     return true;
-}*/
-
+bool Airport::addCarriage( Carriage carriage ) {
+     return carriages.insert(carriage);
+}
+*/
 void Airport::removeCarriage(Carriage carriage) {
 carriages.remove(carriage);
 }
-
-Flight *Airport::searchFlight(int num) {
-    vector<Flight *> ::iterator it = flights.begin();
+vector<Flight *> Airport::getFlights() const {
+    return flights;
+}
+vector<Plane *> Airport::getPlanes() const {
+    return planes;
+}
+/*
+bool Airport::searchFlight(int num) {
+    auto it = flights.begin();
     for (;it != flights.end();) {
-        if ((*it)->getNum() == num) {
+        if ((*it)->getnum() == num) {
             return (*it);
         }
         it++;
     }
     throw(Exception(num));
-}
 
-Airline *Airport::searchAirline(string id) {
-    vector<Airline *> ::iterator it = airlines.begin();
-    for (;it != airlines.end();) {
-        if ((*it)->getId() == id) {
-            return (*it);
-        }
-        it++;
-    }
-    throw(Exception(id));
 }
-
 bool Airport::addAirline(Airline *airline) {
     for(auto x:airlines){
         if(x == airline){
@@ -77,16 +71,14 @@ void Airport::removeAirline(Airline* airline) {
         it++;
     }
 }
+*/
 
-vector<Plane *> Airport::getPlanes() const {
-    return planes;
-}
-
+/*
 vector<Airline *> Airport::getAirlines() const {
     return airlines;
 }
-
-Plane *Airport::searchPlane(string id) {
+/*
+bool Airport::searchPlane(string id) {
     vector<Plane *> ::iterator it = planes.begin();
     for (;it != planes.end();) {
         if ((*it)->getmat() == id) {
@@ -96,11 +88,8 @@ Plane *Airport::searchPlane(string id) {
     }
     throw(Exception());
 }
-
-vector<Flight *> Airport::getFlights() const {
-    return flights;
-}
-
+*/
+/*
 //-----------------------------------------AIRLINE
 void Airline::addFlight(Flight *flight) {
     flights.push_back(flight);
@@ -111,7 +100,7 @@ void Airline::addPlane(Plane *plane) {
 }
 
 void Airline::removeFlight(Flight *flight) {
-    vector<Flight *> ::iterator it = flights.begin();
+    auto  it = flights.begin();
     for (;it != flights.end();) {
         if ((*it) == flight) {
             flights.erase(it);
@@ -132,9 +121,9 @@ void Airline::removePlane(Plane *plane) {
 }
 
 Flight *Airline::searchFlight(Flight *flight) {
-    vector<Flight *> ::iterator it = flights.begin();
+    auto it = flights.begin();
     for (;it != flights.end();) {
-        if ((*it)->getNum() == flight->getNum()) {
+        if ((*it)->getnum() == flight->getnum()) {
             return (*it);
         }
         it++;
@@ -145,5 +134,5 @@ Flight *Airline::searchFlight(Flight *flight) {
 string Airline::getId() const{
     return this->idAirline;
 }
-
+*/
 

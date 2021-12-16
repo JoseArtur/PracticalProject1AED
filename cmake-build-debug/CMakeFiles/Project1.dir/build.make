@@ -66,6 +66,7 @@ include CMakeFiles/Project1.dir/progress.make
 include CMakeFiles/Project1.dir/flags.make
 
 CMakeFiles/Project1.dir/tests/planeService.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/planeService.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
 CMakeFiles/Project1.dir/tests/planeService.cpp.obj: ../tests/planeService.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project1.dir/tests/planeService.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\planeService.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\planeService.cpp
@@ -79,6 +80,7 @@ CMakeFiles/Project1.dir/tests/planeService.cpp.s: cmake_force
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\planeService.cpp -o CMakeFiles\Project1.dir\tests\planeService.cpp.s
 
 CMakeFiles/Project1.dir/tests/airport.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/airport.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
 CMakeFiles/Project1.dir/tests/airport.cpp.obj: ../tests/airport.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project1.dir/tests/airport.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\airport.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\airport.cpp
@@ -92,6 +94,7 @@ CMakeFiles/Project1.dir/tests/airport.cpp.s: cmake_force
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\airport.cpp -o CMakeFiles\Project1.dir\tests\airport.cpp.s
 
 CMakeFiles/Project1.dir/tests/carriage.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/carriage.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
 CMakeFiles/Project1.dir/tests/carriage.cpp.obj: ../tests/carriage.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project1.dir/tests/carriage.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\carriage.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\carriage.cpp
@@ -105,6 +108,7 @@ CMakeFiles/Project1.dir/tests/carriage.cpp.s: cmake_force
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\carriage.cpp -o CMakeFiles\Project1.dir\tests\carriage.cpp.s
 
 CMakeFiles/Project1.dir/tests/main.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/main.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
 CMakeFiles/Project1.dir/tests/main.cpp.obj: ../tests/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project1.dir/tests/main.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\main.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\main.cpp
@@ -117,29 +121,112 @@ CMakeFiles/Project1.dir/tests/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/main.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\main.cpp -o CMakeFiles\Project1.dir\tests\main.cpp.s
 
+CMakeFiles/Project1.dir/tests/tests.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/tests.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
+CMakeFiles/Project1.dir/tests/tests.cpp.obj: ../tests/tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project1.dir/tests/tests.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\tests.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\tests.cpp
+
+CMakeFiles/Project1.dir/tests/tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/tests.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\josea\Feup\AED\Project1\tests\tests.cpp > CMakeFiles\Project1.dir\tests\tests.cpp.i
+
+CMakeFiles/Project1.dir/tests/tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/tests.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\tests.cpp -o CMakeFiles\Project1.dir\tests\tests.cpp.s
+
+CMakeFiles/Project1.dir/tests/Time.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/Time.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
+CMakeFiles/Project1.dir/tests/Time.cpp.obj: ../tests/Time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project1.dir/tests/Time.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\Time.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\Time.cpp
+
+CMakeFiles/Project1.dir/tests/Time.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/Time.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\josea\Feup\AED\Project1\tests\Time.cpp > CMakeFiles\Project1.dir\tests\Time.cpp.i
+
+CMakeFiles/Project1.dir/tests/Time.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/Time.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\Time.cpp -o CMakeFiles\Project1.dir\tests\Time.cpp.s
+
+CMakeFiles/Project1.dir/tests/Date.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/Date.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
+CMakeFiles/Project1.dir/tests/Date.cpp.obj: ../tests/Date.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project1.dir/tests/Date.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\Date.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\Date.cpp
+
+CMakeFiles/Project1.dir/tests/Date.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/Date.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\josea\Feup\AED\Project1\tests\Date.cpp > CMakeFiles\Project1.dir\tests\Date.cpp.i
+
+CMakeFiles/Project1.dir/tests/Date.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/Date.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\Date.cpp -o CMakeFiles\Project1.dir\tests\Date.cpp.s
+
+CMakeFiles/Project1.dir/tests/plane.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/plane.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
+CMakeFiles/Project1.dir/tests/plane.cpp.obj: ../tests/plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project1.dir/tests/plane.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\plane.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\plane.cpp
+
+CMakeFiles/Project1.dir/tests/plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/plane.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\josea\Feup\AED\Project1\tests\plane.cpp > CMakeFiles\Project1.dir\tests\plane.cpp.i
+
+CMakeFiles/Project1.dir/tests/plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/plane.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\plane.cpp -o CMakeFiles\Project1.dir\tests\plane.cpp.s
+
+CMakeFiles/Project1.dir/tests/Passenger.cpp.obj: CMakeFiles/Project1.dir/flags.make
+CMakeFiles/Project1.dir/tests/Passenger.cpp.obj: CMakeFiles/Project1.dir/includes_CXX.rsp
+CMakeFiles/Project1.dir/tests/Passenger.cpp.obj: ../tests/Passenger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project1.dir/tests/Passenger.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project1.dir\tests\Passenger.cpp.obj -c C:\Users\josea\Feup\AED\Project1\tests\Passenger.cpp
+
+CMakeFiles/Project1.dir/tests/Passenger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project1.dir/tests/Passenger.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\josea\Feup\AED\Project1\tests\Passenger.cpp > CMakeFiles\Project1.dir\tests\Passenger.cpp.i
+
+CMakeFiles/Project1.dir/tests/Passenger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project1.dir/tests/Passenger.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\josea\Feup\AED\Project1\tests\Passenger.cpp -o CMakeFiles\Project1.dir\tests\Passenger.cpp.s
+
 # Object files for target Project1
 Project1_OBJECTS = \
 "CMakeFiles/Project1.dir/tests/planeService.cpp.obj" \
 "CMakeFiles/Project1.dir/tests/airport.cpp.obj" \
 "CMakeFiles/Project1.dir/tests/carriage.cpp.obj" \
-"CMakeFiles/Project1.dir/tests/main.cpp.obj"
+"CMakeFiles/Project1.dir/tests/main.cpp.obj" \
+"CMakeFiles/Project1.dir/tests/tests.cpp.obj" \
+"CMakeFiles/Project1.dir/tests/Time.cpp.obj" \
+"CMakeFiles/Project1.dir/tests/Date.cpp.obj" \
+"CMakeFiles/Project1.dir/tests/plane.cpp.obj" \
+"CMakeFiles/Project1.dir/tests/Passenger.cpp.obj"
 
 # External object files for target Project1
 Project1_EXTERNAL_OBJECTS =
 
-Project1.exe: CMakeFiles/Project1.dir/tests/planeService.cpp.obj
-Project1.exe: CMakeFiles/Project1.dir/tests/airport.cpp.obj
-Project1.exe: CMakeFiles/Project1.dir/tests/carriage.cpp.obj
-Project1.exe: CMakeFiles/Project1.dir/tests/main.cpp.obj
-Project1.exe: CMakeFiles/Project1.dir/build.make
-Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
-Project1.exe: CMakeFiles/Project1.dir/objects1.rsp
-Project1.exe: CMakeFiles/Project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Project1.exe"
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/planeService.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/airport.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/carriage.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/main.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/tests.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/Time.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/Date.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/plane.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/tests/Passenger.cpp.obj
+../tests/Project1.exe: CMakeFiles/Project1.dir/build.make
+../tests/Project1.exe: lib/libgtestd.a
+../tests/Project1.exe: lib/libgtest_maind.a
+../tests/Project1.exe: lib/libgtestd.a
+../tests/Project1.exe: CMakeFiles/Project1.dir/linklibs.rsp
+../tests/Project1.exe: CMakeFiles/Project1.dir/objects1.rsp
+../tests/Project1.exe: CMakeFiles/Project1.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\josea\Feup\AED\Project1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ..\tests\Project1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Project1.dir/build: Project1.exe
+CMakeFiles/Project1.dir/build: ../tests/Project1.exe
 .PHONY : CMakeFiles/Project1.dir/build
 
 CMakeFiles/Project1.dir/clean:

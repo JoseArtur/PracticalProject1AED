@@ -5,14 +5,18 @@
 #ifndef PROJECT1_AIRPORT_H
 #define PROJECT1_AIRPORT_H
 
-#include <iostream>
 #include <stdlib.h>
-#include "Flight.h"
+#include "flight.h"
 #include "plane.h"
 #include "bst.h"
 #include "carriage.h"
 #include "set"
+#include <string>
+#include <list>
+#include "Time.h"
+#include "Date.h"
 using namespace std;
+/*
 class Airline {
     string name, idAirline;
     vector<Flight *> flights;
@@ -25,30 +29,28 @@ public:
     void removePlane(Plane* plane);
     Flight*  searchFlight(Flight* flight);
 
-};
+};*/
 class Airport{
 
     string id;
     vector<Flight *> flights;
     vector<Plane *> planes;
-    vector<Airline *> airlines;
-    BST<Carriage > carriages;
+    //vector<Airline *> airlines;
+    BST<Carriage > carriages = BST<Carriage>(Carriage("f",0,{0,0}));
 public:
-    Airport(): carriages(Carriage("",0,0)) {};
-    Airport(int id, BST<Carriage> carriages);
+    Airport(){};
+    Airport(int id);
     void setId(int id) ;
     string getId() const;
     vector<Flight *> getFlights() const;
     vector<Plane *>getPlanes() const;
-    vector<Airline *> getAirlines() const;
+  //  vector<Airline *> getAirlines() const;
     BST<Carriage> getCarriages() const;
-    bool addCarriage( const Carriage& carriage );
+    bool addCarriage( Carriage carriage );
     void removeCarriage(Carriage carriage);
-    Flight*  searchFlight(int num);
-    Airline*  searchAirline(string name);
-    Plane* searchPlane(string id);
-    bool addAirline(Airline* airline);
-    void removeAirline(Airline* airline);
+    bool  searchFlight(int num);
+    bool searchPlane(string id);
+
 
 
 };
@@ -65,7 +67,7 @@ public:
     Exception(string idAirline):idAirline(idAirline){
         cout<<"not found";
     }
-    Exception(Flight* flight):id(flight->getNum()){
+    Exception(Flight* flight):id(flight->getnum()){
         cout<<"not found";
     }
 

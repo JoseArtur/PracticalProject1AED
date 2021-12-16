@@ -74,6 +74,30 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -83,6 +107,27 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -140,6 +185,130 @@ Doxygen: cmake_check_build_system
 Doxygen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
 .PHONY : Doxygen/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir\build.make lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googlemock\CMakeFiles\gmock.dir\build.make lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googletest\CMakeFiles\gtest.dir\build.make lib/googletest-master/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googletest\CMakeFiles\gtest_main.dir\build.make lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+tests/Date.obj: tests/Date.cpp.obj
+.PHONY : tests/Date.obj
+
+# target to build an object file
+tests/Date.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Date.cpp.obj
+.PHONY : tests/Date.cpp.obj
+
+tests/Date.i: tests/Date.cpp.i
+.PHONY : tests/Date.i
+
+# target to preprocess a source file
+tests/Date.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Date.cpp.i
+.PHONY : tests/Date.cpp.i
+
+tests/Date.s: tests/Date.cpp.s
+.PHONY : tests/Date.s
+
+# target to generate assembly for a file
+tests/Date.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Date.cpp.s
+.PHONY : tests/Date.cpp.s
+
+tests/Passenger.obj: tests/Passenger.cpp.obj
+.PHONY : tests/Passenger.obj
+
+# target to build an object file
+tests/Passenger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Passenger.cpp.obj
+.PHONY : tests/Passenger.cpp.obj
+
+tests/Passenger.i: tests/Passenger.cpp.i
+.PHONY : tests/Passenger.i
+
+# target to preprocess a source file
+tests/Passenger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Passenger.cpp.i
+.PHONY : tests/Passenger.cpp.i
+
+tests/Passenger.s: tests/Passenger.cpp.s
+.PHONY : tests/Passenger.s
+
+# target to generate assembly for a file
+tests/Passenger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Passenger.cpp.s
+.PHONY : tests/Passenger.cpp.s
+
+tests/Time.obj: tests/Time.cpp.obj
+.PHONY : tests/Time.obj
+
+# target to build an object file
+tests/Time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Time.cpp.obj
+.PHONY : tests/Time.cpp.obj
+
+tests/Time.i: tests/Time.cpp.i
+.PHONY : tests/Time.i
+
+# target to preprocess a source file
+tests/Time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Time.cpp.i
+.PHONY : tests/Time.cpp.i
+
+tests/Time.s: tests/Time.cpp.s
+.PHONY : tests/Time.s
+
+# target to generate assembly for a file
+tests/Time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Time.cpp.s
+.PHONY : tests/Time.cpp.s
 
 tests/airport.obj: tests/airport.cpp.obj
 .PHONY : tests/airport.obj
@@ -213,6 +382,30 @@ tests/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.s
 .PHONY : tests/main.cpp.s
 
+tests/plane.obj: tests/plane.cpp.obj
+.PHONY : tests/plane.obj
+
+# target to build an object file
+tests/plane.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/plane.cpp.obj
+.PHONY : tests/plane.cpp.obj
+
+tests/plane.i: tests/plane.cpp.i
+.PHONY : tests/plane.i
+
+# target to preprocess a source file
+tests/plane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/plane.cpp.i
+.PHONY : tests/plane.cpp.i
+
+tests/plane.s: tests/plane.cpp.s
+.PHONY : tests/plane.s
+
+# target to generate assembly for a file
+tests/plane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/plane.cpp.s
+.PHONY : tests/plane.cpp.s
+
 tests/planeService.obj: tests/planeService.cpp.obj
 .PHONY : tests/planeService.obj
 
@@ -237,6 +430,30 @@ tests/planeService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/planeService.cpp.s
 .PHONY : tests/planeService.cpp.s
 
+tests/tests.obj: tests/tests.cpp.obj
+.PHONY : tests/tests.obj
+
+# target to build an object file
+tests/tests.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/tests.cpp.obj
+.PHONY : tests/tests.cpp.obj
+
+tests/tests.i: tests/tests.cpp.i
+.PHONY : tests/tests.i
+
+# target to preprocess a source file
+tests/tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
+
+tests/tests.s: tests/tests.cpp.s
+.PHONY : tests/tests.s
+
+# target to generate assembly for a file
+tests/tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -244,9 +461,26 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Doxygen
 	@echo ... Project1
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... tests/Date.obj
+	@echo ... tests/Date.i
+	@echo ... tests/Date.s
+	@echo ... tests/Passenger.obj
+	@echo ... tests/Passenger.i
+	@echo ... tests/Passenger.s
+	@echo ... tests/Time.obj
+	@echo ... tests/Time.i
+	@echo ... tests/Time.s
 	@echo ... tests/airport.obj
 	@echo ... tests/airport.i
 	@echo ... tests/airport.s
@@ -256,9 +490,15 @@ help:
 	@echo ... tests/main.obj
 	@echo ... tests/main.i
 	@echo ... tests/main.s
+	@echo ... tests/plane.obj
+	@echo ... tests/plane.i
+	@echo ... tests/plane.s
 	@echo ... tests/planeService.obj
 	@echo ... tests/planeService.i
 	@echo ... tests/planeService.s
+	@echo ... tests/tests.obj
+	@echo ... tests/tests.i
+	@echo ... tests/tests.s
 .PHONY : help
 
 

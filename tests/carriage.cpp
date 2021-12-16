@@ -4,23 +4,17 @@
 
 #include "carriage.h"
 #include <iostream>
-bool Carriage::operator < (const Carriage& a )  const {
-    return distance < a.getDistance();
-}
-bool Carriage::operator == (const Carriage& a )  const {
-    return Carriage(carriageType,distance,hour) == Carriage(a.getCarriageType(),a.getDistance(),a.getHour());
-}
-Carriage::Carriage(string cT, float d, time_t h): carriageType(cT), distance(d),hour(h){}
+Carriage::Carriage(string cT, float d, Time t): carriageType(cT), distance(d),time(t){}
 string Carriage::getCarriageType() const {
- return carriageType;
+    return carriageType;
 }
 
 float Carriage::getDistance() const {
 return distance;
 }
 
-time_t Carriage::getHour() const {
-return hour;
+Time Carriage::getTime() const {
+return time;
 }
 
 void Carriage::setCarriageType(string ct) {
@@ -31,7 +25,21 @@ void Carriage::setDistance(float d) {
 distance = d;
 }
 
-void Carriage::setHour(time_t h) {
-hour = h;
+void Carriage::setTime(Time t) {
+time = t;
 }
 
+bool Carriage::operator == (const Carriage& a )  const {
+    return (carriageType==a.getCarriageType()) && (distance == a.getDistance() )&& (time==a.getTime());
+}
+
+bool Carriage::operator<(const Carriage &a)  const {
+    if(time == a.getTime()){
+        if(distance == a.getDistance()){
+            return carriageType<a.getCarriageType();
+        }
+        else return distance < a.getDistance();
+    }
+    else return time < a.getTime();
+
+}

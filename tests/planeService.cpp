@@ -3,11 +3,12 @@
 //
 
 #include "planeService.h"
-
-planeService::planeService(string t, string e, Date d) {
+#include "time.h"
+#include "Date.h"
+planeService::planeService(string t, string e,Date date) {
     this->type = t;
     this->employee = e;
-    this->date = d;
+    this->date = date;
 }
 
 string planeService::getType() const {
@@ -27,5 +28,5 @@ void planeService::setEmployee(string e) {
 }
 
 Date planeService::getDate() const {
-    return this->date;
+    return date;
 }

@@ -6,20 +6,22 @@
 #define PROJECT1_CARRIAGE_H
 #include <ctime>
 #include <iostream>
+#include "Time.h"
+#include "bst.h"
 using namespace std;
 class Carriage{
 
     string carriageType;
     float distance;
-    time_t hour;
+    Time time;
 public:
-    Carriage(string cT, float d, time_t h);
+    Carriage(string cT, float d, Time h);
     string getCarriageType() const;
     float getDistance() const;
-    time_t getHour() const;
+    Time getTime() const;
     void setCarriageType(string ct);
     void setDistance(float d);
-    void setHour(time_t h);
+    void setTime(Time h);
     bool operator < (const Carriage& a )  const;
     bool operator == (const Carriage& a )  const;
 
