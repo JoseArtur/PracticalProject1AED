@@ -2,17 +2,16 @@
 // Created by jccmg on 04/12/2021.
 //
 
-#include "Passenger.h"
-
+#include "passenger.h"
 #include <iostream>
 #include <string>
 #include <vector>
 
-Passenger::Passenger(int id, string name, bool ticket, bool bagage, bool group){
+Passenger::Passenger(int id, string name, bool ticket, bool hasLuggage, bool group) {
     this->id = id;
     this->name = name;
     this->ticket = ticket;
-    this->bagage = bagage;
+    this->hasLuggage = hasLuggage;
     this->group = group;
 }
 
@@ -39,12 +38,12 @@ void Passenger::setticket(bool ticket){
     this->ticket = ticket;
 }
 
-bool Passenger::getbagage(){
-    return bagage;
+bool Passenger::getLuggage(){
+    return hasLuggage;
 }
 
-void Passenger::setbagage(bool bagage){
-    this->bagage = bagage;
+void Passenger::setLuggage(bool hasLuggage){
+    this->hasLuggage = hasLuggage;
 }
 
 bool Passenger::getgroup(){
@@ -53,4 +52,3 @@ bool Passenger::getgroup(){
 void Passenger::setgroup(bool group){
     this->group = group;
 }
-

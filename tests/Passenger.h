@@ -1,27 +1,34 @@
 //
-#ifndef PROJECT1_PASSANGER_H
-#define PROJECT1_PASSANGER_H
+// Created by jccmg on 04/12/2021.
+//
+
+#ifndef PROJETO_PASSENGER_H
+#define PROJETO_PASSENGER_H
+
+#include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class Passenger {
     int id;
     string name;
     bool ticket;
-    bool bagage;
+    bool hasLuggage;
     bool group;
-
 public:
-    Passenger(int id, string name, bool ticket, bool bagage, bool group);
+    Passenger(int id, string name, bool ticket, bool hasLuggage, bool group);
     int getid();
     void setid(int id);
     string getname();
-    void setname(string  name);
+    void setname(string name);
     bool getticket();
-    void setticket(bool  ticket);
-    bool getbagage();
-    void setbagage(bool bagage);
+    void setticket(bool ticket);
+    bool getLuggage();
+    void setLuggage(bool hasLuggage);
     bool getgroup();
-    void setgroup(bool  group);
+    void setgroup(bool group);
 };
-#endif //PROJECT1_PASSANGER_H
+
+#endif //PROJETO_PASSENGER_H
