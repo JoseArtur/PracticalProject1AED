@@ -44,8 +44,6 @@ public:
     bool IsValid( int day,int month, int year);
     bool operator ==(const Date& date) const;
     bool operator <(const Date& date) const;
-    // operator =( Date date);
-    bool operator!=(const Date& date) const;
 };
 
 #endif //PLANESERVICE_CPP_DATE_H

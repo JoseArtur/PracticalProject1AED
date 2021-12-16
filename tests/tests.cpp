@@ -35,7 +35,7 @@ TEST(test_2, addPlane)
     Plane a( "22A", "A", 10);
     a.addflight(&f1);
     a.addflight(&f1);
-
+    a.removeflight(141);
     EXPECT_EQ(true, a.addflight(&f1));
 }
 TEST(test_3, addplane){

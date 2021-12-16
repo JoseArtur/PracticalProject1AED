@@ -29,7 +29,7 @@ Time::Time() {
 }
 
 void Time::setHour(int hour) {
-    if (hour >= 0 && hour <= 23)this->hour = hour;
+    this->hour = hour;
 }
 
 void Time::setMinute(int minute) {

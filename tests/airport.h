@@ -23,7 +23,14 @@ class Airport{
     //vector<Airline *> airlines;
     BST<Carriage > carriages = BST<Carriage>(Carriage("f",0,{0,0}));
 public:
+    /**
+     * empty constructor.
+     */
     Airport(){};
+    /**
+     * construct with id.
+     * @param id
+     */
     Airport(string id);
     void setId(string id) ;
     string getId() const;

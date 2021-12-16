@@ -44,7 +44,7 @@ public:
     void setDateDeparture(const Date &dateDeparture);
     bool addpassenger(Passenger &pass);
     bool removepassenger(Passenger &pass);
-    int getDur();
+    Time getDur();
     bool operator==(Flight *flight);
 
 

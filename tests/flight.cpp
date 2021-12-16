@@ -109,6 +109,11 @@ bool Flight::operator==(Flight *flight) {
     return this->getNum()==flight->getNum();
 }
 
+Time Flight::getDur() {
+
+    return Time();
+}
+
 
 
 

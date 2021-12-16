@@ -1,16 +1,24 @@
 //
 // Created by gdrp7 on 15/12/2021.
 //
-/*
+
 #include "Menu.h"
 
 void Menu::DisplayMenu() {
     unsigned int input;
     do {
-        cout << "\n\n"
-                "1) Search Flight\n"
-                "2) Buy Ticket\n"
-                "0) Quit\n";
+        cout << " ____________________________________ " << endl;
+        cout << "| *** AIRLINE MANAGEMENT SYSTEM  *** |" << endl;
+        cout << "|       -- Select a option -         |" << endl;
+        cout << "| 1 - Airport options                |" << endl;
+        cout << "| 2 - Plane options                  |" << endl;
+        cout << "| 3 - Flight options                 |" << endl;
+        cout << "| 4 - Passengers options             |" << endl;
+        cout << "| 5 - Cart options                   |" << endl;
+        cout << "| 6 - PlaneServices options          |" << endl;
+        cout << "| 0 - Exit                           |" << endl;
+        cout << "|____________________________________|" << endl;
+
         cout << "Choose an option: " << input << endl;
 
         switch (input) {
@@ -38,7 +46,7 @@ void Menu::SearchFlight() {
         }
     } while (true);
 }
-
+/*
 void Menu::SearchFlightNumber() {
     unsigned int input;
     do {
@@ -57,7 +65,7 @@ void Menu::SearchFlightNumber() {
 
     } while (true);
 }
-
+/*
 void Menu::SearchFlightOrigin() {
     string origin, destination;
     do {
@@ -75,5 +83,4 @@ void Menu::SearchFlightOrigin() {
     } while (true);
 
 }
-
 */
