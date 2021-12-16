@@ -238,6 +238,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googletest\CMakeFiles\gtest_main.dir\build.make lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+tests/Cart.obj: tests/Cart.cpp.obj
+.PHONY : tests/Cart.obj
+
+# target to build an object file
+tests/Cart.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.obj
+.PHONY : tests/Cart.cpp.obj
+
+tests/Cart.i: tests/Cart.cpp.i
+.PHONY : tests/Cart.i
+
+# target to preprocess a source file
+tests/Cart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.i
+.PHONY : tests/Cart.cpp.i
+
+tests/Cart.s: tests/Cart.cpp.s
+.PHONY : tests/Cart.s
+
+# target to generate assembly for a file
+tests/Cart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Cart.cpp.s
+.PHONY : tests/Cart.cpp.s
+
 tests/Date.obj: tests/Date.cpp.obj
 .PHONY : tests/Date.obj
 
@@ -261,6 +285,30 @@ tests/Date.s: tests/Date.cpp.s
 tests/Date.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Date.cpp.s
 .PHONY : tests/Date.cpp.s
+
+tests/Menu.obj: tests/Menu.cpp.obj
+.PHONY : tests/Menu.obj
+
+# target to build an object file
+tests/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Menu.cpp.obj
+.PHONY : tests/Menu.cpp.obj
+
+tests/Menu.i: tests/Menu.cpp.i
+.PHONY : tests/Menu.i
+
+# target to preprocess a source file
+tests/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Menu.cpp.i
+.PHONY : tests/Menu.cpp.i
+
+tests/Menu.s: tests/Menu.cpp.s
+.PHONY : tests/Menu.s
+
+# target to generate assembly for a file
+tests/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/Menu.cpp.s
+.PHONY : tests/Menu.cpp.s
 
 tests/Passenger.obj: tests/Passenger.cpp.obj
 .PHONY : tests/Passenger.obj
@@ -357,6 +405,54 @@ tests/carriage.s: tests/carriage.cpp.s
 tests/carriage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/carriage.cpp.s
 .PHONY : tests/carriage.cpp.s
+
+tests/flight.obj: tests/flight.cpp.obj
+.PHONY : tests/flight.obj
+
+# target to build an object file
+tests/flight.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/flight.cpp.obj
+.PHONY : tests/flight.cpp.obj
+
+tests/flight.i: tests/flight.cpp.i
+.PHONY : tests/flight.i
+
+# target to preprocess a source file
+tests/flight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/flight.cpp.i
+.PHONY : tests/flight.cpp.i
+
+tests/flight.s: tests/flight.cpp.s
+.PHONY : tests/flight.s
+
+# target to generate assembly for a file
+tests/flight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/flight.cpp.s
+.PHONY : tests/flight.cpp.s
+
+tests/luggage.obj: tests/luggage.cpp.obj
+.PHONY : tests/luggage.obj
+
+# target to build an object file
+tests/luggage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/luggage.cpp.obj
+.PHONY : tests/luggage.cpp.obj
+
+tests/luggage.i: tests/luggage.cpp.i
+.PHONY : tests/luggage.i
+
+# target to preprocess a source file
+tests/luggage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/luggage.cpp.i
+.PHONY : tests/luggage.cpp.i
+
+tests/luggage.s: tests/luggage.cpp.s
+.PHONY : tests/luggage.s
+
+# target to generate assembly for a file
+tests/luggage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/luggage.cpp.s
+.PHONY : tests/luggage.cpp.s
 
 tests/main.obj: tests/main.cpp.obj
 .PHONY : tests/main.obj
@@ -472,9 +568,15 @@ help:
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... tests/Cart.obj
+	@echo ... tests/Cart.i
+	@echo ... tests/Cart.s
 	@echo ... tests/Date.obj
 	@echo ... tests/Date.i
 	@echo ... tests/Date.s
+	@echo ... tests/Menu.obj
+	@echo ... tests/Menu.i
+	@echo ... tests/Menu.s
 	@echo ... tests/Passenger.obj
 	@echo ... tests/Passenger.i
 	@echo ... tests/Passenger.s
@@ -487,6 +589,12 @@ help:
 	@echo ... tests/carriage.obj
 	@echo ... tests/carriage.i
 	@echo ... tests/carriage.s
+	@echo ... tests/flight.obj
+	@echo ... tests/flight.i
+	@echo ... tests/flight.s
+	@echo ... tests/luggage.obj
+	@echo ... tests/luggage.i
+	@echo ... tests/luggage.s
 	@echo ... tests/main.obj
 	@echo ... tests/main.i
 	@echo ... tests/main.s

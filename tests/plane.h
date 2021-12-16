@@ -5,16 +5,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
-<<<<<<< HEAD
+
 #include "flight.h"
 #include "planeService.h"
 #include <list>
 #include "Passenger.h"
-=======
 #include <queue>
-#include "Flight.h"
 #include "planeService.h"
->>>>>>> origin/b3
 
 using namespace std;
 
@@ -33,7 +30,7 @@ public:
     void setType(string & type);
     int getCap();
     void setCap(int & cap);
-    void addflight(Flight flight);
+    bool addflight(Flight &flight);
     bool removeflight(int num);
     bool addpassenger(Flight &flight, Passenger &pass);
     void scheduleService(planeService service);

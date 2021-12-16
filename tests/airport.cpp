@@ -7,41 +7,31 @@
 #include <vector>
 using namespace std;
 
-<<<<<<< HEAD
-
 
 /// this is a description.
 /// this is a breve description.
-Airport::Airport(int id) {
-=======
+
 Airport::Airport(string id){
->>>>>>> origin/b3
     this->id = id;
 }
 string Airport::getId() const {
     return id;
 }
 
-void Airport::setId(int id) {
+void Airport::setId(string id) {
     this->id = id;
 }
 
 BST<Carriage> Airport::getCarriages() const {
     return carriages;
 } //TO DO
-<<<<<<< HEAD
+
 /*
 bool Airport::addCarriage( Carriage carriage ) {
-     return carriages.insert(carriage);
-=======
-
-bool Airport::addCarriage(Carriage carriage ) {
     return carriages.insert(carriage);
->>>>>>> origin/b3
-}
-*/
-void Airport::removeCarriage(Carriage carriage) {
-carriages.remove(carriage);
+}*/
+bool Airport::removeCarriage(Carriage carriage) {
+return carriages.remove(carriage);
 }
 vector<Flight *> Airport::getFlights() const {
     return flights;
@@ -49,6 +39,7 @@ vector<Flight *> Airport::getFlights() const {
 vector<Plane *> Airport::getPlanes() const {
     return planes;
 }
+
 /*
 bool Airport::searchFlight(int num) {
     auto it = flights.begin();

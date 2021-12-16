@@ -34,14 +34,13 @@ void Plane::setCap(int & cap){
     this->cap=cap;
 }
 
-void Plane::addflight(Flight flight) {
+bool Plane::addflight(Flight &flight) {
     int count = -1;
-    for(int i = 0; i < flights.size();i++) {
-        if(flights[i].getnum()== flight.getnum()){
-            count ++;
-        }
+    for(auto x:flights){
+        if(x == flight) return false;
     }
     if (count == -1) flights.push_back(flight);
+    return true;
 }
 
 bool Plane::removeflight(int num) {

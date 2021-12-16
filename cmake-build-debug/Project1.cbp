@@ -340,10 +340,22 @@
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/lib/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Cart.cpp">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Cart.h">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Date.cpp">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Date.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Menu.cpp">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Menu.h">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/Passenger.cpp">
@@ -376,7 +388,13 @@
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/departure.h">
 			<Option target="Project1"/>
 		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/flight.cpp">
+			<Option target="Project1"/>
+		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/flight.h">
+			<Option target="Project1"/>
+		</Unit>
+		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/luggage.cpp">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/josea/Feup/AED/Project1/tests/luggage.h">

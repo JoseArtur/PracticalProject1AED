@@ -8,11 +8,9 @@
 #include <string>
 #include <vector>
 #include "passenger.h"
-<<<<<<< HEAD:tests/flight.h
+
 #include "Date.h"
-=======
-#include "date.h"
->>>>>>> origin/b3:tests/Flight.h
+
 using namespace std;
 
 class Flight {
@@ -24,22 +22,24 @@ class Flight {
     vector<Passenger> passengers;
 public:
 
-    Flight(Date date,int num, string origin, string destiny);
+    Flight( Date date,int num, int dur, string origin, string destiny);
     int getnum();
-    int getday();
-    int getmonth();
-    int getyear();
+    void setDate(Date date);
     vector<Passenger> getPassenger() const;
-    string getdate();
+    Date getdate();
     int getdur();
     string getorigin();
     string getdestiny();
-    void addpassenger(Passenger &pass);
-    void removepassenger(Passenger &pass);
-
+    bool addpassenger(Passenger &pass);
+    bool removepassenger(Passenger &pass);
+    void setnum(int num);
+    void setdestiny(string  destiny);
+    void setpassengers(vector<Passenger> & passengers);
+    void setorigin(string  origin);
     Date getDate();
     int getDur();
 
+    bool operator==(Flight &flight);
 
 };
 #endif //PROJETO_FLIGHT_H

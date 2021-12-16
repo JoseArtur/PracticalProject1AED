@@ -39,15 +39,15 @@ class Airport{
     BST<Carriage > carriages = BST<Carriage>(Carriage("f",0,{0,0}));
 public:
     Airport(){};
-    Airport(int id);
-    void setId(int id) ;
+    Airport(string id);
+    void setId(string id) ;
     string getId() const;
     vector<Flight *> getFlights() const;
     vector<Plane *>getPlanes() const;
   //  vector<Airline *> getAirlines() const;
     BST<Carriage> getCarriages() const;
     bool addCarriage( Carriage carriage );
-    void removeCarriage(Carriage carriage);
+    bool removeCarriage(Carriage carriage);
     bool  searchFlight(int num);
     bool searchPlane(string id);
 
