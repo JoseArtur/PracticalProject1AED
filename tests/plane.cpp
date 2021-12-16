@@ -34,7 +34,7 @@ void Plane::setCap(int & cap){
     this->cap=cap;
 }
 
-bool Plane::addflight(Flight &flight) {
+bool Plane::addflight(Flight *flight) {
     int count = -1;
     for(auto x:flights){
         if(x == flight) return false;
@@ -45,7 +45,7 @@ bool Plane::addflight(Flight &flight) {
 
 bool Plane::removeflight(int num) {
     for(int i = 0; i < flights.size();i++){
-        if(flights[i].getnum() == num){
+        if(flights[i]->getNum() == num){
             flights.erase(flights.begin()+i);
             return true;
         }
@@ -56,15 +56,17 @@ bool Plane::removeflight(int num) {
 bool Plane::addpassenger(Flight &flight, Passenger &pass) {
     int count = -1;
     for(int i = 0; i < flights.size();i++) {
-        if(flights[i].getnum() == flight.getnum()){
-            for(int j = 0; j < flights[i].getPassenger().size();j++){
-                if(flights[i].getPassenger()[j].getid() == pass.getid()){
+        if(flights[i]->getNum() == flight.getNum()){
+            for(int j = 0; j < flights[i]->getPassengers().size();j++){
+                vector<Passenger> a= flights[i]->getPassengers();
+                if(a[j].getid() == pass.getid()){
                     count++;
                 }
             }
-            if ( this->cap - flights[i].getPassenger().size() > 0 && count == -1) {
+            if ( this->cap - flights[i]->getPassengers().size() > 0 && count == -1) {
                 pass.setticket(true);
-                flights[i].getPassenger().push_back(pass);
+                vector<Passenger> a= flights[i]->getPassengers();
+                a.push_back(pass);
                 return true;
             }
         }
@@ -85,10 +87,10 @@ void Plane::completeService() {
 }
 
 
-vector<Flight> Plane::getflights(){
+vector<Flight*> Plane::getflights(){
     return flights;
 }
 
-void Plane::setflights(vector<Flight> &flights) {
+void Plane::setflights(vector<Flight*> flights) {
     this->flights = flights;
 }

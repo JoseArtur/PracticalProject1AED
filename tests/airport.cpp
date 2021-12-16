@@ -33,12 +33,7 @@ bool Airport::addCarriage( Carriage carriage ) {
 bool Airport::removeCarriage(Carriage carriage) {
 return carriages.remove(carriage);
 }
-vector<Flight *> Airport::getFlights() const {
-    return flights;
-}
-vector<Plane *> Airport::getPlanes() const {
-    return planes;
-}
+
 
 /*
 bool Airport::searchFlight(int num) {

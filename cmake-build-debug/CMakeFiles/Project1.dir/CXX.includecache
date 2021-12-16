@@ -549,10 +549,6 @@ string
 C:/Users/josea/Feup/AED/Project1/tests/airport.h
 stdlib.h
 -
-flight.h
-C:/Users/josea/Feup/AED/Project1/tests/flight.h
-plane.h
-C:/Users/josea/Feup/AED/Project1/tests/plane.h
 bst.h
 C:/Users/josea/Feup/AED/Project1/tests/bst.h
 carriage.h
@@ -587,16 +583,20 @@ bst.h
 C:/Users/josea/Feup/AED/Project1/tests/bst.h
 
 C:/Users/josea/Feup/AED/Project1/tests/flight.h
+Airport.h
+C:/Users/josea/Feup/AED/Project1/tests/airport.h
 iostream
 -
 string
 -
 vector
 -
-passenger.h
+Passenger.h
 C:/Users/josea/Feup/AED/Project1/tests/Passenger.h
 Date.h
 C:/Users/josea/Feup/AED/Project1/tests/Date.h
+Time.h
+C:/Users/josea/Feup/AED/Project1/tests/Time.h
 
 C:/Users/josea/Feup/AED/Project1/tests/luggage.h
 

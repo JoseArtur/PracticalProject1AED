@@ -23,10 +23,22 @@ TEST(test_1, buildService){
     EXPECT_EQ(2002, s1.getDate().getYear());
     EXPECT_EQ("jose", s1.getEmployee());
 }
-TEST(test_2, removePlane)
+TEST(test_2, addPlane)
 {
-    list<Flight> b;
+    Date t1(30,12,2019);
+    Date t2(31,12,2019);
+    Time time1(22,30);
+    Time time(6,30);
+    Airport a1("SLZ");
+    Airport a2("LIS");
+    Flight f1(141,t1,time1,t2,time,a1,a2);
     Plane a( "22A", "A", 10);
-    EXPECT_EQ(false, a.removeflight(4));
+    a.addflight(&f1);
+    a.addflight(&f1);
 
+    EXPECT_EQ(true, a.addflight(&f1));
+}
+TEST(test_3, addplane){
+    vector<Flight> a;
+    Plane b("22","B",20);
 }

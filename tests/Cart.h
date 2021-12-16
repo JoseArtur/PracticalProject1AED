@@ -7,7 +7,7 @@
 
 #include <stack>
 #include <vector>
-
+#include "luggage.h"
 using namespace std;
 
 class Cart {
@@ -24,7 +24,8 @@ public:
     void setC(const unsigned int c);
     void setN(const unsigned int n);
     void setM(const unsigned int m);
-    void addLuggage(Luggage l);
+
+    bool addLuggage(Luggage l);
 };
 
 #endif //HEAD_CART_H

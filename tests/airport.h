@@ -6,8 +6,6 @@
 #define PROJECT1_AIRPORT_H
 
 #include <stdlib.h>
-#include "flight.h"
-#include "plane.h"
 #include "bst.h"
 #include "carriage.h"
 #include "set"
@@ -16,25 +14,12 @@
 #include "Time.h"
 #include "Date.h"
 using namespace std;
-/*
-class Airline {
-    string name, idAirline;
-    vector<Flight *> flights;
-    vector<Plane *> planes;
-public:
-    string getId() const;
-    void addFlight(Flight* flight);
-    void addPlane(Plane* plane);
-    void removeFlight(Flight* flight);
-    void removePlane(Plane* plane);
-    Flight*  searchFlight(Flight* flight);
 
-};*/
 class Airport{
 
     string id;
-    vector<Flight *> flights;
-    vector<Plane *> planes;
+
+   // vector<Plane *> planes;
     //vector<Airline *> airlines;
     BST<Carriage > carriages = BST<Carriage>(Carriage("f",0,{0,0}));
 public:
@@ -42,8 +27,8 @@ public:
     Airport(string id);
     void setId(string id) ;
     string getId() const;
-    vector<Flight *> getFlights() const;
-    vector<Plane *>getPlanes() const;
+
+    //vector<Plane *>getPlanes() const;
   //  vector<Airline *> getAirlines() const;
     BST<Carriage> getCarriages() const;
     bool addCarriage( Carriage carriage );
@@ -67,9 +52,21 @@ public:
     Exception(string idAirline):idAirline(idAirline){
         cout<<"not found";
     }
-    Exception(Flight* flight):id(flight->getnum()){
-        cout<<"not found";
-    }
+
 
 };
 #endif //PROJECT1_AIRPORT_H
+/*
+class Airline {
+    string name, idAirline;
+    vector<Flight *> flights;
+    vector<Plane *> planes;
+public:
+    string getId() const;
+    void addFlight(Flight* flight);
+    void addPlane(Plane* plane);
+    void removeFlight(Flight* flight);
+    void removePlane(Plane* plane);
+    Flight*  searchFlight(Flight* flight);
+
+};*/

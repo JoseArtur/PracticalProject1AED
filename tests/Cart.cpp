@@ -43,7 +43,7 @@ bool Cart::addLuggage(Luggage l) {
     for (auto c : cart)
         for (auto n : c)
             if (n.size() < m) {
-                n.insert(l);
+                n.push(l);
                 return true;
             }
     return false;

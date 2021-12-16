@@ -1,7 +1,7 @@
 //
 // Created by gdrp7 on 15/12/2021.
 //
-
+/*
 #include "Menu.h"
 
 void Menu::DisplayMenu() {
@@ -48,7 +48,7 @@ void Menu::SearchFlightNumber() {
         if (input == 0) return;
 
         bool flightFound = false;
-        for (auto f : Airport.flight)
+        for (auto f : planes.flight)
             if (f.num == input) {
                 flightFound = true;
                 cout << f.num << f.date << f.origin << f.destiny << f.dur << endl;
@@ -76,3 +76,4 @@ void Menu::SearchFlightOrigin() {
 
 }
 
+*/
