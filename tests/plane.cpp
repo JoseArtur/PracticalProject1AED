@@ -58,7 +58,7 @@ void Plane::removeflight(Flight &flight) {
 
 bool Flight::addpassenger(Flight &flight, passenger &pass) {
     int count = -1;
-    for(int i = 0; i < passengers.size();i++) {
+    for(int i = 0; i < flights.size();i++) {
         if(flights[i].getnum() == flight.getnum()){
             for(int j = 0; j < flights[i].getpassangers().size();j++){
                 if(flights[i].getpassanger()[j].getid() == pass.getid()){
