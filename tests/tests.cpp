@@ -23,7 +23,7 @@ TEST(test_1, buildService){
     EXPECT_EQ(2002, s1.getDate().getYear());
     EXPECT_EQ("jose", s1.getEmployee());
 }
-TEST(test_2, PlaneDelete)
+TEST(test_2, removePlane)
 {
     list<Flight> b;
     Plane a( "22A", "A", 10);
