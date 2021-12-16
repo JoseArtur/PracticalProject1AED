@@ -13,6 +13,7 @@ Time::Time( int hour, int minute) {
 }
 
 int Time::getHour() const {
+
     return this->hour;
 }
 
@@ -28,11 +29,11 @@ Time::Time() {
 }
 
 void Time::setHour(int hour) {
-this->hour = hour;
+    if (hour >= 0 && hour <= 23)this->hour = hour;
 }
 
 void Time::setMinute(int minute) {
-this->minute = minute;
+    if (minute >= 0 && minute <= 59)this->minute = minute;
 }
 
 string Time::getTime() const {

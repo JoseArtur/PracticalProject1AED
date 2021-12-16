@@ -1,0 +1,81 @@
+\hypertarget{airport_8h_source}{}\doxysection{airport.\+h}
+\label{airport_8h_source}\index{C:/Users/josea/Feup/AED/Project1/tests/airport.h@{C:/Users/josea/Feup/AED/Project1/tests/airport.h}}
+\mbox{\hyperlink{airport_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by josea on 04/12/2021.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJECT1\_AIRPORT\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJECT1\_AIRPORT\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flight_8h}{flight.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{plane_8h}{plane.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{bst_8h}{bst.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{carriage_8h}{carriage.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}set"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_time_8h}{Time.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_date_8h}{Date.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{19 \textcolor{comment}{/*}}
+\DoxyCodeLine{20 \textcolor{comment}{class Airline \{}}
+\DoxyCodeLine{21 \textcolor{comment}{    string name, idAirline;}}
+\DoxyCodeLine{22 \textcolor{comment}{    vector<Flight *> flights;}}
+\DoxyCodeLine{23 \textcolor{comment}{    vector<Plane *> planes;}}
+\DoxyCodeLine{24 \textcolor{comment}{public:}}
+\DoxyCodeLine{25 \textcolor{comment}{    string getId() const;}}
+\DoxyCodeLine{26 \textcolor{comment}{    void addFlight(Flight* flight);}}
+\DoxyCodeLine{27 \textcolor{comment}{    void addPlane(Plane* plane);}}
+\DoxyCodeLine{28 \textcolor{comment}{    void removeFlight(Flight* flight);}}
+\DoxyCodeLine{29 \textcolor{comment}{    void removePlane(Plane* plane);}}
+\DoxyCodeLine{30 \textcolor{comment}{    Flight*  searchFlight(Flight* flight);}}
+\DoxyCodeLine{31 \textcolor{comment}{}}
+\DoxyCodeLine{32 \textcolor{comment}{\};*/}}
+\DoxyCodeLine{33 \textcolor{keyword}{class }\mbox{\hyperlink{class_airport}{Airport}}\{}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{string} id;}
+\DoxyCodeLine{36     vector<Flight *> flights;}
+\DoxyCodeLine{37     vector<Plane *> planes;}
+\DoxyCodeLine{38     \textcolor{comment}{//vector<Airline *> airlines;}}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_b_s_t}{BST<Carriage >}} carriages = \mbox{\hyperlink{class_b_s_t}{BST<Carriage>}}(\mbox{\hyperlink{class_carriage}{Carriage}}(\textcolor{stringliteral}{"{}f"{}},0,\{0,0\}));}
+\DoxyCodeLine{40 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_airport_a2fc0f2402c94225b9deaf76176bb887f}{Airport}}()\{\};}
+\DoxyCodeLine{42     \mbox{\hyperlink{class_airport_a7e4804bf32f48289100f5e1b86a2ea46}{Airport}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_airport_a3b8ef3abafb9f29b97acb73eb8014502}{setId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) ;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_airport_aba035eae5f7c66ad07c291e379c2488b}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{45     vector<Flight *> \mbox{\hyperlink{class_airport_a2964e85c4f9745cb630bcaa50b40b193}{getFlights}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46     vector<Plane *>\mbox{\hyperlink{class_airport_a41a497ef19f5b10b558799c55a95daca}{getPlanes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{47   \textcolor{comment}{//  vector<Airline *> getAirlines() const;}}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_b_s_t}{BST<Carriage>}} \mbox{\hyperlink{class_airport_a1dd14a528a6f3cb598aad674389df8a4}{getCarriages}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{49     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_airport_a561d6d3a40e5245c863f0c7c1cdd9457}{addCarriage}}( \mbox{\hyperlink{class_carriage}{Carriage}} carriage );}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_airport_ac3fea99e6302c4369b01e07552c8a193}{removeCarriage}}(\mbox{\hyperlink{class_carriage}{Carriage}} carriage);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool}  \mbox{\hyperlink{class_airport_ad9d36c514004f4b94cb08ccc36a3024c}{searchFlight}}(\textcolor{keywordtype}{int} num);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_airport_a40321872ac6cced746acb7124fc57f1a}{searchPlane}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \};}
+\DoxyCodeLine{57 \textcolor{keyword}{class }\mbox{\hyperlink{class_exception}{Exception}}\{}
+\DoxyCodeLine{58     \textcolor{keywordtype}{int} id, mat;}
+\DoxyCodeLine{59     \textcolor{keywordtype}{string} idAirline;}
+\DoxyCodeLine{60 \textcolor{keyword}{public}:}
+\DoxyCodeLine{61     \mbox{\hyperlink{class_exception_a1b78336bb26edf8e784783cc150c5801}{Exception}}()\{}
+\DoxyCodeLine{62         cout<<\textcolor{stringliteral}{"{}not found"{}};}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64     \mbox{\hyperlink{class_exception_ab67778f8a99cbcf400b69bd27a02c153}{Exception}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}):\mbox{\hyperlink{airport_8cpp_a25413a5d4925fd0e87b471a828477447}{id}}(\mbox{\hyperlink{airport_8cpp_a25413a5d4925fd0e87b471a828477447}{id}})\{}
+\DoxyCodeLine{65         cout<<\textcolor{stringliteral}{"{}not found"{}};}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67     \mbox{\hyperlink{class_exception_ac55a6528b1b50a1d351ac173b8b494b1}{Exception}}(\textcolor{keywordtype}{string} idAirline):idAirline(idAirline)\{}
+\DoxyCodeLine{68         cout<<\textcolor{stringliteral}{"{}not found"{}};}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70     \mbox{\hyperlink{class_exception_a3aa5a13d4531840a49f32f7e2989c4f6}{Exception}}(\mbox{\hyperlink{class_flight}{Flight}}* flight):\mbox{\hyperlink{airport_8cpp_a25413a5d4925fd0e87b471a828477447}{id}}(flight-\/>getnum())\{}
+\DoxyCodeLine{71         cout<<\textcolor{stringliteral}{"{}not found"{}};}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \};}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJECT1\_AIRPORT\_H}}
+
+\end{DoxyCode}

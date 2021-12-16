@@ -7,12 +7,14 @@
 #include <string>
 #include <vector>
 
-Flight::Flight(Date date, int num, string origin, string destiny) {
-    this->date = date;
+
+Flight::Flight(int num, Date date, int dur, string origin, string destiny) {
+
     this-> num = num;
     this-> dur = dur;
     this-> origin = origin;
     this-> destiny = destiny;
+    this-> date = date;
 }
 
 int Flight::getnum(){
@@ -77,5 +79,6 @@ vector<Passenger> getpassangers(){
 void Flight::setpassengers(vector<Passenger> & passengers){
     tis->passengers = passengers;
 }
+
 
 

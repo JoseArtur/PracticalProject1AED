@@ -10,27 +10,27 @@ Plane::Plane(string mat, string type, int cap) {
     this->cap = cap;
 }
 
-string Plane::getmat(){
+string Plane::getMat(){
     return mat;
 }
 
-void Plane::setmat(string & mat){
+void Plane::setMat(string & mat){
     this->mat = mat;
 }
 
-string Plane::gettype(){
+string Plane::getType(){
     return type;
 }
 
-void Plane::settype(string & type){
+void Plane::setType(string & type){
     this->type = type;
 }
 
-int Plane::getcap(){
+int Plane::getCap(){
     return cap;
 }
 
-void Plane::setcap(int & cap){
+void Plane::setCap(int & cap){
     this->cap=cap;
 }
 
@@ -73,6 +73,9 @@ bool Plane::addpassenger(Flight &flight, Passenger &pass) {
     return false;
 }
 
+
+
+
 void Plane::scheduleService(planeService service) {
     this->scheduled.push(service);
 }
@@ -81,6 +84,7 @@ void Plane::completeService() {
     this->completed.push(scheduled.front());
     this->scheduled.pop();
 }
+
 
 vector<Flight> Plane::getflights(){
     return flights;

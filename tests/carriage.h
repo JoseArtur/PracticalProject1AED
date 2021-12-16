@@ -10,7 +10,6 @@
 #include "bst.h"
 using namespace std;
 class Carriage{
-
     string carriageType;
     float distance;
     Time time;

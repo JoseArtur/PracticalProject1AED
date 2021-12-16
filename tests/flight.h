@@ -8,7 +8,11 @@
 #include <string>
 #include <vector>
 #include "passenger.h"
+<<<<<<< HEAD:tests/flight.h
 #include "Date.h"
+=======
+#include "date.h"
+>>>>>>> origin/b3:tests/Flight.h
 using namespace std;
 
 class Flight {
@@ -19,6 +23,7 @@ class Flight {
     string destiny;
     vector<Passenger> passengers;
 public:
+
     Flight(Date date,int num, string origin, string destiny);
     int getnum();
     int getday();
@@ -31,6 +36,10 @@ public:
     string getdestiny();
     void addpassenger(Passenger &pass);
     void removepassenger(Passenger &pass);
+
+    Date getDate();
+    int getDur();
+
 
 };
 #endif //PROJETO_FLIGHT_H

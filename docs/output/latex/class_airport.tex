@@ -1,0 +1,109 @@
+\hypertarget{class_airport}{}\doxysection{Airport Class Reference}
+\label{class_airport}\index{Airport@{Airport}}
+
+
+{\ttfamily \#include $<$airport.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_airport_a2fc0f2402c94225b9deaf76176bb887f}{Airport}} ()
+\item 
+\mbox{\hyperlink{class_airport_a7e4804bf32f48289100f5e1b86a2ea46}{Airport}} (int id)
+\item 
+void \mbox{\hyperlink{class_airport_a3b8ef3abafb9f29b97acb73eb8014502}{set\+Id}} (int id)
+\item 
+string \mbox{\hyperlink{class_airport_aba035eae5f7c66ad07c291e379c2488b}{get\+Id}} () const
+\item 
+vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $\ast$ $>$ \mbox{\hyperlink{class_airport_a2964e85c4f9745cb630bcaa50b40b193}{get\+Flights}} () const
+\item 
+vector$<$ \mbox{\hyperlink{class_plane}{Plane}} $\ast$ $>$ \mbox{\hyperlink{class_airport_a41a497ef19f5b10b558799c55a95daca}{get\+Planes}} () const
+\item 
+\mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_carriage}{Carriage}} $>$ \mbox{\hyperlink{class_airport_a1dd14a528a6f3cb598aad674389df8a4}{get\+Carriages}} () const
+\item 
+bool \mbox{\hyperlink{class_airport_a561d6d3a40e5245c863f0c7c1cdd9457}{add\+Carriage}} (\mbox{\hyperlink{class_carriage}{Carriage}} carriage)
+\item 
+void \mbox{\hyperlink{class_airport_ac3fea99e6302c4369b01e07552c8a193}{remove\+Carriage}} (\mbox{\hyperlink{class_carriage}{Carriage}} carriage)
+\item 
+bool \mbox{\hyperlink{class_airport_ad9d36c514004f4b94cb08ccc36a3024c}{search\+Flight}} (int num)
+\item 
+bool \mbox{\hyperlink{class_airport_a40321872ac6cced746acb7124fc57f1a}{search\+Plane}} (string id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_airport_a2fc0f2402c94225b9deaf76176bb887f}\label{class_airport_a2fc0f2402c94225b9deaf76176bb887f}} 
+\index{Airport@{Airport}!Airport@{Airport}}
+\index{Airport@{Airport}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{Airport()}{Airport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Airport\+::\+Airport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_airport_a7e4804bf32f48289100f5e1b86a2ea46}\label{class_airport_a7e4804bf32f48289100f5e1b86a2ea46}} 
+\index{Airport@{Airport}!Airport@{Airport}}
+\index{Airport@{Airport}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{Airport()}{Airport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Airport\+::\+Airport (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_airport_a561d6d3a40e5245c863f0c7c1cdd9457}\label{class_airport_a561d6d3a40e5245c863f0c7c1cdd9457}} 
+\index{Airport@{Airport}!addCarriage@{addCarriage}}
+\index{addCarriage@{addCarriage}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{addCarriage()}{addCarriage()}}
+{\footnotesize\ttfamily bool Airport\+::add\+Carriage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_carriage}{Carriage}}}]{carriage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_airport_a1dd14a528a6f3cb598aad674389df8a4}\label{class_airport_a1dd14a528a6f3cb598aad674389df8a4}} 
+\index{Airport@{Airport}!getCarriages@{getCarriages}}
+\index{getCarriages@{getCarriages}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getCarriages()}{getCarriages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_carriage}{Carriage}} $>$ Airport\+::get\+Carriages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_airport_a2964e85c4f9745cb630bcaa50b40b193}\label{class_airport_a2964e85c4f9745cb630bcaa50b40b193}} 
+\index{Airport@{Airport}!getFlights@{getFlights}}
+\index{getFlights@{getFlights}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getFlights()}{getFlights()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $\ast$ $>$ Airport\+::get\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_airport_aba035eae5f7c66ad07c291e379c2488b}\label{class_airport_aba035eae5f7c66ad07c291e379c2488b}} 
+\index{Airport@{Airport}!getId@{getId}}
+\index{getId@{getId}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily string Airport\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_airport_a41a497ef19f5b10b558799c55a95daca}\label{class_airport_a41a497ef19f5b10b558799c55a95daca}} 
+\index{Airport@{Airport}!getPlanes@{getPlanes}}
+\index{getPlanes@{getPlanes}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getPlanes()}{getPlanes()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_plane}{Plane}} $\ast$ $>$ Airport\+::get\+Planes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_airport_ac3fea99e6302c4369b01e07552c8a193}\label{class_airport_ac3fea99e6302c4369b01e07552c8a193}} 
+\index{Airport@{Airport}!removeCarriage@{removeCarriage}}
+\index{removeCarriage@{removeCarriage}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{removeCarriage()}{removeCarriage()}}
+{\footnotesize\ttfamily void Airport\+::remove\+Carriage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_carriage}{Carriage}}}]{carriage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_airport_ad9d36c514004f4b94cb08ccc36a3024c}\label{class_airport_ad9d36c514004f4b94cb08ccc36a3024c}} 
+\index{Airport@{Airport}!searchFlight@{searchFlight}}
+\index{searchFlight@{searchFlight}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{searchFlight()}{searchFlight()}}
+{\footnotesize\ttfamily bool Airport\+::search\+Flight (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_airport_a40321872ac6cced746acb7124fc57f1a}\label{class_airport_a40321872ac6cced746acb7124fc57f1a}} 
+\index{Airport@{Airport}!searchPlane@{searchPlane}}
+\index{searchPlane@{searchPlane}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{searchPlane()}{searchPlane()}}
+{\footnotesize\ttfamily bool Airport\+::search\+Plane (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_airport_a3b8ef3abafb9f29b97acb73eb8014502}\label{class_airport_a3b8ef3abafb9f29b97acb73eb8014502}} 
+\index{Airport@{Airport}!setId@{setId}}
+\index{setId@{setId}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Airport\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/josea/\+Feup/\+AED/\+Project1/tests/\mbox{\hyperlink{airport_8h}{airport.\+h}}\item 
+C\+:/\+Users/josea/\+Feup/\+AED/\+Project1/tests/\mbox{\hyperlink{airport_8cpp}{airport.\+cpp}}\end{DoxyCompactItemize}

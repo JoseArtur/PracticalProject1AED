@@ -1,16 +1,22 @@
 
 #ifndef PROJETO_PLANE_H
 #define PROJETO_PLANE_H
+
 #include <iostream>
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 #include "flight.h"
 #include "planeService.h"
 #include <list>
 #include "Passenger.h"
+=======
+#include <queue>
+#include "Flight.h"
+#include "planeService.h"
+>>>>>>> origin/b3
 
 using namespace std;
-
 
 class Plane {
     string mat;
@@ -21,12 +27,12 @@ class Plane {
     queue<planeService> completed;
 public:
     Plane(string mat, string type, int cap);
-    string getmat();
-    void setmat(string & mat);
-    string gettype();
-    void settype(string & type);
-    int getcap();
-    void setcap(int & cap);
+    string getMat();
+    void setMat(string & mat);
+    string getType();
+    void setType(string & type);
+    int getCap();
+    void setCap(int & cap);
     void addflight(Flight flight);
     bool removeflight(int num);
     bool addpassenger(Flight &flight, Passenger &pass);
@@ -36,3 +42,4 @@ public:
     void setflights(vector<Flight> &flights);
 };
 #endif //PROJETO_PLANE_H
+
