@@ -4,21 +4,43 @@
 #include "airport.h"
 #include <iostream>
 #include <string>
+#include <utility>
 #include <vector>
+
 using namespace std;
 
-Airport::Airport(string id){
-    this->id = id;
+//Airline
+
+void Airline::addPlane(Plane *plane) {
+    this->planes.push_back(plane);
+}
+
+void Airline::deletePlane(Plane *plane) {
+    //auto it = find(planes.begin(), planes.end(), plane);
+    //this->planes.erase(it);
+}
+
+Airline::Airline(string name) {
+    this->name = std::move(name);
 
 }
 
-BST<Carriage> Airport::carriages(Carriage carriage) {
-    return BST<Carriage>(Carriage());
+string Airline::getName() const {
+    return this->name;
+}
 
+void Airline::setName(string name) {
+    this->name = name;
+}
+
+//Airport
+
+Airport::Airport(string id) { // ????
+    this->id = id;
 }
 
 string Airport::getId() const {
-    return id;
+    return this->id;
 }
 
 void Airport::setId(string id) {
@@ -26,57 +48,13 @@ void Airport::setId(string id) {
 }
 
 BST<Carriage> Airport::getCarriages() const {
-    return carriages;
-} //TO DO
+    return this->carriages;
+}
 
-bool Airport::addCarriage(Carriage carriage ) {
-    return carriages.insert(carriage);
+void Airport::addCarriage(Carriage carriage) {
+    this->carriages.insert(carriage); // ???
 }
 
 void Airport::removeCarriage(Carriage carriage) {
-carriages.remove(carriage);
-}
-
-Flight *Airport::searchFlight(Flight *flight) {
-    flights.
-    return nullptr;
-}
-
-Airline *Airport::searchAirline(Airline *airline) {
-    return nullptr;
-}
-
-void Airport::addAirline(Airline *airline) {
-    airlines.push_back(airline);
-
-}
-
-void Airport::removeAirline(Airline* airline) {
-
-    airlines.erase(airline.);
-}
-
-
-BST<Carriage> Airline::carriages(Carriage) {
-    return BST<Carriage>(Carriage());
-}
-
-void Airline::addFlight(Flight *flight) {
-
-}
-
-void Airline::addPlane(Plane *plane) {
-
-}
-
-void Airline::deleteFlight(Flight *flight) {
-
-}
-
-void Airline::deletePlane(Plane *plane) {
-
-}
-
-Flight *Airline::searchFlight(Flight *flight) {
-    return nullptr;
+    this->carriages.remove(carriage);
 }
