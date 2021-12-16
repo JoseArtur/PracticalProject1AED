@@ -113,13 +113,7 @@
 		<Unit filename="C:/Users/gdrp7/Documents/JetBrains/CLionProjects/PracticalProject1AED/tests/carriage.h">
 			<Option target="Project1"/>
 		</Unit>
-		<Unit filename="C:/Users/gdrp7/Documents/JetBrains/CLionProjects/PracticalProject1AED/tests/departure.h">
-			<Option target="Project1"/>
-		</Unit>
 		<Unit filename="C:/Users/gdrp7/Documents/JetBrains/CLionProjects/PracticalProject1AED/tests/luggage.h">
-			<Option target="Project1"/>
-		</Unit>
-		<Unit filename="C:/Users/gdrp7/Documents/JetBrains/CLionProjects/PracticalProject1AED/tests/passanger.h">
 			<Option target="Project1"/>
 		</Unit>
 		<Unit filename="C:/Users/gdrp7/Documents/JetBrains/CLionProjects/PracticalProject1AED/tests/plane.h">
