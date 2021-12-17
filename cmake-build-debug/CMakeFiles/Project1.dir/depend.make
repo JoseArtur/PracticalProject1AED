@@ -145,6 +145,7 @@ CMakeFiles/Project1.dir/tests/tests.cpp.obj: \
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h \
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h \
  ../tests/Date.h \
+ ../tests/Menu.h \
  ../tests/Passenger.h \
  ../tests/Time.h \
  ../tests/airport.h \

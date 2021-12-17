@@ -4,6 +4,7 @@
 #include "airport.h"
 #include <iostream>
 #include <string>
+#include <utility>
 #include <vector>
 using namespace std;
 
@@ -12,24 +13,24 @@ using namespace std;
 /// this is a breve description.
 
 Airport::Airport(string id){
-    this->id = id;
+    this->id = std::move(id);
 }
 string Airport::getId() const {
     return id;
 }
 
 void Airport::setId(string id) {
-    this->id = id;
+    this->id = std::move(id);
 }
 
 BST<Carriage> Airport::getCarriages() const {
     return carriages;
 } //TO DO
 
-/*
+
 bool Airport::addCarriage( Carriage carriage ) {
     return carriages.insert(carriage);
-}*/
+}
 bool Airport::removeCarriage(Carriage carriage) {
 return carriages.remove(carriage);
 }

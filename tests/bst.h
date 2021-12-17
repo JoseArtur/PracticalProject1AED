@@ -1,11 +1,10 @@
-#ifndef PROJECT1_BST_H
-#define PROJECT1_BST_H
+#ifndef PROJECT1_BST_H_
+#define PROJECT1_BST_H_
 
 #include <iostream>
 #include <stack>
 #include <queue>
 using namespace std;
-
 template <class Comparable> class BSTItrIn;
 template <class Comparable> class BSTItrPre;
 template <class Comparable> class BSTItrPost;
@@ -61,7 +60,6 @@ public:
     const BST& operator= (const BST& rhs);
     iteratorBST<Comparable> begin() const;
     iteratorBST<Comparable> end() const;
-    int size(const Comparable& el) const;   //new
 };
 
 // Note that all "matching" is based on the < method.
@@ -164,7 +162,7 @@ bool BST<Comparable>::insert(const Comparable& x, BinaryNode<Comparable>* & t) c
         t = new BinaryNode<Comparable>(x, NULL, NULL);
         return true;
     }
-    else if(static_cast<const error_code>(static_cast<const error_code>(x)) < t->element )
+    else if( x < t->element )
         return insert( x, t->left );
     else if( t->element < x )
         return insert( x, t->right );
@@ -275,7 +273,7 @@ template <class Comparable>
 void BSTItrPost<Comparable>::advance () {
     itrStack.pop();
     visitStack.pop();
-    if (!itrStack.empty() && !visitStack.top()) {
+    if ((!itrStack.empty()) && (visitStack.top() == false)) {
         visitStack.pop();
         visitStack.push(true);
         slideDown(itrStack.top()->right);
@@ -457,5 +455,6 @@ template <class Comparable>
 bool iteratorBST<Comparable>::operator!= (const iteratorBST<Comparable>& it2) const {
     return itrStack != it2.itrStack;
 }
+
 
 #endif

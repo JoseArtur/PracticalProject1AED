@@ -11,12 +11,22 @@
 using namespace std;
 
 class Menu {
+    vector<Airport> airports;
 public:
     void DisplayMenu();
     void SearchFlight();
     void SearchFlightNumber();
     void SearchFlightOrigin();
     void BuyTicket();
+    void AirportManagement();
+    void PlaneManagement();
+    void FlightManagement();
+    void PassengersManagement();
+    void CartManagement();
+    unsigned int showAirportFunctions();
+    void viewAirports();
+    void addAirport();
+    void updateAirport();
 };
 
 #endif //HEAD_MENU_H

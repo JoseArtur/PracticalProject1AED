@@ -6,7 +6,6 @@
 #define PROJECT1_AIRPORT_H
 
 #include <stdlib.h>
-#include "bst.h"
 #include "carriage.h"
 #include "set"
 #include <string>
