@@ -14,7 +14,14 @@ class Carriage{
     float distance;
     Time time;
 public:
+    /**
+     * Constructor with 3 parameters : Carriage Type, distance and time.
+     * @param cT
+     * @param d
+     * @param h
+     */
     Carriage(string cT, float d, Time h);
+
     string getCarriageType() const;
     float getDistance() const;
     Time getTime() const;

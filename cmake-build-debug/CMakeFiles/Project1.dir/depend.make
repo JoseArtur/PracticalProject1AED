@@ -12,10 +12,15 @@ CMakeFiles/Project1.dir/tests/Menu.cpp.obj: \
  ../tests/Date.h \
  ../tests/Menu.cpp \
  ../tests/Menu.h \
+ ../tests/Passenger.h \
  ../tests/Time.h \
  ../tests/airport.h \
  ../tests/bst.h \
- ../tests/carriage.h
+ ../tests/carriage.h \
+ ../tests/flight.h \
+ ../tests/luggage.h \
+ ../tests/plane.h \
+ ../tests/planeService.h
 CMakeFiles/Project1.dir/tests/Passenger.cpp.obj: \
  ../tests/Passenger.cpp \
  ../tests/Passenger.h
@@ -44,7 +49,8 @@ CMakeFiles/Project1.dir/tests/flight.cpp.obj: \
  ../tests/flight.cpp \
  ../tests/flight.h
 CMakeFiles/Project1.dir/tests/luggage.cpp.obj: \
- ../tests/luggage.cpp
+ ../tests/luggage.cpp \
+ ../tests/luggage.h
 CMakeFiles/Project1.dir/tests/main.cpp.obj: \
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h \
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h \

@@ -1,2 +1,22 @@
 BSB-ALE - D:22/12/2019 - 16:40 - A:23/12/2019 - 06:30 - F:141
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 23 : 0 | A:0 - 4421877 - 0 11103392 : 0 | F:131  has been added!
 addedAirport: OPO
+addedAirport: LIS
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 36 : 0 | A:0 - 50397186 - 0 128 : 32763 | F:121  has been added!
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 11694640 : 0 | A:22 - 12 - 2020 11692608 : 0 | F:121  has been added!
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 11694640 : 0 | A:23 - 12 - 2020 11692608 : 0 | F:141  has been added!
+addedAirport: OPO
+addedAirport: OPO
+addedAirport: opo
+addedAirport: opo
+addedAirport: opo
+addedAirport: OPO
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 10 : 0 | A:0 - 0 - 0 30 : 0 | F:141  has been added!
+addedAirport: OPO
+addedAirport: LIS
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 16 : 30 | A:23 - 12 - 2020 6 : 30 | F:141  has been added!
+addedAirport: OPO
+addedAirport: LIS
+FlightInfo: OPO-LIS | D:22 - 12 - 2020 14 : 30 | A:23 - 12 - 2020 16 : 30 | F:10  has been added!
+FlightInfo: OPO-LIS | D:20 - 12 - 2020 10 : 30 | A:20 - 12 - 2020 11 : 30 | F:120  has been added!
+FlightInfo: opo-lis | D:22 - 12 - 2020 16 : 30 | A:22 - 12 - 2020 19 : 30 | F:12  has been added!

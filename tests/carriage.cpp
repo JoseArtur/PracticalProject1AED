@@ -41,5 +41,4 @@ bool Carriage::operator<(const Carriage &a)  const {
         else return distance < a.getDistance();
     }
     else return time < a.getTime();
-
 }

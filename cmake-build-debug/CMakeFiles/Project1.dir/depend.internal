@@ -12,10 +12,15 @@ CMakeFiles/Project1.dir/tests/Menu.cpp.obj
  C:/Users/josea/Feup/AED/Project1/tests/Date.h
  C:/Users/josea/Feup/AED/Project1/tests/Menu.cpp
  C:/Users/josea/Feup/AED/Project1/tests/Menu.h
+ C:/Users/josea/Feup/AED/Project1/tests/Passenger.h
  C:/Users/josea/Feup/AED/Project1/tests/Time.h
  C:/Users/josea/Feup/AED/Project1/tests/airport.h
  C:/Users/josea/Feup/AED/Project1/tests/bst.h
  C:/Users/josea/Feup/AED/Project1/tests/carriage.h
+ C:/Users/josea/Feup/AED/Project1/tests/flight.h
+ C:/Users/josea/Feup/AED/Project1/tests/luggage.h
+ C:/Users/josea/Feup/AED/Project1/tests/plane.h
+ C:/Users/josea/Feup/AED/Project1/tests/planeService.h
 CMakeFiles/Project1.dir/tests/Passenger.cpp.obj
  C:/Users/josea/Feup/AED/Project1/tests/Passenger.cpp
  C:/Users/josea/Feup/AED/Project1/tests/Passenger.h
@@ -45,6 +50,7 @@ CMakeFiles/Project1.dir/tests/flight.cpp.obj
  C:/Users/josea/Feup/AED/Project1/tests/flight.h
 CMakeFiles/Project1.dir/tests/luggage.cpp.obj
  C:/Users/josea/Feup/AED/Project1/tests/luggage.cpp
+ C:/Users/josea/Feup/AED/Project1/tests/luggage.h
 CMakeFiles/Project1.dir/tests/main.cpp.obj
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h

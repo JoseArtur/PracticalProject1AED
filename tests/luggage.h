@@ -5,7 +5,13 @@
 #ifndef PROJECT1_LUGGAGE_H
 #define PROJECT1_LUGGAGE_H
 
-#endif //PROJECT1_LUGGAGE_H
-class Luggage{
-
+class Luggage {
+    unsigned int weight;
+public:
+    Luggage(unsigned int w);
+    unsigned int getWeight() const;
+    void setWeight(unsigned int w);
 };
+
+
+#endif //PROJECT1_LUGGAGE_H

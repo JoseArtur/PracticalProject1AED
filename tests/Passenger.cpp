@@ -8,49 +8,51 @@
 #include <string>
 #include <vector>
 
-Passenger::Passenger(int id, string name, bool ticket, bool bagage, bool group){
+Passenger::Passenger(int id, string name, bool ticket, bool hasLuggage, bool group){
     this->id = id;
     this->name = name;
     this->ticket = ticket;
-    this->bagage = bagage;
+    this->hasLuggage = hasLuggage;
     this->group = group;
 }
 
-int Passenger::getid(){
+int Passenger::getId() const {
     return id;
 }
 
-void Passenger::setid(int id){
-    this->id = id;
+void Passenger::setId(int id) {
+    Passenger::id = id;
 }
 
-string Passenger::getname(){
+const string &Passenger::getName() const {
     return name;
 }
 
-void Passenger::setname(string name){
-    this->name = name;
+void Passenger::setName(const string &name) {
+    Passenger::name = name;
 }
-bool Passenger::getticket(){
+
+bool Passenger::isTicket() const {
     return ticket;
 }
 
-void Passenger::setticket(bool ticket){
-    this->ticket = ticket;
+void Passenger::setTicket(bool ticket) {
+    Passenger::ticket = ticket;
 }
 
-bool Passenger::getbagage(){
-    return bagage;
+bool Passenger::isLuggage() const {
+    return hasLuggage;
 }
 
-void Passenger::setbagage(bool bagage){
-    this->bagage = bagage;
+void Passenger::setLuggage(bool bagage) {
+    Passenger::hasLuggage = bagage;
 }
 
-bool Passenger::getgroup(){
+bool Passenger::isGroup() const {
     return group;
 }
-void Passenger::setgroup(bool group){
-    this->group = group;
+
+void Passenger::setGroup(bool group) {
+    Passenger::group = group;
 }
 

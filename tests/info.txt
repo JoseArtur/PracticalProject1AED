@@ -1,0 +1,2 @@
+addClient 100000 JOSE 010
+addClient 122 jose 010

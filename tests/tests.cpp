@@ -81,3 +81,47 @@ TEST(test_6, menu){
     Menu menu;
     menu.DisplayMenu();
 }
+TEST(test_7,duration){
+    Date t1(31,12,2019);
+    Date t2(01,01,2020);
+    Time time1(22,29);
+    Time time(6,30);
+    Airport a1("SLZ");
+    Airport a2("LIS");
+    Flight f1(141,t1,time1,t2,time,a1,a2);
+    Time d1(f1.getDur());
+
+    Flight f2(142,t1,time1,t2,time,a1,a2);
+    Plane a( "22A", "A", 10);
+    a.addflight(&f1);
+    a.addflight(&f1);
+    a.removeflight(141);
+    EXPECT_EQ(true, a.addflight(&f1));
+}
+TEST(test_8,a){
+    vector<Airport*> airports;
+    string id = "GRU";
+    for(auto x:airports){
+        if((*x).getId() == id){
+            cout<<"Already exist a airport with this name."<<endl;
+            return;
+        }
+    }
+    try{
+
+        // Airport* newAirport = new Airport(id);
+        Airport a1(id);
+        airports.push_back(&a1);
+    }
+    catch (...) {  }
+
+    if(airports.empty()){
+        cout<<"There is no airports in the system."<<endl;
+    }
+    else
+        cout<<"this are the airports."<<endl;
+    for(auto x:airports){
+        cout<<"- "<<((*x).getId())<<" -"<<endl;
+    }
+
+}

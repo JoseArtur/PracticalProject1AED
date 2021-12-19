@@ -8,20 +8,31 @@ class Passenger {
     int id;
     string name;
     bool ticket;
-    bool bagage;
+    bool hasLuggage;
     bool group;
 
 public:
-    Passenger(int id, string name, bool ticket, bool bagage, bool group);
-    int getid();
-    void setid(int id);
-    string getname();
-    void setname(string  name);
-    bool getticket();
-    void setticket(bool  ticket);
-    bool getbagage();
-    void setbagage(bool bagage);
-    bool getgroup();
-    void setgroup(bool  group);
+    Passenger(int id, string name, bool ticket, bool hasLuggage, bool group);
+
+    int getId() const;
+
+    void setId(int id);
+
+    const string &getName() const;
+
+    void setName(const string &name);
+
+    bool isTicket() const;
+
+    void setTicket(bool ticket);
+
+    bool isLuggage() const;
+
+    void setLuggage(bool bagage);
+
+    bool isGroup() const;
+
+    void setGroup(bool group);
+
 };
 #endif //PROJECT1_PASSANGER_H

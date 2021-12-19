@@ -59,12 +59,12 @@ bool Plane::addpassenger(Flight &flight, Passenger &pass) {
         if(flights[i]->getNum() == flight.getNum()){
             for(int j = 0; j < flights[i]->getPassengers().size();j++){
                 vector<Passenger> a= flights[i]->getPassengers();
-                if(a[j].getid() == pass.getid()){
+                if(a[j].getId() == pass.getId()){
                     count++;
                 }
             }
             if ( this->cap - flights[i]->getPassengers().size() > 0 && count == -1) {
-                pass.setticket(true);
+                pass.setTicket(true);
                 vector<Passenger> a= flights[i]->getPassengers();
                 a.push_back(pass);
                 return true;
@@ -73,6 +73,7 @@ bool Plane::addpassenger(Flight &flight, Passenger &pass) {
     }
     return false;
 }
+
 
 
 

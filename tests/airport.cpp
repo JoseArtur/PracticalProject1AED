@@ -19,8 +19,8 @@ string Airport::getId() const {
     return id;
 }
 
-void Airport::setId(string id) {
-    this->id = std::move(id);
+void Airport::setId(const string& id) {
+    this->id = (id);
 }
 
 BST<Carriage> Airport::getCarriages() const {
@@ -35,6 +35,13 @@ bool Airport::removeCarriage(Carriage carriage) {
 return carriages.remove(carriage);
 }
 
+void Airport::SortCarriage() {
+sort(carriages.begin(),carriages.end());
+}
+BST<Carriage> Airport::getCarriagesByType(string type){
+    BST<Carriage > carriages2 = BST<Carriage>(Carriage("f",0,{0,0}));
+   // copy_if(carriages.begin(),carriages.end(), back_inserter(carriages2),[&type](Carriage carriage ) { return carriage.getCarriageType() == type ; })
+}
 
 /*
 bool Airport::searchFlight(int num) {

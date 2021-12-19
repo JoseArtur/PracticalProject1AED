@@ -85,7 +85,7 @@ void Flight::setPassengers(const vector<Passenger> &passengers) {
 
 bool Flight::addpassenger(Passenger &pass) {
     for(auto x:passengers){
-        if(x.getid() == pass.getid()){
+        if(x.getId() == pass.getId()){
             return false;
         }}
 
@@ -95,7 +95,7 @@ bool Flight::addpassenger(Passenger &pass) {
 
 bool Flight::removepassenger(Passenger &pass) {
     for(int i = 0; i < passengers.size();i++){
-        if(passengers[i].getid() == pass.getid()){
+        if(passengers[i].getId() == pass.getId()){
 
             passengers.erase(passengers.begin()+i);
             return true;

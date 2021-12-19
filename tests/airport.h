@@ -11,15 +11,13 @@
 #include <string>
 #include <list>
 #include "Time.h"
+#include <algorithm>
 #include "Date.h"
 using namespace std;
 
 class Airport{
 
     string id;
-
-   // vector<Plane *> planes;
-    //vector<Airline *> airlines;
     BST<Carriage > carriages = BST<Carriage>(Carriage("f",0,{0,0}));
 public:
     /**
@@ -31,18 +29,17 @@ public:
      * @param id
      */
     Airport(string id);
-    void setId(string id) ;
+    void setId(const string& id) ;
     string getId() const;
-
-    //vector<Plane *>getPlanes() const;
-  //  vector<Airline *> getAirlines() const;
+    /**
+     *
+     * @return A BST with the Airport's Carriages.
+     */
     BST<Carriage> getCarriages() const;
     bool addCarriage( Carriage carriage );
     bool removeCarriage(Carriage carriage);
-    bool  searchFlight(int num);
-    bool searchPlane(string id);
-
-
+    void SortCarriage();
+    BST<Carriage> getCarriagesByType(string type);
 
 };
 class Exception{
