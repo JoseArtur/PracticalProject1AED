@@ -36,12 +36,14 @@ return carriages.remove(carriage);
 }
 
 void Airport::SortCarriage() {
-sort(carriages.begin(),carriages.end());
+//sort(carriages.begin(),carriages.end());
 }
 BST<Carriage> Airport::getCarriagesByType(string type){
     BST<Carriage > carriages2 = BST<Carriage>(Carriage("f",0,{0,0}));
+    return carriages2;
    // copy_if(carriages.begin(),carriages.end(), back_inserter(carriages2),[&type](Carriage carriage ) { return carriage.getCarriageType() == type ; })
 }
+
 
 /*
 bool Airport::searchFlight(int num) {

@@ -5,22 +5,27 @@
 #include "Menu.h"
 #include <fstream>
 void Menu::Control(){
-    for(auto plane:planes) {
+    for(auto &plane:planes) {
         //file<<plane
         fstream file;
-        file.open("planeInfo.txt", fstream::app);
+        file.open("planeInfo.txt" );
         file << "PlaneInfo: " << plane.getMat()<<" "<<plane.getType()<< " "<<plane.getCap() << endl;
         for(auto &flight:plane.getflights()){
             //agora to em flight
-        fstream file;
-        file.open("flightInfo.txt", fstream::app);
-        file << "FlightInfo: " << flight->getOrigin().getId() << flight->getDestiny().getId() << " | D:" << flight->getDateDeparture().getDate() << " "
+        fstream file2;
+        file2.open("flightInfo.txt");
+        file2 << "FlightInfo: " << flight->getOrigin().getId() << flight->getDestiny().getId() << " | D:" << flight->getDateDeparture().getDate() << " "
              << flight->getTimeDeparture().getTime()
              << " | A:" << flight->getDateArrival().getDate() << " " << flight->getTimeArrival().getTime() << " | F:"
              << flight->getNum() <<"P: "<<plane.getMat() <<"  has been added!" << endl;
-    }}
+    }
+    }
+    cout<<"test";
+    int aa;
+    cin>>aa;
     exit(0);
 }
+
 void Menu::DisplayMenu() {
     unsigned int input;
     do {
@@ -219,7 +224,7 @@ unsigned int Menu::showSelectedAirportFunctions(Airport *a1){
     cout << " |_____________________________________|" << endl;
     cout << " |---- -- Select a option :------------ |" << endl;
     cout << " |1 - View carriages -------------------|" << endl;
-    cout << " |2 - add carriage-------------------|" << endl;
+    cout << " |2 - add carriage----------------------|" << endl;
     cout << " |3 - select carriage-------------------|" << endl;
     cout << " |4 - remove carriage-------------------|" << endl;
     cout << " |0 - Back-----------------------------|" << endl << endl;
@@ -270,7 +275,6 @@ unsigned int Menu::showPlaneFunctions(){
     cout << " |3 - update plane-------------------|" << endl;
     cout << " |4 - remove a plane-------------------|" << endl;
     cout << " |5 - select a  plane-------------------|" << endl;
-
     cout << " |0 - Back-----------------------------|" << endl << endl;
     cout << " |Option: ";
     cout << "Choose an option: " ;
@@ -473,7 +477,7 @@ void Menu::SearchFlightNumber() {
         if (!flightFound) cout << "\n\nFlight not found!\n\n";
 
     }
-    catch (...) {  }}
+    catch (...) {}}
 
 unsigned int Menu::showSelectedFlightFunctions(Flight *f1) {
 
@@ -482,18 +486,17 @@ unsigned int Menu::showSelectedFlightFunctions(Flight *f1) {
     cout << " |---"<<f1->getNum()<<" Flight Function --------| " << endl;
     cout << " |_____________________________________|" << endl;
     cout << " |---- -- Select a option :------------ |" << endl;
-    cout << " |1 - View flights -------------------|" << endl;
-    cout << " |2 - add flight-------------------|" << endl;
-    cout << " |3 - select flight-------------------|" << endl;
-    cout << " |4 - remove flight-------------------|" << endl;
+    cout << " |1 - View Passengers -------------------|" << endl;
+    cout << " |2 - Buy Ticket-------------------|" << endl;
+    cout << " |3 - select passenger-------------------|" << endl;
+    cout << " |4 - remove passenger-------------------|" << endl;
+    cout << " |5 - Update flight-------------------|" << endl;
     cout << " |0 - Back-----------------------------|" << endl << endl;
     cout << " |Option: ";
     cout << "Choose an option: " ;
     cin>> input ;
     return input;
 }
-
-
 void Menu::selectPlane() {
     viewPlanes();
     string license;
@@ -531,10 +534,11 @@ unsigned int Menu::showSelectedPlaneFunctions(Plane *p1) {
     cout << " |---"<<p1->getMat()<<" Flight Function --------| " << endl;
     cout << " |_____________________________________|" << endl;
     cout << " |---- -- Select a option :------------ |" << endl;
-    cout << " |1 - View Passengers -------------------|" << endl;
-    cout << " |2 - Buy ticket-------------------|" << endl;
-    cout << " |3 - Select Passenger-------------------|" << endl;
-    cout << " |4 - update flight-------------------|" << endl;
+    cout << " |1 - View Flights -------------------|" << endl;
+    cout << " |2 - Add Flight-------------------|" << endl;
+    cout << " |3 - Select Flight-------------------|" << endl;
+    cout << " |4 - Remove Flight-------------------|" << endl;
+    cout << " |5 - Update Plane-------------------|" << endl;
     cout << " |0 - Back-----------------------------|" << endl << endl;
     cout << " |Option: ";
     cout << "Choose an option: " ;
@@ -621,7 +625,11 @@ void Menu::addFlight(Plane *p1) {
     catch (...) {  }
 }
 void Menu::removeFlight(Plane *p1) {
-
+    viewFlights(p1);
+    int num;
+    cout<<"Which flight do you want to remove? "<<endl;
+    cin>>num;
+    p1->removeflight(num);
 }
 
 
@@ -639,7 +647,17 @@ void Menu::selectFlight(Plane *p1) {
 }
 
 void Menu::removePlane() {
-
+    string mat;
+    cout<<"Insert an plance by his license: "<<endl;
+    for(auto it = planes.begin();it!=planes.end();){
+        if((*it).getMat() == mat){
+            it = planes.erase(it);
+            cout<<"The selected plane has been removed"<<endl;
+            return;
+        }
+        else it++;
+    }
+    cout<< "No plane has been removed";
 }
 
 void Menu::FlightMenu(Flight *f1) {
@@ -698,7 +716,7 @@ void Menu::DisplayUserMenu() {
         switch (input) {
             case 0: break;
           //  case 1: selectFlight(); break;
-            case 2: selectPassenger(); break;
+          //  case 2: selectPassenger(); break;
             default: cout << "\n\nInvalid input!\n\n";
         }
     } while (input !=0);
@@ -753,15 +771,15 @@ void Menu::BuyTicket(Flight *f1){//    Passenger(int id, string name, bool ticke
     int Fnum;
     cout<<"Welcome to the buy system ?:";
     int id;
-                string name,resp1,resp2;
-                bool ticket,bagage,group;
+    string name,resp1,resp2;
+    bool ticket,bagage,group;
                 cin.clear();
                 cin.ignore(1000, '\n');
                 cout << "Identity: "<<endl;
                 cin >> id;
                 cout << "Name: "<<endl;
-                cin>>name;
-                cout<<"Are you in a group ?: "<<endl;
+                getline(cin,name);
+                cout<<"Are you in a group (Y/N) ?: "<<endl;
                 cin>>resp1;
                 if(resp1 =="N")
                 {
@@ -775,10 +793,10 @@ void Menu::BuyTicket(Flight *f1){//    Passenger(int id, string name, bool ticke
                         fstream file;
                         file.open("info.txt", fstream::app);
                         size_t pos;
-                        while ((pos = name.find(" ")) != std::string::npos) {
+                        while ((pos = name.find(" ")) != string::npos) {
                             name.replace(pos, 1, "_");
                         }
-                        file << "addClient " << id << " " << name << " " << ticket <<bagage<<group<< endl;
+                        file << id << " " << name << " " << ticket <<bagage<<group<< endl;
                         file.close();
                         return;
                     }
@@ -789,18 +807,33 @@ void Menu::BuyTicket(Flight *f1){//    Passenger(int id, string name, bool ticke
 
 
 
-void Menu::selectPassenger() {
-
+void Menu::selectPassenger(Flight *f1) {
+    viewPassengers(f1);
+    int id;
+    cout<<"Insert an passenger by his id."<<endl;
+    cin>>id;
+    for(auto &x:f1->getPassengers()){
+        if(x.getId() == id){
+            //PassengerMenu(x);
+        }
+    }
 }
 
 void Menu::viewPassengers(Flight *f1) {
-
+    if(f1->getPassengers().empty()){
+        cout<<"There is no passengers in the system."<<endl;
+    }
+    else
+        cout<<"this are the passengers:"<<endl;
+    for(auto x:f1->getPassengers()){
+        //      Passenger(int id, string name, bool ticket, bool hasLuggage, bool group);   cout<<"Number: "<<(x->getNum())<<" -  Departure:"<<x->getOrigin().getId()<<" "<<x->getDateDeparture().getDate()
+        cout<<"ID: "<<(x.getId())<<" -  Name:"<<x.getName()<<"  Ticket:"<<x.isTicket()<<" Luggage:"<<x.isLuggage()<<"  Group:"<<x.isGroup()<<"  F:"<<f1->getNum();
+    }
+}
+void Menu::updateFlight(Flight *f1)
+{// Flight( int num, Date dateDeparture,Time timeDeparture, Date dateArrival,Time timeArrival, Airport origin, Airport destiny);
+    string op;
+   cout<<" What you like to update?";
+   //if(op ="")
 }
 
-void Menu::selectPassenger(Flight *f1) {
-
-}
-
-void Menu::updateFlight(Flight *f1) {
-
-}
