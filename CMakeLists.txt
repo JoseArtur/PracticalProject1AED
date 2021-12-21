@@ -7,7 +7,7 @@ include_directories(lib/googletest-master/googletest/include)
 include_directories(lib/googletest-master/googlemock/include)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/tests")
 
-add_executable(Project1  tests/Date.h tests/Date.cpp tests/Time.h tests/Time.cpp tests/bst.h tests/carriage.h tests/carriage.cpp tests/airport.h tests/airport.cpp tests/Cart.cpp tests/Cart.h tests/Menu.cpp tests/Menu.h   tests/luggage.h tests/flight.h tests/flight.cpp  tests/planeService.h tests/departure.h tests/planeService.cpp  tests/main.cpp  tests/tests.cpp tests/Passenger.h  tests/plane.h tests/plane.cpp tests/Passenger.cpp tests/luggage.cpp)
+add_executable(Project1  main.cpp tests/Date.h tests/Date.cpp tests/Time.h tests/Time.cpp tests/bst.h tests/carriage.h tests/carriage.cpp tests/airport.h tests/airport.cpp tests/Cart.cpp tests/Cart.h tests/Menu.cpp tests/Menu.h   tests/luggage.h tests/flight.h tests/flight.cpp  tests/planeService.h tests/planeService.cpp tests/tests.cpp tests/Passenger.h  tests/plane.h tests/plane.cpp tests/Passenger.cpp tests/luggage.cpp)
 target_link_libraries(Project1 gtest gtest_main)
 
 # Doxygen Build

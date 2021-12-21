@@ -1,2 +1,2 @@
-PlaneInfo: 141 b-777 300
-PlaneInfo: b-777 141 300
+PlaneInfo: 141 B-777 300
+PlaneInfo: 151 A-380 450

@@ -16,8 +16,8 @@ using namespace std;
 
 class Menu {
     vector<Airport> airports;
-    vector<Plane> planes;
-    vector<Flight> flights;
+    vector<Plane > planes;
+   // vector<Flight> flights;
     vector<Passenger> passengers;
     vector<vector<stack<Luggage>>> cart;
 public:

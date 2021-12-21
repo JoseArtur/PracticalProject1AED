@@ -49,6 +49,8 @@ string
 C:/Users/josea/Feup/AED/Project1/tests/airport.h
 stdlib.h
 -
+bst.h
+C:/Users/josea/Feup/AED/Project1/tests/bst.h
 carriage.h
 C:/Users/josea/Feup/AED/Project1/tests/carriage.h
 set
@@ -59,8 +61,6 @@ list
 -
 Time.h
 C:/Users/josea/Feup/AED/Project1/tests/Time.h
-algorithm
--
 Date.h
 C:/Users/josea/Feup/AED/Project1/tests/Date.h
 

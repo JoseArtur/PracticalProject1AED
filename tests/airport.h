@@ -6,42 +6,62 @@
 #define PROJECT1_AIRPORT_H
 
 #include <stdlib.h>
+#include "bst.h"
 #include "carriage.h"
 #include "set"
 #include <string>
 #include <list>
 #include "Time.h"
-#include <algorithm>
 #include "Date.h"
+
 using namespace std;
 
 class Airport{
-
     string id;
     BST<Carriage > carriages = BST<Carriage>(Carriage("f",0,{0,0}));
 public:
     /**
-     * empty constructor.
+     * Constructors
      */
-    Airport(){};
+    Airport() = default;;
+    Airport(string id);
+
     /**
-     * construct with id.
+     * Getters
      * @param id
      */
-    Airport(string id);
-    void setId(const string& id) ;
     string getId() const;
-    /**
-     *
-     * @return A BST with the Airport's Carriages.
-     */
     BST<Carriage> getCarriages() const;
-    bool addCarriage( Carriage carriage );
-    bool removeCarriage(Carriage carriage);
+
+    /**
+     * Setters
+     * @param id
+     */
+    void setId(string id) ;
+
+    /**
+     * Adds a carriage
+     * @param carriage
+     * @return
+     */
+    bool addCarriage( Carriage carriage );  // doesn't work
     void SortCarriage();
     BST<Carriage> getCarriagesByType(string type);
+    /**
+     * Removes a carriage
+     * @param carriage
+     * @return
+     */
+    bool removeCarriage(Carriage carriage);
 
+//  UNUSED
+//    vector<Airline *> getAirlines() const;
+//    vector<Flight *> getFlights() const;
+//    vector<Plane *>getPlanes() const;
+//    bool  searchFlight(int num);
+//    bool searchPlane(string id);
 };
+
 class Exception{
     int id, mat;
     string idAirline;
@@ -56,20 +76,15 @@ public:
         cout<<"not found";
     }
 
-
 };
-#endif //PROJECT1_AIRPORT_H
-/*
-class Airline {
-    string name, idAirline;
-    vector<Flight *> flights;
+
+/*class Airline {
+    string name;
     vector<Plane *> planes;
 public:
-    string getId() const;
-    void addFlight(Flight* flight);
+    string getName() const;
     void addPlane(Plane* plane);
     void removeFlight(Flight* flight);
-    void removePlane(Plane* plane);
-    Flight*  searchFlight(Flight* flight);
-
 };*/
+
+#endif //PROJECT1_AIRPORT_H

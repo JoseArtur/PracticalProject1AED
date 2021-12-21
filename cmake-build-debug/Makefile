@@ -238,6 +238,30 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googletest\CMakeFiles\gtest_main.dir\build.make lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+main.obj: main.cpp.obj
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 tests/Cart.obj: tests/Cart.cpp.obj
 .PHONY : tests/Cart.obj
 
@@ -454,30 +478,6 @@ tests/luggage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/luggage.cpp.s
 .PHONY : tests/luggage.cpp.s
 
-tests/main.obj: tests/main.cpp.obj
-.PHONY : tests/main.obj
-
-# target to build an object file
-tests/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.obj
-.PHONY : tests/main.cpp.obj
-
-tests/main.i: tests/main.cpp.i
-.PHONY : tests/main.i
-
-# target to preprocess a source file
-tests/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.i
-.PHONY : tests/main.cpp.i
-
-tests/main.s: tests/main.cpp.s
-.PHONY : tests/main.s
-
-# target to generate assembly for a file
-tests/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Project1.dir\build.make CMakeFiles/Project1.dir/tests/main.cpp.s
-.PHONY : tests/main.cpp.s
-
 tests/plane.obj: tests/plane.cpp.obj
 .PHONY : tests/plane.obj
 
@@ -568,6 +568,9 @@ help:
 	@echo ... gmock_main
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... tests/Cart.obj
 	@echo ... tests/Cart.i
 	@echo ... tests/Cart.s
@@ -595,9 +598,6 @@ help:
 	@echo ... tests/luggage.obj
 	@echo ... tests/luggage.i
 	@echo ... tests/luggage.s
-	@echo ... tests/main.obj
-	@echo ... tests/main.i
-	@echo ... tests/main.s
 	@echo ... tests/plane.obj
 	@echo ... tests/plane.i
 	@echo ... tests/plane.s

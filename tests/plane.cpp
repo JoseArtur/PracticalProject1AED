@@ -39,7 +39,7 @@ bool Plane::addflight(Flight *flight) {
     for(auto x:flights){
         if(x == flight) return false;
     }
-    if (count == -1) flights.push_back(flight);
+    flights.push_back(flight);
     return true;
 }
 

@@ -5,19 +5,26 @@
 #include "Menu.h"
 #include <fstream>
 void Menu::Control(){
+    std::ofstream ofs;
+    ofs.open("planeInfo.txt", std::ofstream::out | std::ofstream::trunc);
+    ofs.close();
+    ofs.open("flightInfo.txt", std::ofstream::out | std::ofstream::trunc);
+    ofs.close();
+    fstream file,file2;
     for(auto &plane:planes) {
         //file<<plane
-        fstream file;
-        file.open("planeInfo.txt" );
+        file.open("planeInfo.txt" ,fstream::app);
         file << "PlaneInfo: " << plane.getMat()<<" "<<plane.getType()<< " "<<plane.getCap() << endl;
-        for(auto &flight:plane.getflights()){
+        file.close();
+        vector<Flight*> a = plane.getflights();
+        for(auto &flight:a){
             //agora to em flight
-        fstream file2;
-        file2.open("flightInfo.txt");
+        file2.open("flightInfo.txt",fstream::app);
         file2 << "FlightInfo: " << flight->getOrigin().getId() << flight->getDestiny().getId() << " | D:" << flight->getDateDeparture().getDate() << " "
              << flight->getTimeDeparture().getTime()
              << " | A:" << flight->getDateArrival().getDate() << " " << flight->getTimeArrival().getTime() << " | F:"
              << flight->getNum() <<"P: "<<plane.getMat() <<"  has been added!" << endl;
+        file2.close();
     }
     }
     cout<<"test";
@@ -119,22 +126,30 @@ void Menu::UseDefault() {
     a1.addCarriage(c1);
     a1.addCarriage(c2);
     a2.addCarriage(Carriage("BUS",140,t2));
-    Plane p1("141","B-777",300);
+    Plane  p1("141","B-777",300);
     Plane p2("151","A-380",450);
     Date d2(22,12,2020);
     Date d3(23,12,2020);
-    Flight f1(122,d2,t1,d3,t2,a1,a2);
+    Time t5(10,30);
+    Time t6(11,30);
+    Flight f1(122,d2,t5,d3,t6,a1,a2);
+   // Flight( int num, Date dateDeparture,Time timeDeparture, Date dateArrival,Time timeArrival, Airport origin, Airport destiny);
     Date d4(20,12,2020);
     Time t4(10,30);
     Flight f2(144,d4,t4,d2,t4,a2,a3);
     planes.push_back(p1);
     planes.push_back(p2);
-    p1.addflight(&f1);
+    bool a;
+   /* for(auto &plane:planes){
+        if(plane.getMat() ==p1.getMat()){
+            plane.addflight(&f1);
+            cout<<"a";
+        }
+    }*/
 
 }
 //--AIRPORT
 unsigned int Menu::showAirportFunctions(){
-
     int input;
     cout << " _______________________________________ " << endl;
     cout << " |----------- Airport Function --------| " << endl;
@@ -167,12 +182,10 @@ void Menu::addAirport(){
         Airport a1(id);
         airports.push_back(a1);
         cout << "Airport added!" << endl << endl;
-
-        fstream file;
+       /* fstream file;
         file.open("flightInfo.txt", fstream::app);
         file << "addedAirport: " << id << endl;
-
-        file.close();
+        file.close();*/
     }
     catch (...) {  }
 }
@@ -302,7 +315,7 @@ void Menu::addPlane(){
         Plane p1(mat,type,cap);
         planes.push_back(p1);
         cout << "the Plane" <<p1.getType()<<"with license "<<p1.getMat()<<" and capacity of "<<p1.getCap()<<" passengers has been added!" << endl;
-        fstream file;
+      /*  fstream file;
         file.open("planeInfo.txt", fstream::app);
         size_t pos;
         while ((pos = mat.find(" ")) != std::string::npos) {
@@ -315,7 +328,7 @@ void Menu::addPlane(){
             mat.replace(pos, 1, "_");
         }
         file << "PlaneInfo: " << type<<" "<<mat<< " "<<cap << endl;
-        file.close();
+        file.close(); */
     }
     catch (...) {  }
 }
@@ -421,10 +434,10 @@ void Menu::addCarriage(Airport *a1) {
         Carriage c2(type,distance,time);
         a1->addCarriage(c2);
         cout << "the Carriage" <<c2.getCarriageType()<<"with  "<<c2.getDistance()<<" and time of "<<c2.getTime().getTime()<<"  has been added!" << endl;
-        fstream file;
+      /*  fstream file;
         file.open("planeInfo.txt", fstream::app);
         file << "PlaneInfo: " << type<<" "<<distance<< " "<<time.getTime() << endl;
-        file.close();
+        file.close(); */
     }
     catch (...) {  }
 }
@@ -612,6 +625,11 @@ void Menu::addFlight(Plane *p1) {
     }
     try{
         Flight f2(num,dDep,tDep,dArrival,tArrival,origin,destiny);
+        for(auto &p:planes){
+            if(p.getMat() == p1->getMat()){
+                p.addflight(&f2);
+            }
+        }
         p1->addflight(&f2);
         // BSB-ALE | D:22/12/2019 16:40 | A:23/12/2019 06:30 | F:141
         cout << origin<<destiny<<" | D:" <<f2.getDateDeparture().getDate()<<" "<<f2.getTimeDeparture().getTime()
@@ -773,34 +791,32 @@ void Menu::BuyTicket(Flight *f1){//    Passenger(int id, string name, bool ticke
     int id;
     string name,resp1,resp2;
     bool ticket,bagage,group;
-                cin.clear();
-                cin.ignore(1000, '\n');
-                cout << "Identity: "<<endl;
-                cin >> id;
-                cout << "Name: "<<endl;
-                getline(cin,name);
-                cout<<"Are you in a group (Y/N) ?: "<<endl;
-                cin>>resp1;
-                if(resp1 =="N")
-                {
-                    cout << "Would you like to use the automatic luggage check-in ?(Y or N): ";
-                    cin>>resp2;
-                    if(resp2 == "Y") {
-                        bool bagage = true;
-                        Passenger p1(id,name,ticket,bagage,group);
-                        f1->addpassenger(p1);
-                        cout<<"Congrats, you know have a flight reservation.";
+    //TO DO : TIRAR GROUP E TICKET.
+    int n ;
+    cin.clear();
+    cin.ignore(1000, '\n');
+    cout << "\nHow many tickets do you wish to buy? "<<endl;
+    cin >>  n;
+    group = (n != 1);
+    while (n) {
+        int id;
+        cout << "\nIdentity: ";
+        cin >> id;
+        string name;
+        cout << "\nName: "<<endl;
+        getline(cin,name);
+         char b;
+        cout << "\nBaggage? (Y/N): ";
+        cin >> b;
+        Passenger p1(id, name, true, b == 'Y', group);
+        f1->addpassenger(p1);
+                        //FILE
                         fstream file;
                         file.open("info.txt", fstream::app);
-                        size_t pos;
-                        while ((pos = name.find(" ")) != string::npos) {
-                            name.replace(pos, 1, "_");
-                        }
                         file << id << " " << name << " " << ticket <<bagage<<group<< endl;
                         file.close();
-                        return;
+                        n--;
                     }
-                }
             }
 
 
