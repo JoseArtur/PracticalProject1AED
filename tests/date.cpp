@@ -25,8 +25,6 @@ int Date::getYear() const{
     return this->year;
 }
 
-
-
 bool Date::IsValid( int day,int month, int year)
 {
     //The first comercial flight in history was in 1914
@@ -48,9 +46,6 @@ bool Date::IsValid( int day,int month, int year)
         return false;
     return true;
 }
-
-
-
 
 
 string Date::getDate() const {

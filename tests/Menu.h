@@ -5,77 +5,71 @@
 #ifndef HEAD_MENU_H
 #define HEAD_MENU_H
 
-#include "airport.h"
-#include <iostream>
+#include "luggage.h"
 #include "plane.h"
+#include "airport.h"
+#include "Cart.h"
 #include <iostream>
 #include <sstream>
 #include <string>
-#include "luggage.h"
+
 using namespace std;
 
 class Menu {
     vector<Airport> airports;
     vector<Plane > planes;
-   // vector<Flight> flights;
     vector<Passenger> passengers;
-    vector<vector<stack<Luggage>>> cart;
+    vector<Cart> cart;
 public:
-    void Control();
+    void UseDefault();
+    void Control(); // inputs data to files
     void DisplayMenu();
-void DisplayUserMenu();
-void selectPassenger();
-void DisplayAdminMenu();
-    void SearchFlightOrigin();
-    void BuyTicket();
-    void AirportManagement();
-    void PlaneManagement();
-    void FlightManagement();
-    void PassengersManagement();
-    void CartManagement();
+    void DisplayOptions(); // airport,plane,flight,passenger,cart,service options
+    void AirportManagement(); // view,add,select,remove airports
+    void PlaneManagement(); // view,add,select,remove planes
+    static void Help();
+
     // airports
-    unsigned int showAirportFunctions();
-    void viewAirports();
-    void addAirport();
-    void updateAirport(Airport *p1);
-    void selectAirport();
-    void AirportMenu(Airport *a1);
-    unsigned int showSelectedAirportFunctions(Airport *a1);
-    void removeAirport();
+    static unsigned int showAirportFunctions();
+    void viewAirports(); // cout airport ID
+    void addAirport(); // check if exists, adds to vector (menu)
+    void selectAirport(); // view airports -> airport menu (selected airport)
+    void AirportMenu(const Airport& a1); // execute carriage options for the airport
+    unsigned int showSelectedAirportFunctions(const Airport& a1); // shows carriage options
 
     // carriages
-    void viewCarriages(Airport *a1);
-    void addCarriage(Airport *a1);
-    void removeCarriage(Airport *a1);
-    void selectCarriage(Airport *a1);
+    void viewCarriages(const Airport& a1); // cout type, distance, time every carriage
+    void addCarriage(Airport a1); // adds carriage to vector (menu)
 
     // planes
-    unsigned int showPlaneFunctions();
-    void viewPlanes();
-    void addPlane();
-    void updatePlane(Plane *p1);
-    void removePlane();
-    void selectPlane();
-    void PlaneMenu(Plane *p1);
-    unsigned int showSelectedPlaneFunctions(Plane *p1);
-    //flight
-    void updateFlight(Flight *f1);
-    void viewFlights(Plane *p1);
-    void addFlight(Plane *p1);
-    void removeFlight(Plane *p1);
-    void selectFlight(Plane *p1);
-    void FlightMenu(Flight *f1);
-    unsigned int showSelectedFlightFunctions(Flight *a1);
-    void SearchFlight();
-    void SearchFlightNumber();
-    void UseDefault();
-    // Passenger
-    void viewPassengers(Flight *f1);
-    void BuyTicket(Flight *f1);
-    void selectPassenger(Flight *f1);
-    void removePassenger(Flight *f1) {
+    static unsigned int showPlaneFunctions();
+    void viewPlanes(); // cout mat, type, cap for flights
+    void addPlane(); // adds plane to vector
+    void selectPlane(); // view planes -> planes menu (selected planes)
+    void PlaneMenu(Plane &p1); // executes flight options
+    unsigned int showSelectedPlaneFunctions(Plane p1); // show options
 
-    }
+    //flight
+    void viewFlights(Plane p1); // cout every plane info
+    void addFlight(Plane &p1); // adds flight
+    void selectFlight(Plane p1); // view flight -> flight menu (selected flight)
+    void FlightMenu(Flight &f1, int cap); // execute passenger options
+    static unsigned int showSelectedFlightFunctions(const Flight& f1); // buy ticket, view/select/remove passenger, update flight
+
+    // Passenger
+    void viewPassengers(Flight f1); // cout id, name, luggage, flight
+    void BuyTicket(Flight &f1, int cap); // buys a ticket
+
+    // Cart
+    void autoCheckIn(Flight f1);
+    void addLuggage(Cart &c1, unsigned int number);
+
+    // Plane Service
+    void serviceMenu(Plane &p1);
+    unsigned int showServiceOptions();
+    void viewAllServices(const Plane& p1);
+    void scheduleService(Plane &p1);
+    void completeService(Plane &p1);
 };
 
 #endif //HEAD_MENU_H

@@ -1,6 +1,6 @@
 \hypertarget{plane_8h_source}{}\doxysection{plane.\+h}
 \label{plane_8h_source}\index{C:/Users/josea/Feup/AED/Project1/tests/plane.h@{C:/Users/josea/Feup/AED/Project1/tests/plane.h}}
-\mbox{\hyperlink{plane_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef PROJETO\_PLANE\_H}}
@@ -9,43 +9,42 @@
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{8 <<<<<<< HEAD}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flight_8h}{flight.h}}"{}}}
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{plane_service_8h}{planeService.h}}"{}}}
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <list>}}
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_passenger_8h}{Passenger.h}}"{}}}
-\DoxyCodeLine{13 =======}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <queue>}}
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flight_8h}{Flight.h}}"{}}}
-\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{plane_service_8h}{planeService.h}}"{}}}
-\DoxyCodeLine{17 >>>>>>> origin/\mbox{\hyperlink{flight_8h_aaa8f4441c51990be6e7b791fe3e61a3a}{b3}}}
-\DoxyCodeLine{18 }
-\DoxyCodeLine{19 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_plane}{Plane}} \{}
-\DoxyCodeLine{22     \textcolor{keywordtype}{string} mat;}
-\DoxyCodeLine{23     \textcolor{keywordtype}{string} type;}
-\DoxyCodeLine{24     \textcolor{keywordtype}{int} cap;}
-\DoxyCodeLine{25     vector<Flight> flights;}
-\DoxyCodeLine{26     queue<planeService> scheduled;}
-\DoxyCodeLine{27     queue<planeService> completed;}
-\DoxyCodeLine{28 \textcolor{keyword}{public}:}
-\DoxyCodeLine{29     \mbox{\hyperlink{class_plane_ab8756891e8210b1aa5a1e23990cad1f5}{Plane}}(\textcolor{keywordtype}{string} mat, \textcolor{keywordtype}{string} type, \textcolor{keywordtype}{int} cap);}
-\DoxyCodeLine{30     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_plane_a356d00ccc3df401ee170a465165aef0c}{getMat}}();}
-\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_a81d508de56b724b06e197f4c880d2814}{setMat}}(\textcolor{keywordtype}{string} \& mat);}
-\DoxyCodeLine{32     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_plane_a90f44d1741cab8cff90df733ad70a018}{getType}}();}
-\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_a3b8fd4dcda6b0a41db0835f43f5d0006}{setType}}(\textcolor{keywordtype}{string} \& type);}
-\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_plane_a89bdfc23f415b4df00bf95c67b336d40}{getCap}}();}
-\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_a1fc02df74b13aa355abdb0626962a7cb}{setCap}}(\textcolor{keywordtype}{int} \& cap);}
-\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_ad658ec5fba23a74a32ef3797206fe3b2}{addflight}}(\mbox{\hyperlink{class_flight}{Flight}} flight);}
-\DoxyCodeLine{37     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_plane_a6046395b8e72d184c39682e0886c4ca0}{removeflight}}(\textcolor{keywordtype}{int} num);}
-\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_plane_a5a1fb7731f17830b7ad7409e4e03b600}{addpassenger}}(\mbox{\hyperlink{class_flight}{Flight}} \&flight, \mbox{\hyperlink{class_passenger}{Passenger}} \&pass);}
-\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_a60af27c895c7bcda6b4f1bc065917c19}{scheduleService}}(\mbox{\hyperlink{classplane_service}{planeService}} service);}
-\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_ad2bc3f4bdfb9bb550953c5270a6543bc}{completeService}}();}
-\DoxyCodeLine{41     vector<Flight> \mbox{\hyperlink{class_plane_afe3a7e636d014f652df8f971651c30dc}{getflights}}();}
-\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_plane_a49538904aeea0aae514102eea2b06269}{setflights}}(vector<Flight> \&flights);}
-\DoxyCodeLine{43 \};}
-\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_PLANE\_H}}
-\DoxyCodeLine{45 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}flight.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}planeService.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Passenger.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}planeService.h"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_plane}{Plane}} \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{string} mat;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{string} type;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} cap;}
+\DoxyCodeLine{21     vector<Flight> flights;}
+\DoxyCodeLine{22     queue<planeService> scheduled;}
+\DoxyCodeLine{23     queue<planeService> completed;}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_plane}{Plane}}(\textcolor{keywordtype}{string} mat, \textcolor{keywordtype}{string} type, \textcolor{keywordtype}{int} cap);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{string} getMat();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} setMat(\textcolor{keywordtype}{string} \& mat);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{string} getType();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} setType(\textcolor{keywordtype}{string} \& type);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} getCap();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} setCap(\textcolor{keywordtype}{int} \& cap);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool} addflight(\mbox{\hyperlink{class_flight}{Flight}} flight);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} removeflight(\textcolor{keywordtype}{int} num);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} addpassenger(\mbox{\hyperlink{class_flight}{Flight}} \&flight, \mbox{\hyperlink{class_passenger}{Passenger}} pass);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} scheduleService(\mbox{\hyperlink{classplane_service}{planeService}} service);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} completeService();}
+\DoxyCodeLine{37     vector<Flight> getflights();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} setflights(vector<Flight> flights);}
+\DoxyCodeLine{39     queue<planeService> getScheduled() \textcolor{keyword}{const};}
+\DoxyCodeLine{40     queue<planeService> getCompleted() \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} sort(vector<Flight> sortflights);}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_PLANE\_H}}
+\DoxyCodeLine{44 }
 
 \end{DoxyCode}

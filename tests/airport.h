@@ -62,29 +62,4 @@ public:
 //    bool searchPlane(string id);
 };
 
-class Exception{
-    int id, mat;
-    string idAirline;
-public:
-    Exception(){
-        cout<<"not found";
-    }
-    Exception(int id):id(id){
-        cout<<"not found";
-    }
-    Exception(string idAirline):idAirline(idAirline){
-        cout<<"not found";
-    }
-
-};
-
-/*class Airline {
-    string name;
-    vector<Plane *> planes;
-public:
-    string getName() const;
-    void addPlane(Plane* plane);
-    void removeFlight(Flight* flight);
-};*/
-
 #endif //PROJECT1_AIRPORT_H

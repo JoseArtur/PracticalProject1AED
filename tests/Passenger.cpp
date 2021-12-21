@@ -8,12 +8,11 @@
 #include <string>
 #include <vector>
 
-Passenger::Passenger(int id, string name, bool ticket, bool hasLuggage, bool group){
+Passenger::Passenger(int id, string name, bool hasLuggage, bool autoCheck){
     this->id = id;
     this->name = name;
-    this->ticket = ticket;
     this->hasLuggage = hasLuggage;
-    this->group = group;
+    this->autoCheck = autoCheck;
 }
 
 int Passenger::getId() const {
@@ -32,27 +31,18 @@ void Passenger::setName(const string &name) {
     Passenger::name = name;
 }
 
-bool Passenger::isTicket() const {
-    return ticket;
-}
-
-void Passenger::setTicket(bool ticket) {
-    Passenger::ticket = ticket;
-}
-
 bool Passenger::isLuggage() const {
     return hasLuggage;
 }
 
-void Passenger::setLuggage(bool bagage) {
-    Passenger::hasLuggage = bagage;
+void Passenger::setLuggage(bool hasLuggage) {
+    this->hasLuggage = hasLuggage;
 }
 
-bool Passenger::isGroup() const {
-    return group;
+bool Passenger::isAutoCheck() const {
+    return this->autoCheck;
 }
 
-void Passenger::setGroup(bool group) {
-    Passenger::group = group;
+void Passenger::setAutoCheck(bool aC) {
+    this->autoCheck = aC;
 }
-

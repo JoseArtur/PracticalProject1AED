@@ -34,19 +34,19 @@ TEST(test_2, addPlane)
     Flight f1(141,t1,time1,t2,time,a1,a2);
     Flight f2(141,t1,time1,t2,time,a1,a2);
     Plane a( "22A", "A", 10);
-    a.addflight(&f1);
-    a.addflight(&f1);
+    a.addflight(f1);
+    a.addflight(f1);
     a.removeflight(141);
-    EXPECT_EQ(true, a.addflight(&f1));
+    EXPECT_EQ(true, a.addflight(f1));
 }
 TEST(test_3, addplane){
     vector<Flight> a;
     Plane b("22","B",20);
     vector<Airport*> airports;
-    Airport* newAirport = new Airport("OPO");
+    auto* newAirport = new Airport("OPO");
     airports.push_back(newAirport);
-    return;
 }
+
 TEST(test_4, createSystem){
     /*
     cout<<endl<<"Testing 'create'"<<endl;
@@ -93,10 +93,10 @@ TEST(test_7,duration){
 
     Flight f2(142,t1,time1,t2,time,a1,a2);
     Plane a( "22A", "A", 10);
-    a.addflight(&f1);
-    a.addflight(&f1);
+    a.addflight(f1);
+    a.addflight(f1);
     a.removeflight(141);
-    EXPECT_EQ(true, a.addflight(&f1));
+    EXPECT_EQ(true, a.addflight(f1));
 }
 TEST(test_8,a){
     vector<Airport*> airports;

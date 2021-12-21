@@ -1,133 +1,62 @@
 \hypertarget{class_plane}{}\doxysection{Plane Class Reference}
 \label{class_plane}\index{Plane@{Plane}}
-
-
-{\ttfamily \#include $<$plane.\+h$>$}
-
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_plane_ab8756891e8210b1aa5a1e23990cad1f5}{Plane}} (string mat, string type, int cap)
-\item 
-string \mbox{\hyperlink{class_plane_a356d00ccc3df401ee170a465165aef0c}{get\+Mat}} ()
-\item 
-void \mbox{\hyperlink{class_plane_a81d508de56b724b06e197f4c880d2814}{set\+Mat}} (string \&mat)
-\item 
-string \mbox{\hyperlink{class_plane_a90f44d1741cab8cff90df733ad70a018}{get\+Type}} ()
-\item 
-void \mbox{\hyperlink{class_plane_a3b8fd4dcda6b0a41db0835f43f5d0006}{set\+Type}} (string \&type)
-\item 
-int \mbox{\hyperlink{class_plane_a89bdfc23f415b4df00bf95c67b336d40}{get\+Cap}} ()
-\item 
-void \mbox{\hyperlink{class_plane_a1fc02df74b13aa355abdb0626962a7cb}{set\+Cap}} (int \&cap)
-\item 
-void \mbox{\hyperlink{class_plane_ad658ec5fba23a74a32ef3797206fe3b2}{addflight}} (\mbox{\hyperlink{class_flight}{Flight}} flight)
-\item 
-bool \mbox{\hyperlink{class_plane_a6046395b8e72d184c39682e0886c4ca0}{removeflight}} (int num)
-\item 
-bool \mbox{\hyperlink{class_plane_a5a1fb7731f17830b7ad7409e4e03b600}{addpassenger}} (\mbox{\hyperlink{class_flight}{Flight}} \&flight, \mbox{\hyperlink{class_passenger}{Passenger}} \&pass)
-\item 
-void \mbox{\hyperlink{class_plane_a60af27c895c7bcda6b4f1bc065917c19}{schedule\+Service}} (\mbox{\hyperlink{classplane_service}{plane\+Service}} service)
-\item 
-void \mbox{\hyperlink{class_plane_ad2bc3f4bdfb9bb550953c5270a6543bc}{complete\+Service}} ()
-\item 
-vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \mbox{\hyperlink{class_plane_afe3a7e636d014f652df8f971651c30dc}{getflights}} ()
-\item 
-void \mbox{\hyperlink{class_plane_a49538904aeea0aae514102eea2b06269}{setflights}} (vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&flights)
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_plane_ab8756891e8210b1aa5a1e23990cad1f5}\label{class_plane_ab8756891e8210b1aa5a1e23990cad1f5}} 
-\index{Plane@{Plane}!Plane@{Plane}}
-\index{Plane@{Plane}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}}
-{\footnotesize\ttfamily Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{string}]{mat,  }\item[{string}]{type,  }\item[{int}]{cap }\end{DoxyParamCaption})}
-
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_plane_ad658ec5fba23a74a32ef3797206fe3b2}\label{class_plane_ad658ec5fba23a74a32ef3797206fe3b2}} 
-\index{Plane@{Plane}!addflight@{addflight}}
-\index{addflight@{addflight}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{addflight()}{addflight()}}
-{\footnotesize\ttfamily void Plane\+::addflight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}}}]{flight }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a5a1fb7731f17830b7ad7409e4e03b600}\label{class_plane_a5a1fb7731f17830b7ad7409e4e03b600}} 
-\index{Plane@{Plane}!addpassenger@{addpassenger}}
-\index{addpassenger@{addpassenger}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{addpassenger()}{addpassenger()}}
-{\footnotesize\ttfamily bool Plane\+::addpassenger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flight}{Flight}} \&}]{flight,  }\item[{\mbox{\hyperlink{class_passenger}{Passenger}} \&}]{pass }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_ad2bc3f4bdfb9bb550953c5270a6543bc}\label{class_plane_ad2bc3f4bdfb9bb550953c5270a6543bc}} 
-\index{Plane@{Plane}!completeService@{completeService}}
-\index{completeService@{completeService}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{completeService()}{completeService()}}
-{\footnotesize\ttfamily void Plane\+::complete\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a89bdfc23f415b4df00bf95c67b336d40}\label{class_plane_a89bdfc23f415b4df00bf95c67b336d40}} 
-\index{Plane@{Plane}!getCap@{getCap}}
-\index{getCap@{getCap}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{getCap()}{getCap()}}
-{\footnotesize\ttfamily int Plane\+::get\+Cap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_afe3a7e636d014f652df8f971651c30dc}\label{class_plane_afe3a7e636d014f652df8f971651c30dc}} 
-\index{Plane@{Plane}!getflights@{getflights}}
-\index{getflights@{getflights}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{getflights()}{getflights()}}
-{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ Plane\+::getflights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
+{\bfseries Plane} (string mat, string type, int cap)
+\item 
 \mbox{\Hypertarget{class_plane_a356d00ccc3df401ee170a465165aef0c}\label{class_plane_a356d00ccc3df401ee170a465165aef0c}} 
-\index{Plane@{Plane}!getMat@{getMat}}
-\index{getMat@{getMat}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{getMat()}{getMat()}}
-{\footnotesize\ttfamily string Plane\+::get\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a90f44d1741cab8cff90df733ad70a018}\label{class_plane_a90f44d1741cab8cff90df733ad70a018}} 
-\index{Plane@{Plane}!getType@{getType}}
-\index{getType@{getType}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
-{\footnotesize\ttfamily string Plane\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a6046395b8e72d184c39682e0886c4ca0}\label{class_plane_a6046395b8e72d184c39682e0886c4ca0}} 
-\index{Plane@{Plane}!removeflight@{removeflight}}
-\index{removeflight@{removeflight}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{removeflight()}{removeflight()}}
-{\footnotesize\ttfamily bool Plane\+::removeflight (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a60af27c895c7bcda6b4f1bc065917c19}\label{class_plane_a60af27c895c7bcda6b4f1bc065917c19}} 
-\index{Plane@{Plane}!scheduleService@{scheduleService}}
-\index{scheduleService@{scheduleService}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{scheduleService()}{scheduleService()}}
-{\footnotesize\ttfamily void Plane\+::schedule\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplane_service}{plane\+Service}}}]{service }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a1fc02df74b13aa355abdb0626962a7cb}\label{class_plane_a1fc02df74b13aa355abdb0626962a7cb}} 
-\index{Plane@{Plane}!setCap@{setCap}}
-\index{setCap@{setCap}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{setCap()}{setCap()}}
-{\footnotesize\ttfamily void Plane\+::set\+Cap (\begin{DoxyParamCaption}\item[{int \&}]{cap }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{class_plane_a49538904aeea0aae514102eea2b06269}\label{class_plane_a49538904aeea0aae514102eea2b06269}} 
-\index{Plane@{Plane}!setflights@{setflights}}
-\index{setflights@{setflights}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{setflights()}{setflights()}}
-{\footnotesize\ttfamily void Plane\+::setflights (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \&}]{flights }\end{DoxyParamCaption})}
-
+string {\bfseries get\+Mat} ()
+\item 
 \mbox{\Hypertarget{class_plane_a81d508de56b724b06e197f4c880d2814}\label{class_plane_a81d508de56b724b06e197f4c880d2814}} 
-\index{Plane@{Plane}!setMat@{setMat}}
-\index{setMat@{setMat}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{setMat()}{setMat()}}
-{\footnotesize\ttfamily void Plane\+::set\+Mat (\begin{DoxyParamCaption}\item[{string \&}]{mat }\end{DoxyParamCaption})}
-
+void {\bfseries set\+Mat} (string \&mat)
+\item 
+\mbox{\Hypertarget{class_plane_a90f44d1741cab8cff90df733ad70a018}\label{class_plane_a90f44d1741cab8cff90df733ad70a018}} 
+string {\bfseries get\+Type} ()
+\item 
 \mbox{\Hypertarget{class_plane_a3b8fd4dcda6b0a41db0835f43f5d0006}\label{class_plane_a3b8fd4dcda6b0a41db0835f43f5d0006}} 
-\index{Plane@{Plane}!setType@{setType}}
-\index{setType@{setType}!Plane@{Plane}}
-\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
-{\footnotesize\ttfamily void Plane\+::set\+Type (\begin{DoxyParamCaption}\item[{string \&}]{type }\end{DoxyParamCaption})}
-
+void {\bfseries set\+Type} (string \&type)
+\item 
+\mbox{\Hypertarget{class_plane_a89bdfc23f415b4df00bf95c67b336d40}\label{class_plane_a89bdfc23f415b4df00bf95c67b336d40}} 
+int {\bfseries get\+Cap} ()
+\item 
+\mbox{\Hypertarget{class_plane_a1fc02df74b13aa355abdb0626962a7cb}\label{class_plane_a1fc02df74b13aa355abdb0626962a7cb}} 
+void {\bfseries set\+Cap} (int \&cap)
+\item 
+\mbox{\Hypertarget{class_plane_addf3dc45c7bf6bfa73e29f8507292c16}\label{class_plane_addf3dc45c7bf6bfa73e29f8507292c16}} 
+bool {\bfseries addflight} (\mbox{\hyperlink{class_flight}{Flight}} flight)
+\item 
+\mbox{\Hypertarget{class_plane_a6046395b8e72d184c39682e0886c4ca0}\label{class_plane_a6046395b8e72d184c39682e0886c4ca0}} 
+bool {\bfseries removeflight} (int num)
+\item 
+\mbox{\Hypertarget{class_plane_aac014c5e0cb0e5ab136f59df154a397e}\label{class_plane_aac014c5e0cb0e5ab136f59df154a397e}} 
+bool {\bfseries addpassenger} (\mbox{\hyperlink{class_flight}{Flight}} \&flight, \mbox{\hyperlink{class_passenger}{Passenger}} pass)
+\item 
+\mbox{\Hypertarget{class_plane_a60af27c895c7bcda6b4f1bc065917c19}\label{class_plane_a60af27c895c7bcda6b4f1bc065917c19}} 
+void {\bfseries schedule\+Service} (\mbox{\hyperlink{classplane_service}{plane\+Service}} service)
+\item 
+\mbox{\Hypertarget{class_plane_ad2bc3f4bdfb9bb550953c5270a6543bc}\label{class_plane_ad2bc3f4bdfb9bb550953c5270a6543bc}} 
+void {\bfseries complete\+Service} ()
+\item 
+\mbox{\Hypertarget{class_plane_afe3a7e636d014f652df8f971651c30dc}\label{class_plane_afe3a7e636d014f652df8f971651c30dc}} 
+vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ {\bfseries getflights} ()
+\item 
+\mbox{\Hypertarget{class_plane_a12552d22b1468bb609c57a2796c8a0b7}\label{class_plane_a12552d22b1468bb609c57a2796c8a0b7}} 
+void {\bfseries setflights} (vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ flights)
+\item 
+\mbox{\Hypertarget{class_plane_a405148a1675c78a257cb3478bdabab20}\label{class_plane_a405148a1675c78a257cb3478bdabab20}} 
+queue$<$ \mbox{\hyperlink{classplane_service}{plane\+Service}} $>$ {\bfseries get\+Scheduled} () const
+\item 
+\mbox{\Hypertarget{class_plane_ab0f56159b24fa3a62e3216f235ae8f0a}\label{class_plane_ab0f56159b24fa3a62e3216f235ae8f0a}} 
+queue$<$ \mbox{\hyperlink{classplane_service}{plane\+Service}} $>$ {\bfseries get\+Completed} () const
+\item 
+\mbox{\Hypertarget{class_plane_ade883cb4eaa34d19805b46d84c3d8fef}\label{class_plane_ade883cb4eaa34d19805b46d84c3d8fef}} 
+void {\bfseries sort} (vector$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ sortflights)
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/josea/\+Feup/\+AED/\+Project1/tests/\mbox{\hyperlink{plane_8h}{plane.\+h}}\item 
-C\+:/\+Users/josea/\+Feup/\+AED/\+Project1/tests/\mbox{\hyperlink{plane_8cpp}{plane.\+cpp}}\end{DoxyCompactItemize}
+C\+:/\+Users/josea/\+Feup/\+AED/\+Project1/tests/plane.\+h\item 
+C\+:/\+Users/josea/\+Feup/\+AED/\+Project1/tests/plane.\+cpp\end{DoxyCompactItemize}

@@ -69,7 +69,7 @@ $(function() {
   <div class="headertitle"><div class="title">planeService.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="plane_service_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by josea on 04/12/2021.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -77,9 +77,9 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef PROJECT1_PLANESERVICE_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define PROJECT1_PLANESERVICE_H</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_date_8h.html">Date.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Date.h&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_date_8h.html">date.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;date.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using namespace </span>std;</div>
@@ -89,24 +89,17 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">string</span> employee;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_date.html">Date</a> date;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="classplane_service.html#a54ef33695d1ec8f968df81324ce3b11a">planeService</a>(<span class="keywordtype">string</span> t, <span class="keywordtype">string</span> e, <a class="code hl_class" href="class_date.html">Date</a> date);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="classplane_service.html#a412286ff6e4212762c25e778819dc4af">getType</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="classplane_service.html#a656d36c4b71cae2fcd11fe19bcf45c87">getEmployee</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_date.html">Date</a> <a class="code hl_function" href="classplane_service.html#a727f97399fcda5f7ecbab5b8120f3e1c">getDate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classplane_service.html#af1cf8bb488bc6180609bb37085a602e6">setType</a>(<span class="keywordtype">string</span> t);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classplane_service.html#ab9adb39ffe18700d8bc19dee75836b25">setEmployee</a>(<span class="keywordtype">string</span> e);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classplane_service.html">planeService</a>(<span class="keywordtype">string</span> t, <span class="keywordtype">string</span> e, <a class="code hl_class" href="class_date.html">Date</a> date);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">string</span> getType() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">string</span> getEmployee() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_date.html">Date</a> getDate() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> setType(<span class="keywordtype">string</span> t);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> setEmployee(<span class="keywordtype">string</span> e);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">//PROJECT1_PLANESERVICE_H</span></div>
-<div class="ttc" id="a_date_8h_html"><div class="ttname"><a href="_date_8h.html">Date.h</a></div></div>
 <div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdef"><b>Definition:</b> Date.h:10</div></div>
 <div class="ttc" id="aclassplane_service_html"><div class="ttname"><a href="classplane_service.html">planeService</a></div><div class="ttdef"><b>Definition:</b> planeService.h:16</div></div>
-<div class="ttc" id="aclassplane_service_html_a412286ff6e4212762c25e778819dc4af"><div class="ttname"><a href="classplane_service.html#a412286ff6e4212762c25e778819dc4af">planeService::getType</a></div><div class="ttdeci">string getType() const</div><div class="ttdef"><b>Definition:</b> planeService.cpp:14</div></div>
-<div class="ttc" id="aclassplane_service_html_a54ef33695d1ec8f968df81324ce3b11a"><div class="ttname"><a href="classplane_service.html#a54ef33695d1ec8f968df81324ce3b11a">planeService::planeService</a></div><div class="ttdeci">planeService(string t, string e, Date date)</div><div class="ttdef"><b>Definition:</b> planeService.cpp:8</div></div>
-<div class="ttc" id="aclassplane_service_html_a656d36c4b71cae2fcd11fe19bcf45c87"><div class="ttname"><a href="classplane_service.html#a656d36c4b71cae2fcd11fe19bcf45c87">planeService::getEmployee</a></div><div class="ttdeci">string getEmployee() const</div><div class="ttdef"><b>Definition:</b> planeService.cpp:18</div></div>
-<div class="ttc" id="aclassplane_service_html_a727f97399fcda5f7ecbab5b8120f3e1c"><div class="ttname"><a href="classplane_service.html#a727f97399fcda5f7ecbab5b8120f3e1c">planeService::getDate</a></div><div class="ttdeci">Date getDate() const</div><div class="ttdef"><b>Definition:</b> planeService.cpp:22</div></div>
-<div class="ttc" id="aclassplane_service_html_ab9adb39ffe18700d8bc19dee75836b25"><div class="ttname"><a href="classplane_service.html#ab9adb39ffe18700d8bc19dee75836b25">planeService::setEmployee</a></div><div class="ttdeci">void setEmployee(string e)</div><div class="ttdef"><b>Definition:</b> planeService.cpp:30</div></div>
-<div class="ttc" id="aclassplane_service_html_af1cf8bb488bc6180609bb37085a602e6"><div class="ttname"><a href="classplane_service.html#af1cf8bb488bc6180609bb37085a602e6">planeService::setType</a></div><div class="ttdeci">void setType(string t)</div><div class="ttdef"><b>Definition:</b> planeService.cpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

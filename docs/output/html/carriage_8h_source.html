@@ -69,7 +69,7 @@ $(function() {
   <div class="headertitle"><div class="title">carriage.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="carriage_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by josea on 04/12/2021.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -77,38 +77,29 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PROJECT1_CARRIAGE_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_time_8h.html">Time.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="bst_8h.html">bst.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Time.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;bst.h&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_carriage.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_carriage.html">Carriage</a>{</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">string</span> carriageType;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">float</span> distance;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_time.html">Time</a> time;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="class_carriage.html#a3fc9eecfbe5d4c69415e1767a04bb77a">Carriage</a>(<span class="keywordtype">string</span> cT, <span class="keywordtype">float</span> d, <a class="code hl_class" href="class_time.html">Time</a> h);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_carriage.html#a6c167d5a97e07df84afdf1bd1b95fcbe">getCarriageType</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_carriage.html#a18fcc8083866746c23086e93a9a2b337">getDistance</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_class" href="class_time.html">Time</a> <a class="code hl_function" href="class_carriage.html#abc65c01ca5d4ad396c2fc03d89245aed">getTime</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_carriage.html#a356eb19eaa4d87b9bf8deab9006ce72b">setCarriageType</a>(<span class="keywordtype">string</span> ct);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_carriage.html#a6fb07e712fff02256feeb0122df23795">setDistance</a>(<span class="keywordtype">float</span> d);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_carriage.html#a3ec97bceceecc8cd47fd4b560dfafa32">setTime</a>(<a class="code hl_class" href="class_time.html">Time</a> h);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_carriage.html#a46425e683c0973f4c37c0062e28de11c">operator &lt; </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_carriage.html">Carriage</a>&amp; a )  <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_carriage.html#a59e4160009988c94d0787e4370a44224">operator == </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_carriage.html">Carriage</a>&amp; a )  <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">//PROJECT1_CARRIAGE_H</span></div>
-<div class="ttc" id="a_time_8h_html"><div class="ttname"><a href="_time_8h.html">Time.h</a></div></div>
-<div class="ttc" id="abst_8h_html"><div class="ttname"><a href="bst_8h.html">bst.h</a></div></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_carriage.html#a3fc9eecfbe5d4c69415e1767a04bb77a">Carriage</a>(<span class="keywordtype">string</span> cT, <span class="keywordtype">float</span> d, <a class="code hl_class" href="class_time.html">Time</a> h);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">string</span> getCarriageType() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">float</span> getDistance() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="class_time.html">Time</a> getTime() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> setCarriageType(<span class="keywordtype">string</span> ct);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> setDistance(<span class="keywordtype">float</span> d);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> setTime(<a class="code hl_class" href="class_time.html">Time</a> h);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">bool</span> operator &lt; (<span class="keyword">const</span> <a class="code hl_class" href="class_carriage.html">Carriage</a>&amp; a )  <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code hl_class" href="class_carriage.html">Carriage</a>&amp; a )  <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">//PROJECT1_CARRIAGE_H</span></div>
 <div class="ttc" id="aclass_carriage_html"><div class="ttname"><a href="class_carriage.html">Carriage</a></div><div class="ttdef"><b>Definition:</b> carriage.h:12</div></div>
-<div class="ttc" id="aclass_carriage_html_a18fcc8083866746c23086e93a9a2b337"><div class="ttname"><a href="class_carriage.html#a18fcc8083866746c23086e93a9a2b337">Carriage::getDistance</a></div><div class="ttdeci">float getDistance() const</div><div class="ttdef"><b>Definition:</b> carriage.cpp:12</div></div>
-<div class="ttc" id="aclass_carriage_html_a356eb19eaa4d87b9bf8deab9006ce72b"><div class="ttname"><a href="class_carriage.html#a356eb19eaa4d87b9bf8deab9006ce72b">Carriage::setCarriageType</a></div><div class="ttdeci">void setCarriageType(string ct)</div><div class="ttdef"><b>Definition:</b> carriage.cpp:20</div></div>
-<div class="ttc" id="aclass_carriage_html_a3ec97bceceecc8cd47fd4b560dfafa32"><div class="ttname"><a href="class_carriage.html#a3ec97bceceecc8cd47fd4b560dfafa32">Carriage::setTime</a></div><div class="ttdeci">void setTime(Time h)</div><div class="ttdef"><b>Definition:</b> carriage.cpp:28</div></div>
 <div class="ttc" id="aclass_carriage_html_a3fc9eecfbe5d4c69415e1767a04bb77a"><div class="ttname"><a href="class_carriage.html#a3fc9eecfbe5d4c69415e1767a04bb77a">Carriage::Carriage</a></div><div class="ttdeci">Carriage(string cT, float d, Time h)</div><div class="ttdef"><b>Definition:</b> carriage.cpp:7</div></div>
-<div class="ttc" id="aclass_carriage_html_a46425e683c0973f4c37c0062e28de11c"><div class="ttname"><a href="class_carriage.html#a46425e683c0973f4c37c0062e28de11c">Carriage::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Carriage &amp;a) const</div><div class="ttdef"><b>Definition:</b> carriage.cpp:36</div></div>
-<div class="ttc" id="aclass_carriage_html_a59e4160009988c94d0787e4370a44224"><div class="ttname"><a href="class_carriage.html#a59e4160009988c94d0787e4370a44224">Carriage::operator==</a></div><div class="ttdeci">bool operator==(const Carriage &amp;a) const</div><div class="ttdef"><b>Definition:</b> carriage.cpp:32</div></div>
-<div class="ttc" id="aclass_carriage_html_a6c167d5a97e07df84afdf1bd1b95fcbe"><div class="ttname"><a href="class_carriage.html#a6c167d5a97e07df84afdf1bd1b95fcbe">Carriage::getCarriageType</a></div><div class="ttdeci">string getCarriageType() const</div><div class="ttdef"><b>Definition:</b> carriage.cpp:8</div></div>
-<div class="ttc" id="aclass_carriage_html_a6fb07e712fff02256feeb0122df23795"><div class="ttname"><a href="class_carriage.html#a6fb07e712fff02256feeb0122df23795">Carriage::setDistance</a></div><div class="ttdeci">void setDistance(float d)</div><div class="ttdef"><b>Definition:</b> carriage.cpp:24</div></div>
-<div class="ttc" id="aclass_carriage_html_abc65c01ca5d4ad396c2fc03d89245aed"><div class="ttname"><a href="class_carriage.html#abc65c01ca5d4ad396c2fc03d89245aed">Carriage::getTime</a></div><div class="ttdeci">Time getTime() const</div><div class="ttdef"><b>Definition:</b> carriage.cpp:16</div></div>
 <div class="ttc" id="aclass_time_html"><div class="ttname"><a href="class_time.html">Time</a></div><div class="ttdef"><b>Definition:</b> Time.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

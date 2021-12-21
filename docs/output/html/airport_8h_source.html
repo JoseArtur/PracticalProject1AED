@@ -69,7 +69,7 @@ $(function() {
   <div class="headertitle"><div class="title">airport.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="airport_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by josea on 04/12/2021.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -77,100 +77,50 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PROJECT1_AIRPORT_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="flight_8h.html">flight.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="plane_8h.html">plane.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="bst_8h.html">bst.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="carriage_8h.html">carriage.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;set&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_time_8h.html">Time.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_date_8h.html">Date.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">class Airline {</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    string name, idAirline;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    vector&lt;Flight *&gt; flights;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">    vector&lt;Plane *&gt; planes;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">public:</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    string getId() const;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">    void addFlight(Flight* flight);</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    void addPlane(Plane* plane);</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    void removeFlight(Flight* flight);</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    void removePlane(Plane* plane);</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">    Flight*  searchFlight(Flight* flight);</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"></span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">};*/</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_airport.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="class_airport.html">Airport</a>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">string</span> id;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    vector&lt;Flight *&gt; flights;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    vector&lt;Plane *&gt; planes;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">//vector&lt;Airline *&gt; airlines;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage &gt;</a> carriages = <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage&gt;</a>(<a class="code hl_class" href="class_carriage.html">Carriage</a>(<span class="stringliteral">&quot;f&quot;</span>,0,{0,0}));</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_airport.html#a2fc0f2402c94225b9deaf76176bb887f">   41</a></span>    <a class="code hl_function" href="class_airport.html#a2fc0f2402c94225b9deaf76176bb887f">Airport</a>(){};</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_airport.html#a7e4804bf32f48289100f5e1b86a2ea46">   42</a></span>    <a class="code hl_function" href="class_airport.html#a7e4804bf32f48289100f5e1b86a2ea46">Airport</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_airport.html#a3b8ef3abafb9f29b97acb73eb8014502">setId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) ;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_airport.html#aba035eae5f7c66ad07c291e379c2488b">getId</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_airport.html#a2964e85c4f9745cb630bcaa50b40b193">   45</a></span>    vector&lt;Flight *&gt; <a class="code hl_function" href="class_airport.html#a2964e85c4f9745cb630bcaa50b40b193">getFlights</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_airport.html#a41a497ef19f5b10b558799c55a95daca">   46</a></span>    vector&lt;Plane *&gt;<a class="code hl_function" href="class_airport.html#a41a497ef19f5b10b558799c55a95daca">getPlanes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">//  vector&lt;Airline *&gt; getAirlines() const;</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage&gt;</a> <a class="code hl_function" href="class_airport.html#a1dd14a528a6f3cb598aad674389df8a4">getCarriages</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_airport.html#a561d6d3a40e5245c863f0c7c1cdd9457">   49</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_airport.html#a561d6d3a40e5245c863f0c7c1cdd9457">addCarriage</a>( <a class="code hl_class" href="class_carriage.html">Carriage</a> carriage );</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_airport.html#ac3fea99e6302c4369b01e07552c8a193">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_airport.html#ac3fea99e6302c4369b01e07552c8a193">removeCarriage</a>(<a class="code hl_class" href="class_carriage.html">Carriage</a> carriage);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_airport.html#ad9d36c514004f4b94cb08ccc36a3024c">   51</a></span>    <span class="keywordtype">bool</span>  <a class="code hl_function" href="class_airport.html#ad9d36c514004f4b94cb08ccc36a3024c">searchFlight</a>(<span class="keywordtype">int</span> num);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_airport.html#a40321872ac6cced746acb7124fc57f1a">   52</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_airport.html#a40321872ac6cced746acb7124fc57f1a">searchPlane</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_exception.html">   57</a></span><span class="keyword">class </span><a class="code hl_class" href="class_exception.html">Exception</a>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> id, mat;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">string</span> idAirline;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_exception.html#a1b78336bb26edf8e784783cc150c5801">   61</a></span>    <a class="code hl_function" href="class_exception.html#a1b78336bb26edf8e784783cc150c5801">Exception</a>(){</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        cout&lt;&lt;<span class="stringliteral">&quot;not found&quot;</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_exception.html#ab67778f8a99cbcf400b69bd27a02c153">   64</a></span>    <a class="code hl_function" href="class_exception.html#ab67778f8a99cbcf400b69bd27a02c153">Exception</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>):<a class="code hl_variable" href="airport_8cpp.html#a25413a5d4925fd0e87b471a828477447">id</a>(<a class="code hl_variable" href="airport_8cpp.html#a25413a5d4925fd0e87b471a828477447">id</a>){</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        cout&lt;&lt;<span class="stringliteral">&quot;not found&quot;</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_exception.html#ac55a6528b1b50a1d351ac173b8b494b1">   67</a></span>    <a class="code hl_function" href="class_exception.html#ac55a6528b1b50a1d351ac173b8b494b1">Exception</a>(<span class="keywordtype">string</span> idAirline):idAirline(idAirline){</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        cout&lt;&lt;<span class="stringliteral">&quot;not found&quot;</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_exception.html#a3aa5a13d4531840a49f32f7e2989c4f6">   70</a></span>    <a class="code hl_function" href="class_exception.html#a3aa5a13d4531840a49f32f7e2989c4f6">Exception</a>(<a class="code hl_class" href="class_flight.html">Flight</a>* flight):<a class="code hl_variable" href="airport_8cpp.html#a25413a5d4925fd0e87b471a828477447">id</a>(flight-&gt;getnum()){</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        cout&lt;&lt;<span class="stringliteral">&quot;not found&quot;</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif </span><span class="comment">//PROJECT1_AIRPORT_H</span></div>
-<div class="ttc" id="a_date_8h_html"><div class="ttname"><a href="_date_8h.html">Date.h</a></div></div>
-<div class="ttc" id="a_time_8h_html"><div class="ttname"><a href="_time_8h.html">Time.h</a></div></div>
-<div class="ttc" id="aairport_8cpp_html_a25413a5d4925fd0e87b471a828477447"><div class="ttname"><a href="airport_8cpp.html#a25413a5d4925fd0e87b471a828477447">id</a></div><div class="ttdeci">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Airport::Airport(int id) {=======Airport::Airport(string id){ &gt; &gt; &gt; &gt; &gt; &gt; origin b3 this id</div><div class="ttdef"><b>Definition:</b> airport.cpp:19</div></div>
-<div class="ttc" id="abst_8h_html"><div class="ttname"><a href="bst_8h.html">bst.h</a></div></div>
-<div class="ttc" id="acarriage_8h_html"><div class="ttname"><a href="carriage_8h.html">carriage.h</a></div></div>
-<div class="ttc" id="aclass_airport_html"><div class="ttname"><a href="class_airport.html">Airport</a></div><div class="ttdef"><b>Definition:</b> airport.h:33</div></div>
-<div class="ttc" id="aclass_airport_html_a1dd14a528a6f3cb598aad674389df8a4"><div class="ttname"><a href="class_airport.html#a1dd14a528a6f3cb598aad674389df8a4">Airport::getCarriages</a></div><div class="ttdeci">BST&lt; Carriage &gt; getCarriages() const</div><div class="ttdef"><b>Definition:</b> airport.cpp:29</div></div>
-<div class="ttc" id="aclass_airport_html_a2964e85c4f9745cb630bcaa50b40b193"><div class="ttname"><a href="class_airport.html#a2964e85c4f9745cb630bcaa50b40b193">Airport::getFlights</a></div><div class="ttdeci">vector&lt; Flight * &gt; getFlights() const</div></div>
-<div class="ttc" id="aclass_airport_html_a2fc0f2402c94225b9deaf76176bb887f"><div class="ttname"><a href="class_airport.html#a2fc0f2402c94225b9deaf76176bb887f">Airport::Airport</a></div><div class="ttdeci">Airport()</div><div class="ttdef"><b>Definition:</b> airport.h:41</div></div>
-<div class="ttc" id="aclass_airport_html_a3b8ef3abafb9f29b97acb73eb8014502"><div class="ttname"><a href="class_airport.html#a3b8ef3abafb9f29b97acb73eb8014502">Airport::setId</a></div><div class="ttdeci">void setId(int id)</div><div class="ttdef"><b>Definition:</b> airport.cpp:25</div></div>
-<div class="ttc" id="aclass_airport_html_a40321872ac6cced746acb7124fc57f1a"><div class="ttname"><a href="class_airport.html#a40321872ac6cced746acb7124fc57f1a">Airport::searchPlane</a></div><div class="ttdeci">bool searchPlane(string id)</div></div>
-<div class="ttc" id="aclass_airport_html_a41a497ef19f5b10b558799c55a95daca"><div class="ttname"><a href="class_airport.html#a41a497ef19f5b10b558799c55a95daca">Airport::getPlanes</a></div><div class="ttdeci">vector&lt; Plane * &gt; getPlanes() const</div></div>
-<div class="ttc" id="aclass_airport_html_a561d6d3a40e5245c863f0c7c1cdd9457"><div class="ttname"><a href="class_airport.html#a561d6d3a40e5245c863f0c7c1cdd9457">Airport::addCarriage</a></div><div class="ttdeci">bool addCarriage(Carriage carriage)</div></div>
-<div class="ttc" id="aclass_airport_html_a7e4804bf32f48289100f5e1b86a2ea46"><div class="ttname"><a href="class_airport.html#a7e4804bf32f48289100f5e1b86a2ea46">Airport::Airport</a></div><div class="ttdeci">Airport(int id)</div></div>
-<div class="ttc" id="aclass_airport_html_aba035eae5f7c66ad07c291e379c2488b"><div class="ttname"><a href="class_airport.html#aba035eae5f7c66ad07c291e379c2488b">Airport::getId</a></div><div class="ttdeci">string getId() const</div><div class="ttdef"><b>Definition:</b> airport.cpp:21</div></div>
-<div class="ttc" id="aclass_airport_html_ac3fea99e6302c4369b01e07552c8a193"><div class="ttname"><a href="class_airport.html#ac3fea99e6302c4369b01e07552c8a193">Airport::removeCarriage</a></div><div class="ttdeci">void removeCarriage(Carriage carriage)</div></div>
-<div class="ttc" id="aclass_airport_html_ad9d36c514004f4b94cb08ccc36a3024c"><div class="ttname"><a href="class_airport.html#ad9d36c514004f4b94cb08ccc36a3024c">Airport::searchFlight</a></div><div class="ttdeci">bool searchFlight(int num)</div></div>
-<div class="ttc" id="aclass_b_s_t_html"><div class="ttname"><a href="class_b_s_t.html">BST</a></div><div class="ttdef"><b>Definition:</b> bst.h:31</div></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;bst.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;carriage.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;set&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;Time.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;Date.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_airport.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_airport.html">Airport</a>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">string</span> id;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage &gt;</a> carriages = <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage&gt;</a>(<a class="code hl_class" href="class_carriage.html">Carriage</a>(<span class="stringliteral">&quot;f&quot;</span>,0,{0,0}));</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_airport.html#a0cfbff33c82596fb7f2f61f7075c0cc4">   26</a></span>    <a class="code hl_function" href="class_airport.html#a0cfbff33c82596fb7f2f61f7075c0cc4">Airport</a>() = <span class="keywordflow">default</span>;;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_airport.html#a0cfbff33c82596fb7f2f61f7075c0cc4">Airport</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_airport.html#aba035eae5f7c66ad07c291e379c2488b">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage&gt;</a> getCarriages() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_airport.html#a8541d72fd3004a56cbba820a9345e02e">setId</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>) ;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_airport.html#a561d6d3a40e5245c863f0c7c1cdd9457">addCarriage</a>( <a class="code hl_class" href="class_carriage.html">Carriage</a> carriage );  <span class="comment">// doesn&#39;t work</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> SortCarriage();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="class_b_s_t.html">BST&lt;Carriage&gt;</a> getCarriagesByType(<span class="keywordtype">string</span> type);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_airport.html#ae7110e48b1416ea45e914022f79c1c4c">removeCarriage</a>(<a class="code hl_class" href="class_carriage.html">Carriage</a> carriage);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">//  UNUSED</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//    vector&lt;Airline *&gt; getAirlines() const;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//    vector&lt;Flight *&gt; getFlights() const;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//    vector&lt;Plane *&gt;getPlanes() const;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//    bool  searchFlight(int num);</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//    bool searchPlane(string id);</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">//PROJECT1_AIRPORT_H</span></div>
+<div class="ttc" id="aclass_airport_html"><div class="ttname"><a href="class_airport.html">Airport</a></div><div class="ttdef"><b>Definition:</b> airport.h:19</div></div>
+<div class="ttc" id="aclass_airport_html_a0cfbff33c82596fb7f2f61f7075c0cc4"><div class="ttname"><a href="class_airport.html#a0cfbff33c82596fb7f2f61f7075c0cc4">Airport::Airport</a></div><div class="ttdeci">Airport()=default</div></div>
+<div class="ttc" id="aclass_airport_html_a561d6d3a40e5245c863f0c7c1cdd9457"><div class="ttname"><a href="class_airport.html#a561d6d3a40e5245c863f0c7c1cdd9457">Airport::addCarriage</a></div><div class="ttdeci">bool addCarriage(Carriage carriage)</div><div class="ttdef"><b>Definition:</b> airport.cpp:41</div></div>
+<div class="ttc" id="aclass_airport_html_a8541d72fd3004a56cbba820a9345e02e"><div class="ttname"><a href="class_airport.html#a8541d72fd3004a56cbba820a9345e02e">Airport::setId</a></div><div class="ttdeci">void setId(string id)</div><div class="ttdef"><b>Definition:</b> airport.cpp:32</div></div>
+<div class="ttc" id="aclass_airport_html_aba035eae5f7c66ad07c291e379c2488b"><div class="ttname"><a href="class_airport.html#aba035eae5f7c66ad07c291e379c2488b">Airport::getId</a></div><div class="ttdeci">string getId() const</div><div class="ttdef"><b>Definition:</b> airport.cpp:20</div></div>
+<div class="ttc" id="aclass_airport_html_ae7110e48b1416ea45e914022f79c1c4c"><div class="ttname"><a href="class_airport.html#ae7110e48b1416ea45e914022f79c1c4c">Airport::removeCarriage</a></div><div class="ttdeci">bool removeCarriage(Carriage carriage)</div><div class="ttdef"><b>Definition:</b> airport.cpp:50</div></div>
+<div class="ttc" id="aclass_b_s_t_html"><div class="ttname"><a href="class_b_s_t.html">BST</a></div><div class="ttdef"><b>Definition:</b> bst.h:30</div></div>
 <div class="ttc" id="aclass_carriage_html"><div class="ttname"><a href="class_carriage.html">Carriage</a></div><div class="ttdef"><b>Definition:</b> carriage.h:12</div></div>
-<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="class_exception.html">Exception</a></div><div class="ttdef"><b>Definition:</b> airport.h:57</div></div>
-<div class="ttc" id="aclass_exception_html_a1b78336bb26edf8e784783cc150c5801"><div class="ttname"><a href="class_exception.html#a1b78336bb26edf8e784783cc150c5801">Exception::Exception</a></div><div class="ttdeci">Exception()</div><div class="ttdef"><b>Definition:</b> airport.h:61</div></div>
-<div class="ttc" id="aclass_exception_html_a3aa5a13d4531840a49f32f7e2989c4f6"><div class="ttname"><a href="class_exception.html#a3aa5a13d4531840a49f32f7e2989c4f6">Exception::Exception</a></div><div class="ttdeci">Exception(Flight *flight)</div><div class="ttdef"><b>Definition:</b> airport.h:70</div></div>
-<div class="ttc" id="aclass_exception_html_ab67778f8a99cbcf400b69bd27a02c153"><div class="ttname"><a href="class_exception.html#ab67778f8a99cbcf400b69bd27a02c153">Exception::Exception</a></div><div class="ttdeci">Exception(int id)</div><div class="ttdef"><b>Definition:</b> airport.h:64</div></div>
-<div class="ttc" id="aclass_exception_html_ac55a6528b1b50a1d351ac173b8b494b1"><div class="ttname"><a href="class_exception.html#ac55a6528b1b50a1d351ac173b8b494b1">Exception::Exception</a></div><div class="ttdeci">Exception(string idAirline)</div><div class="ttdef"><b>Definition:</b> airport.h:67</div></div>
-<div class="ttc" id="aclass_flight_html"><div class="ttname"><a href="class_flight.html">Flight</a></div><div class="ttdef"><b>Definition:</b> flight.h:18</div></div>
-<div class="ttc" id="aflight_8h_html"><div class="ttname"><a href="flight_8h.html">flight.h</a></div></div>
-<div class="ttc" id="aplane_8h_html"><div class="ttname"><a href="plane_8h.html">plane.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

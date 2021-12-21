@@ -13,7 +13,6 @@ Time::Time( int hour, int minute) {
 }
 
 int Time::getHour() const {
-
     return this->hour;
 }
 

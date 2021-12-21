@@ -21,7 +21,7 @@ private:
     Time timeDeparture,timeArrival;
     Airport origin;
     Airport destiny;
-    vector<Passenger> passengers;
+    vector<Passenger> passengers = {};
 public:
 
     Flight( int num, Date dateDeparture,Time timeDeparture, Date dateArrival,Time timeArrival, Airport origin, Airport destiny);
@@ -38,15 +38,16 @@ public:
     void setOrigin(const Airport &origin);
     const Airport &getDestiny() const;
     void setDestiny(const Airport &destiny);
-    const vector<Passenger> &getPassengers() const;
+    vector<Passenger> &getPassengers();
+    int getTotalPassengers();
     void setPassengers(const vector<Passenger> &passengers);
     const Date &getDateDeparture() const;
     void setDateDeparture(const Date &dateDeparture);
     bool addpassenger(Passenger &pass);
     bool removepassenger(Passenger &pass);
     Time getDur();
-    bool operator==(Flight *flight);
-
-
+    bool operator==(Flight flight);
+    vector<Passenger>getpassengerwithluggage();
+    void sort(vector<Passenger> sortpassengers);
 };
 #endif //PROJETO_FLIGHT_H

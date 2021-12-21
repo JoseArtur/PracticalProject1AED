@@ -34,7 +34,7 @@ void Plane::setCap(int & cap){
     this->cap=cap;
 }
 
-bool Plane::addflight(Flight *flight) {
+bool Plane::addflight(Flight flight) {
     int count = -1;
     for(auto x:flights){
         if(x == flight) return false;
@@ -45,7 +45,7 @@ bool Plane::addflight(Flight *flight) {
 
 bool Plane::removeflight(int num) {
     for(int i = 0; i < flights.size();i++){
-        if(flights[i]->getNum() == num){
+        if(flights[i].getNum() == num){
             flights.erase(flights.begin()+i);
             return true;
         }
@@ -53,29 +53,24 @@ bool Plane::removeflight(int num) {
     return false;
 }
 
-bool Plane::addpassenger(Flight &flight, Passenger &pass) {
+bool Plane::addpassenger(Flight &flight, Passenger pass) {
     int count = -1;
-    for(int i = 0; i < flights.size();i++) {
-        if(flights[i]->getNum() == flight.getNum()){
-            for(int j = 0; j < flights[i]->getPassengers().size();j++){
-                vector<Passenger> a= flights[i]->getPassengers();
+    for(auto & i : flights) {
+        if(i.getNum() == flight.getNum()){
+            for(int j = 0; j < i.getPassengers().size();j++){
+                vector<Passenger> a= i.getPassengers();
                 if(a[j].getId() == pass.getId()){
                     count++;
                 }
             }
-            if ( this->cap - flights[i]->getPassengers().size() > 0 && count == -1) {
-                pass.setTicket(true);
-                vector<Passenger> a= flights[i]->getPassengers();
-                a.push_back(pass);
+            if ( this->cap - i.getPassengers().size() > 0 && count == -1) {
+                 i.getPassengers().push_back(pass);
                 return true;
             }
         }
     }
     return false;
 }
-
-
-
 
 
 void Plane::scheduleService(planeService service) {
@@ -88,10 +83,29 @@ void Plane::completeService() {
 }
 
 
-vector<Flight*> Plane::getflights(){
-    return flights;
+vector<Flight> Plane::getflights(){
+    return this->flights;
 }
 
-void Plane::setflights(vector<Flight*> flights) {
+void Plane::setflights(vector<Flight> flights) {
     this->flights = flights;
+}
+
+queue<planeService> Plane::getScheduled() const {
+    return this->scheduled;
+}
+
+queue<planeService> Plane::getCompleted() const {
+    return this->completed;
+}
+void Plane::sort(vector<Flight> sortflights){
+    for(int i = 0;i<sortflights.size()-1;i++){
+        for(int j = i+1;j<sortflights.size();j++){
+            if(sortflights[i].getNum()>sortflights[j].getNum()){
+                Flight swap = sortflights[i];
+                sortflights[i] = sortflights[j];
+                sortflights[j] = swap;
+            }
+        }
+    }
 }

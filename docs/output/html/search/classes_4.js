@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exception_0',['Exception',['../class_exception.html',1,'']]]
+  ['flight_0',['Flight',['../class_flight.html',1,'']]]
 ];

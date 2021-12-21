@@ -1,3 +1,2 @@
-FlightInfo: opo-lis | D:22 - 12 - 2020 20 : 30 | A:22 - 12 - 2020 22 : 30 | F:1  has been added!
-FlightInfo: opo-lis | D:22 - 12 - 2020 10 : 30 | A:22 - 12 - 2020 11 : 20 | F:1  has been added!
-FlightInfo: opo-lis | D:22 - 12 - 2020 10 : 30 | A:22 - 12 - 2020 11 : 30 | F:1  has been added!
+FlightInfo: LIS - OPO | D:20 - 12 - 2020 10 : 30 | A:22 - 12 - 2020 10 : 30 | F:144 P: 141  has been added!
+FlightInfo: OPO - MAD | D:22 - 12 - 2020 19 : 30 | A:23 - 12 - 2020 16 : 30 | F:155 P: 151  has been added!

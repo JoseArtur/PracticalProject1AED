@@ -1,6 +1,2 @@
-addClient 100000 JOSE 010
-addClient 122 jose 010
-addClient 133 JOSE 010
-addClient 11 GUILHERME 010
-111 jose 001
-111  001
+133 Andre Has Luggage? 1 Auto Check-in? 0
+

@@ -75,8 +75,8 @@ void Flight::setDestiny(const Airport &destiny) {
     Flight::destiny = destiny;
 }
 
-const vector<Passenger> &Flight::getPassengers() const {
-    return passengers;
+vector<Passenger> &Flight::getPassengers() {
+    return this->passengers;
 }
 
 void Flight::setPassengers(const vector<Passenger> &passengers) {
@@ -105,8 +105,8 @@ bool Flight::removepassenger(Passenger &pass) {
 }
 
 
-bool Flight::operator==(Flight *flight) {
-    return this->getNum()==flight->getNum();
+bool Flight::operator==(Flight flight) {
+    return this->getNum()==flight.getNum();
 }
 
 Time Flight::getDur() {
@@ -173,7 +173,29 @@ Time Flight::getDur() {
         return dur;
     }
 
+int Flight::getTotalPassengers() {
+    return this->passengers.size();
+}
 
 
+vector<Passenger> Flight::getpassengerwithluggage(){
+    vector<Passenger> passengerswithluggage = {};
+    for(int i = 0; i < passengers.size();i++){
+        if(passengers[i].isLuggage()){
+            passengerswithluggage.push_back(passengers[i]);
+        }
+    }
+    return passengerswithluggage;
+}
 
-
+void Flight::sort(vector<Passenger> sortpassengers){
+    for(int i = 0;i<sortpassengers.size()-1;i++){
+        for(int j = i+1;j<sortpassengers.size();j++){
+            if(sortpassengers[i].getId()>sortpassengers[j].getId()){
+                Passenger swap = sortpassengers[i];
+                sortpassengers[i] = sortpassengers[j];
+                sortpassengers[j] = swap;
+            }
+        }
+    }
+}

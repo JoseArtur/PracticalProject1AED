@@ -40,12 +40,21 @@ void Cart::setM(const unsigned int m) {
 }
 
 bool Cart::addLuggage(Luggage l) {
-    for (auto c : cart)
-        for (auto n : c)
-            if (n.size() < m) {
-                n.push(l);
+    for (const auto& v : cart)
+        for (auto s : v)
+            if (s.size() < m) {
+                s.push(l);
                 return true;
             }
     return false;
+}
+
+unsigned int Cart::getMaxCapacity() const {
+    return getC()*getM()*getN();
+}
+
+bool Cart::isEmpty() {
+    for (const auto& v : cart) for (const auto& s : v) if (!s.empty()) return false;
+    return true;
 }
 

@@ -40,7 +40,6 @@ void Airport::setId(string id) {
  */
 bool Airport::addCarriage( Carriage carriage ) {
     return carriages.insert(carriage);
-
 }
 
 /**

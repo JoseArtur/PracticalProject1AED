@@ -30,12 +30,12 @@ time = t;
 }
 
 bool Carriage::operator == (const Carriage& a )  const {
-    return (carriageType==a.getCarriageType()) && (distance == a.getDistance() )&& (time==a.getTime());
+    return (carriageType==a.getCarriageType()) && abs(distance - a.getDistance()) < 0.01 && (time==a.getTime());
 }
 
 bool Carriage::operator<(const Carriage &a)  const {
     if(time == a.getTime()){
-        if(distance == a.getDistance()){
+        if(abs(distance - a.getDistance()) < 0.01){
             return carriageType<a.getCarriageType();
         }
         else return distance < a.getDistance();

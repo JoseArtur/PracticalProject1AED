@@ -7,12 +7,10 @@ using namespace std;
 class Passenger {
     int id;
     string name;
-    bool ticket;
     bool hasLuggage;
-    bool group;
-
+    bool autoCheck;
 public:
-    Passenger(int id, string name, bool ticket, bool hasLuggage, bool group);
+    Passenger(int id, string name, bool hasLuggage, bool autoCheck);
 
     int getId() const;
 
@@ -22,17 +20,13 @@ public:
 
     void setName(const string &name);
 
-    bool isTicket() const;
-
-    void setTicket(bool ticket);
-
     bool isLuggage() const;
 
-    void setLuggage(bool bagage);
+    void setLuggage(bool hasLuggage);
 
-    bool isGroup() const;
+    bool isAutoCheck() const;
 
-    void setGroup(bool group);
-
+    void setAutoCheck(bool aC);
 };
+
 #endif //PROJECT1_PASSANGER_H

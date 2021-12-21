@@ -21,11 +21,13 @@ public:
     unsigned int getN() const;
     unsigned int getM() const;
     vector<vector<stack<Luggage>>> getCart() const;
-    void setC(const unsigned int c);
-    void setN(const unsigned int n);
-    void setM(const unsigned int m);
+    unsigned int getMaxCapacity() const;
+    void setC(unsigned int c);
+    void setN(unsigned int n);
+    void setM(unsigned int m);
 
     bool addLuggage(Luggage l);
+    bool isEmpty();
 };
 
 #endif //HEAD_CART_H

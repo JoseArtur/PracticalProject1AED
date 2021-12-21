@@ -1,6 +1,6 @@
 \hypertarget{_cart_8h_source}{}\doxysection{Cart.\+h}
 \label{_cart_8h_source}\index{C:/Users/josea/Feup/AED/Project1/tests/Cart.h@{C:/Users/josea/Feup/AED/Project1/tests/Cart.h}}
-\mbox{\hyperlink{_cart_8h}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{comment}{//}}
 \DoxyCodeLine{2 \textcolor{comment}{// Created by gdrp7 on 15/12/2021.}}
@@ -11,7 +11,7 @@
 \DoxyCodeLine{7 }
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stack>}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{10 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}luggage.h"{}}}
 \DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{12 }
 \DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_cart}{Cart}} \{}
@@ -20,17 +20,20 @@
 \DoxyCodeLine{16     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m;}
 \DoxyCodeLine{17     vector<vector<stack<Luggage>>> cart;}
 \DoxyCodeLine{18 \textcolor{keyword}{public}:}
-\DoxyCodeLine{19     \mbox{\hyperlink{class_cart_a5da6d8d2877d71062af6ed017d1acc0f}{Cart}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m);}
-\DoxyCodeLine{20     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cart_a953596bf6142e1ba5b71f485b35bb43a}{getC}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{21     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cart_a9700dc16fff31a5ec01f858c85068b1c}{getN}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{22     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_cart_a87cb0b8e414c6632910a47717ca343fd}{getM}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{23     vector<vector<stack<Luggage>>> \mbox{\hyperlink{class_cart_aa6ea3d90e7cb359c1f77b4f74cc39afe}{getCart}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cart_ad0b9c8ebc1180028f4d5edb047830528}{setC}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
-\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cart_ab1b1f00b07c06a286096204525db63d6}{setN}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n);}
-\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cart_ac9b95c40be9b45453a39fa4b54f78fd1}{setM}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m);}
-\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cart_a81026ceaa62b163c9de2ba2ea7765e26}{addLuggage}}(Luggage l);}
-\DoxyCodeLine{28 \};}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//HEAD\_CART\_H}}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_cart}{Cart}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getC() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getN() \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getM() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     vector<vector<stack<Luggage>>> getCart() \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getMaxCapacity() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} setC(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} setN(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} setM(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} m);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} addLuggage(\mbox{\hyperlink{class_luggage}{Luggage}} l);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} isEmpty();}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//HEAD\_CART\_H}}
 
 \end{DoxyCode}
